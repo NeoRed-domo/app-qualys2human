@@ -1,0 +1,37 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+node_modules/
+dist/
+build/
+*.egg-info/
+.env
+keys/
+certs/
+data/
+docs/
+*.db
+
+# Backend config (contains passwords — use config.yaml.example as template)
+backend/config.yaml
+
+# Prerequisites (large binaries — download separately)
+prerequisites/*.exe
+prerequisites/python-3.12-embed-amd64/
+
+# Build output / packaging artifacts
+Qualys2Human-*.zip
+Qualys2Human-*.exe
+
+# Dev/temp files
+.pids/
+.claude/
+dev/
+memory/
+*.jpg
+exemple-qualys-raw.csv
+Description_projet.txt
+
+# Signing keys (never commit private key)
+scripts/signing/private.key

@@ -1,0 +1,1269 @@
+{
+  "nav": {
+    "overview": "Vue d'ensemble",
+    "trends": "Tendances",
+    "investigation": "Investigation",
+    "search": "Recherche",
+    "reports": "Rapports",
+    "admin": "Admin",
+    "monitoring": "Monitoring",
+    "profile": "Mon Profil",
+    "logout": "Déconnexion",
+    "myProposals": "Mes propositions",
+    "uncategorized": "QIDs non catégorisés"
+  },
+  "common": {
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "create": "Créer",
+    "edit": "Modifier",
+    "close": "Fermer",
+    "back": "Retour",
+    "reset": "Réinitialiser",
+    "confirm": "Confirmer",
+    "ok": "Compris",
+    "yes": "Oui",
+    "no": "Non",
+    "error": "Erreur",
+    "loading": "Chargement...",
+    "noData": "Aucune donnée",
+    "actions": "Actions",
+    "name": "Nom",
+    "status": "Statut",
+    "type": "Type",
+    "category": "Catégorie",
+    "title": "Titre",
+    "date": "Date",
+    "search": "Rechercher",
+    "export": "Exporter",
+    "refresh": "Actualiser",
+    "settings": "Paramètres",
+    "enabled": "Activé",
+    "disabled": "Désactivé",
+    "required": "Requis",
+    "optional": "Optionnel",
+    "none": "Aucun",
+    "all": "Tous",
+    "backToOverview": "Retour à la vue d'ensemble",
+    "uncategorized": "Non catégorisé",
+    "notApplicable": "N/A",
+    "irreversibleAction": "Cette action est irréversible."
+  },
+  "severity": {
+    "1": "Minimal (1)",
+    "2": "Moyen (2)",
+    "3": "Sérieux (3)",
+    "4": "Critique (4)",
+    "5": "Urgent (5)"
+  },
+  "freshness": {
+    "active": "Actives",
+    "stale": "Peut-être obsolètes",
+    "all": "Toutes"
+  },
+  "login": {
+    "title": "Connexion",
+    "username": "Nom d'utilisateur",
+    "usernameRequired": "Nom d'utilisateur requis",
+    "password": "Mot de passe",
+    "passwordRequired": "Mot de passe requis",
+    "submit": "Se connecter",
+    "error": "Erreur de connexion",
+    "localMode": "Local",
+    "adMode": "Active Directory"
+  },
+  "overview": {
+    "title": "Vue d'ensemble",
+    "kpiTitle": "Indicateurs clés",
+    "totalVulns": "Vulnérabilités totales",
+    "hosts": "Hôtes",
+    "criticals": "Critiques (4-5)",
+    "avgPerHost": "Moy. / serveur",
+    "distributions": "Répartitions",
+    "severities": "Criticités",
+    "osClass": "Classe d'OS",
+    "osDistribution": "Répartition des OS",
+    "categorization": "Catégorisation",
+    "topVulnsChart": "Top vulnérabilités (graphique)",
+    "topVulnsTable": "Top vulnérabilités (tableau)",
+    "topHosts": "Top serveurs",
+    "occurrences": "Occurrences"
+  },
+  "vulnList": {
+    "title": "Vulnérabilités",
+    "allVulns": "Toutes les vulnérabilités",
+    "loadError": "Erreur de chargement",
+    "hosts": "Hôtes"
+  },
+  "vulnDetail": {
+    "detectionStatus": "Statut de détection",
+    "hostsAffected": "Hôtes affectés",
+    "totalOccurrences": "Occurrences totales",
+    "threat": "Menace",
+    "impact": "Impact",
+    "solution": "Solution",
+    "scanResults": "Résultats du scan",
+    "affectedServers": "Serveurs affectés",
+    "createRule": "Créer une règle",
+    "vendorRef": "Réf. vendeur",
+    "port": "Port",
+    "protocol": "Protocole",
+    "firstDetected": "Première détection",
+    "lastDetected": "Dernière détection",
+    "trackingMethod": "Méthode de suivi",
+    "timesDetected": "Nb détections",
+    "lastFixed": "Dernière correction",
+    "unknown": "Inconnu",
+    "filter": "filtre :",
+    "proposeCategory": "Proposer une catégorisation"
+  },
+  "hostList": {
+    "title": "Serveurs",
+    "allHosts": "Tous les serveurs",
+    "ip": "IP",
+    "dns": "DNS",
+    "os": "OS",
+    "vulns": "Vulnérabilités"
+  },
+  "hostDetail": {
+    "title": "Hôte",
+    "vulnsFilter": "Vulnérabilités — filtre :",
+    "filteredView": "Vue filtrée",
+    "showAll": "Tout afficher",
+    "filters": "Filtres :",
+    "sevLabel": "Sév.",
+    "typesLabel": "Types :",
+    "detectedLessThan": "Détectées il y a moins de {{days}} jours",
+    "detectedBetween": "Détectées entre {{staleDays}} et {{hideDays}} jours",
+    "noActiveFilter": "Aucun filtre global actif",
+    "severitiesChart": "Sévérités",
+    "trackingMethods": "Méthodes de suivi",
+    "netbios": "NetBIOS",
+    "firstSeen": "Premier scan",
+    "lastSeen": "Dernier scan",
+    "totalScans": "Scans totaux",
+    "osCpe": "OS CPE"
+  },
+  "fullDetail": {
+    "title": "Détail",
+    "ssl": "SSL",
+    "fqdn": "FQDN",
+    "ticket": "Ticket",
+    "pciVuln": "PCI",
+    "osUnknown": "OS inconnu",
+    "proposeCategory": "Proposer une catégorisation"
+  },
+  "trends": {
+    "title": "Tendances",
+    "avgVulnsPerHost": "Moyenne de vulnérabilités par serveur",
+    "hostCount": "Nombre de serveurs",
+    "loadError": "Erreur lors du chargement des tendances",
+    "noData": "Aucune donnée pour cette période",
+    "period3m": "3 mois",
+    "period6m": "6 mois",
+    "period1y": "1 an",
+    "periodCustom": "Personnalisé",
+    "granularity": "Granularité :",
+    "day": "Jour",
+    "week": "Semaine",
+    "month": "Mois",
+    "chartsVisible": "Graphiques visibles",
+    "display": "Affichage",
+    "resetLayout": "Réinitialiser la disposition",
+    "defaultLayout": "Disposition par défaut",
+    "criticalCount": "Vulnérabilités critiques",
+    "remediationRate": "Taux de remédiation (%)",
+    "avgRemediationDays": "Temps moyen de remédiation (jours)",
+    "avgOpenAgeDays": "Âge moyen des vulnérabilités ouvertes (jours)",
+    "categoryBreakdown": "Répartition par catégorie",
+    "days": "jours",
+    "percent": "%",
+    "loadingMetrics": "Chargement des métriques…",
+    "loadingComputing": "Calcul des tendances…",
+    "loadingCharts": "Préparation des graphiques…",
+    "hiddenForUsers": "Masqué",
+    "showToUsers": "Rendre visible aux utilisateurs",
+    "hideFromUsers": "Masquer pour les utilisateurs",
+    "userView": "Vue utilisateur",
+    "adminView": "Vue admin"
+  },
+  "monitoring": {
+    "title": "Monitoring",
+    "loadError": "Erreur de chargement",
+    "uptime": "Uptime :",
+    "alerts": "Alertes",
+    "services": "Services",
+    "systemResources": "Ressources système",
+    "cpu": "CPU",
+    "memory": "Mémoire",
+    "disk": "Disque",
+    "connectionPool": "Pool de connexions",
+    "poolSize": "Taille du pool",
+    "activeConnections": "Connexions actives",
+    "available": "Disponibles",
+    "overflow": "Overflow",
+    "infoUnavailable": "Information non disponible",
+    "activity": "Activité",
+    "importedReports": "Rapports importés",
+    "users": "Utilisateurs",
+    "lastImport": "Dernier import",
+    "dbSize": "Taille de la base",
+    "lastImportStatus": "Statut dernier import",
+    "cpuCritical": "CPU critique : {{value}}%",
+    "cpuHigh": "CPU élevé : {{value}}%",
+    "memCritical": "Mémoire critique : {{value}}%",
+    "memHigh": "Mémoire élevée : {{value}}%",
+    "diskCritical": "Disque critique : {{value}}%",
+    "diskHigh": "Disque élevé : {{value}}%",
+    "dbUnreachable": "Base de données inaccessible",
+    "unitMb": "Mo",
+    "unitGb": "Go",
+    "uptimeDays": "j",
+    "uptimeHours": "h",
+    "uptimeMinutes": "min",
+    "purgeButton": "Purger les données obsolètes",
+    "purgeConfirmTitle": "Confirmer la purge",
+    "purgeConfirmContent": "{{count}} rapport(s) seront supprimés définitivement avec toutes leurs vulnérabilités. Cette action est irréversible.",
+    "purgeResult": "Purge terminée : {{reports}} rapport(s) et {{vulns}} vulnérabilité(s) supprimés.",
+    "purgeNone": "Aucune donnée à purger.",
+    "purgeableWarning": "{{count}} rapport(s) dépassent la durée de rétention — purge recommandée",
+    "purgeImportConflict": "Impossible de purger pendant un import en cours."
+  },
+  "settings": {
+    "freshnessTitle": "Paramètres d'affichage",
+    "staleDays": "Seuil « peut-être obsolète » (jours)",
+    "staleDaysTooltip": "Les vulnérabilités non vues depuis ce nombre de jours seront marquées comme potentiellement obsolètes.",
+    "hideDays": "Seuil « masquée » (jours)",
+    "hideDaysTooltip": "Les vulnérabilités non vues depuis ce nombre de jours seront masquées par défaut.",
+    "required": "Valeur requise",
+    "saveSuccess": "Paramètres enregistrés",
+    "loadError": "Impossible de charger les paramètres",
+    "retentionTitle": "Rétention des données",
+    "retentionMonths": "Durée de rétention (mois)",
+    "retentionMonthsTooltip": "Les rapports plus anciens que cette durée seront automatiquement purgés au démarrage de l'application.",
+    "retentionSaveSuccess": "Durée de rétention mise à jour",
+    "retentionUnit": "mois"
+  },
+  "search": {
+    "vulnerability": "Vulnérabilité",
+    "server": "Serveur",
+    "vulnPlaceholder": "QID ou titre...",
+    "hostPlaceholder": "IP, DNS ou NetBIOS...",
+    "noResults": "Aucun résultat",
+    "results": "Résultats"
+  },
+  "filters": {
+    "severity": "Sévérité",
+    "type": "Type",
+    "allTypes": "Tous les types",
+    "categorization": "Catégorisation",
+    "allCategories": "Toutes",
+    "osClass": "Classe OS",
+    "allOsClasses": "Tous",
+    "freshness": "Fraîcheur",
+    "dateFrom": "Date début",
+    "dateTo": "Date fin",
+    "resetTooltip": "Réinitialiser",
+    "enterpriseTooltip": "Appliquer les règles entreprise",
+    "enterpriseApplied": "Règles entreprise appliquées",
+    "presetEnterprise": "[Entreprise]",
+    "presetPersonal": "[Perso]",
+    "presetApplied": "Filtre \"{{name}}\" appliqué",
+    "noPreset": "Aucun preset",
+    "presetsTooltip": "Presets de filtres",
+    "osWindows": "Windows",
+    "osNix": "Linux / Unix"
+  },
+  "admin": {
+    "imports": "Imports",
+    "users": "Utilisateurs",
+    "enterpriseRules": "Règles entreprise",
+    "categorization": "Catégorisation",
+    "brandingTab": "Branding",
+    "ldapTab": "LDAP / AD",
+    "upgradeTab": "Mise à jour",
+    "upgrade": {
+      "title": "Gestion des mises à jour",
+      "currentState": "État actuel",
+      "currentVersion": "Version actuelle",
+      "lastUpgrade": "Dernière mise à jour",
+      "statusUpToDate": "À jour",
+      "statusScheduled": "Mise à jour planifiée",
+      "statusRunning": "Mise à jour en cours",
+      "scheduledFor": "Planifiée pour le {{date}} à {{time}}",
+      "cancelSchedule": "Annuler",
+      "launchNowBtn": "Lancer maintenant",
+      "uploadAndSchedule": "Téléverser et planifier",
+      "selectPackage": "Sélectionner le paquet (.zip)",
+      "selectSignature": "Sélectionner la signature (.sig)",
+      "uploading": "Téléversement en cours...",
+      "uploadProgress": "{{percent}}% ({{sent}} / {{total}} Mo)",
+      "uploadComplete": "Téléversement terminé",
+      "uploadCancel": "Annuler le téléversement",
+      "validating": "Validation en cours...",
+      "validate": "Valider le paquet",
+      "validationResult": "Résultat de la validation",
+      "signatureOk": "Signature valide",
+      "signatureFail": "Signature invalide",
+      "versionOk": "Version plus récente",
+      "versionFail": "Version non valide",
+      "zipOk": "Archive valide",
+      "zipFail": "Archive invalide",
+      "targetVersion": "Version cible",
+      "scheduledAt": "Date et heure",
+      "scheduleMinTime": "Minimum 15 minutes dans le futur",
+      "notificationThresholds": "Seuils de notification",
+      "minutesBefore": "minutes avant",
+      "levelInfo": "Information",
+      "levelWarning": "Avertissement",
+      "levelDanger": "Urgent",
+      "addThreshold": "Ajouter un seuil",
+      "removeThreshold": "Retirer",
+      "schedule": "Planifier",
+      "launchNow": "Lancer maintenant",
+      "launchNowConfirm": "La mise à jour sera lancée dans 60 secondes. L'application sera temporairement indisponible. Continuer ?",
+      "launchNowTitle": "Lancement immédiat",
+      "history": "Historique des mises à jour",
+      "historySourceVersion": "Version source",
+      "historyTargetVersion": "Version cible",
+      "historyDate": "Date",
+      "historyDuration": "Durée",
+      "historyStatus": "Statut",
+      "historyInitiatedBy": "Lancée par",
+      "historyError": "Erreur",
+      "statusCompleted": "Terminée",
+      "statusFailed": "Échouée",
+      "statusRolledBack": "Restaurée",
+      "statusCancelled": "Annulée",
+      "statusPending": "En attente",
+      "noHistory": "Aucun historique de mise à jour",
+      "settings": "Paramètres de notification",
+      "defaultThresholds": "Seuils par défaut",
+      "settingsSaved": "Paramètres enregistrés",
+      "scheduleCreated": "Mise à jour planifiée avec succès",
+      "scheduleCancelled": "Planification annulée",
+      "newUpload": "Nouveau paquet",
+      "packageReady": "Paquet prêt",
+      "errors": {
+        "INVALID_UPLOAD_ID": "Identifiant de téléversement invalide",
+        "UPGRADE_IN_PROGRESS": "Une mise à jour est déjà en cours",
+        "INSUFFICIENT_DISK_SPACE": "Espace disque insuffisant",
+        "UPLOAD_EXPIRED_OR_NOT_FOUND": "Téléversement expiré ou introuvable",
+        "INVALID_ZIP_FILE": "Fichier ZIP invalide",
+        "SIGNATURE_FILE_MISSING": "Fichier de signature manquant",
+        "INVALID_SIGNATURE": "Signature invalide",
+        "VERSION_FILE_MISSING": "Fichier VERSION manquant",
+        "VERSION_NOT_NEWER": "La version n'est pas plus récente que la version actuelle",
+        "NO_PACKAGE_UPLOADED": "Aucun paquet téléversé",
+        "PACKAGE_NOT_VALIDATED": "Le paquet n'a pas été validé",
+        "UPGRADE_ALREADY_SCHEDULED": "Une mise à jour est déjà planifiée",
+        "NO_PENDING_UPGRADE": "Aucune mise à jour en attente",
+        "SCHEDULED_TIME_TOO_SOON": "L'heure planifiée doit être au moins 15 minutes dans le futur"
+      }
+    },
+    "import": {
+      "dirUpdated": "Répertoire mis à jour",
+      "dirAdded": "Répertoire ajouté",
+      "updateError": "Erreur lors de la mise à jour",
+      "dirDeleted": "Répertoire supprimé",
+      "deleteError": "Erreur lors de la suppression",
+      "loadError": "Erreur lors du chargement des imports",
+      "reportDeleted": "Rapport supprimé avec succès",
+      "dbReset": "Base réinitialisée avec succès",
+      "importStarted": "Import lancé en arrière-plan",
+      "importError": "Erreur d'import",
+      "watchedDirs": "Répertoires surveillés",
+      "addDir": "Ajouter un répertoire",
+      "importManagement": "Gestion des imports",
+      "importCsv": "Importer un CSV",
+      "resetAll": "Réinitialiser toute la base",
+      "resetTitle": "Réinitialiser toute la base",
+      "resetWarning": "Attention : cette action va supprimer TOUS les rapports, vulnérabilités et hôtes importés. Cette action est irréversible.",
+      "resetTypeConfirm": "Tapez <1>CONFIRMER</1> pour valider :",
+      "editDir": "Modifier le répertoire",
+      "addWatchedDir": "Ajouter un répertoire surveillé",
+      "dirPath": "Chemin du répertoire",
+      "dirPathRequired": "Chemin requis",
+      "dirPathPlaceholder": "C:\\Qualys\\Reports ou \\\\serveur\\partage\\qualys",
+      "filePattern": "Pattern de fichier",
+      "recursiveScan": "Scan récursif",
+      "ignoreFilesBefore": "Ignorer les fichiers avant",
+      "active": "Actif",
+      "path": "Chemin",
+      "recursive": "Récursif",
+      "ignoreBefore": "Ignorer avant",
+      "deleteWatchedDir": "Supprimer ce répertoire surveillé ?",
+      "file": "Fichier",
+      "source": "Source",
+      "sourceAuto": "Auto",
+      "sourceManual": "Manuel",
+      "reportDate": "Date rapport",
+      "progress": "Progression",
+      "lines": "lignes",
+      "report": "Rapport",
+      "importDate": "Date import",
+      "deleteReport": "Supprimer ce rapport et toutes ses vulnérabilités associées ?",
+      "noWatchedDir": "Aucun répertoire surveillé",
+      "importInProgress": "Import en cours :",
+      "scanInProgress": "Scan en cours...",
+      "activeDirs": "{{count}} répertoire(s) actif(s) — {{imports}} import(s)",
+      "noWatchedDirStatus": "Aucun répertoire surveillé",
+      "lastError": "Dernier échec :"
+    },
+    "user": {
+      "loadError": "Erreur lors du chargement des utilisateurs",
+      "updated": "Utilisateur mis à jour",
+      "created": "Utilisateur créé",
+      "deleteConfirm": "Supprimer {{username}} ?",
+      "deleted": "Utilisateur supprimé",
+      "sessionSaved": "Paramètres de session enregistrés",
+      "validationError": "Erreur de validation",
+      "profileAdmin": "Administrateur",
+      "profileUser": "Utilisateur",
+      "profileMonitoring": "Monitoring",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "sessionSettings": "Paramètres de session",
+      "timeoutLabel": "Timeout d'inactivité (minutes)",
+      "warningLabel": "Avertissement avant expiration (minutes)",
+      "management": "Gestion des utilisateurs",
+      "newUser": "Nouvel utilisateur",
+      "editUser": "Modifier {{username}}",
+      "username": "Nom d'utilisateur",
+      "usernameRequired": "Nom d'utilisateur requis",
+      "password": "Mot de passe",
+      "passwordRequired": "Mot de passe requis",
+      "newPassword": "Nouveau mot de passe (laisser vide pour ne pas changer)",
+      "profile": "Profil",
+      "profileRequired": "Profil requis",
+      "activeLabel": "Actif",
+      "forceChangePassword": "Forcer changement mot de passe",
+      "displayName": "Nom",
+      "authType": "Type",
+      "lockStatus": "Statut",
+      "locked": "Verrouillé",
+      "failedAttempts": "{{count}} échec(s)",
+      "lastLogin": "Dernier login",
+      "unlock": "Déverrouiller",
+      "unlocked": "{{username}} déverrouillé"
+    },
+    "rules": {
+      "saved": "Règles enregistrées",
+      "loadError": "Erreur lors du chargement",
+      "description": "Ces règles définissent les filtres par défaut appliqués à tous les utilisateurs.",
+      "severitySection": "Sévérités visibles",
+      "typeSection": "Types de vulnérabilités",
+      "noTypeFilter": "Aucun filtre de type — tous les types sont affichés.",
+      "categorizationSection": "Catégorisations visibles",
+      "noCategorizationFilter": "Aucun filtre de catégorisation — toutes les catégorisations sont affichées.",
+      "osClassSection": "Classe d'OS",
+      "noOsClassFilter": "Aucun filtre de classe OS — toutes les classes sont affichées.",
+      "freshnessSection": "Fraîcheur par défaut",
+      "freshnessDefault": "Valeur par défaut du filtre fraîcheur appliquée à la première connexion de chaque utilisateur.",
+      "freshnessThresholds": "Seuils de fraîcheur",
+      "staleThreshold": "Seuil « peut-être obsolète » (jours)",
+      "staleThresholdTooltip": "Les vulnérabilités non vues depuis ce nombre de jours seront marquées comme potentiellement obsolètes.",
+      "hideThreshold": "Seuil « masquée » (jours)",
+      "hideThresholdTooltip": "Les vulnérabilités non vues depuis ce nombre de jours seront masquées par défaut.",
+      "typeVuln": "Vulnérabilité",
+      "typePractice": "Pratique",
+      "typeInfo": "Information",
+      "freshnessActive": "Active",
+      "freshnessStale": "Peut-être obsolète",
+      "freshnessAll": "Tout"
+    },
+    "layer": {
+      "modified": "Catégorisation modifiée",
+      "created": "Catégorisation créée",
+      "deleted": "Catégorisation supprimée",
+      "ruleModified": "Règle modifiée",
+      "ruleCreated": "Règle créée",
+      "ruleDeleted": "Règle supprimée",
+      "loadError": "Erreur lors du chargement",
+      "createCategory": "+ Créer une catégorisation",
+      "reclassStarted": "Reclassification lancée",
+      "reclassInProgress": "Catégorisation en cours",
+      "relaunchCategorization": "Relancer la catégorisation",
+      "categorizeOrphans": "Catégoriser les orphelines",
+      "upToDate": "À jour",
+      "categorizationStale": "Catégorisation obsolète — relancez la catégorisation",
+      "starting": "Démarrage...",
+      "reclassError": "Erreur : {{error}}",
+      "reclassComplete": "Reclassification terminée : {{count}} vulnérabilités classifiées",
+      "reclassProgress": "{{applied}}/{{total}} règles — {{classified}} vulns classifiées",
+      "categorizations": "Catégorisations",
+      "addCategorization": "Ajouter une catégorisation",
+      "categorizationDesc": "Les catégorisations permettent de regrouper les vulnérabilités par couche infrastructure (OS, Middleware, Applicatif, Réseau...).",
+      "classificationRules": "Règles de classification",
+      "addRule": "Ajouter une règle",
+      "ruleDesc": "Chaque règle associe un pattern (mot-clé) à une catégorisation. Lors de l'import ou de la reclassification, les règles sont évaluées par priorité décroissante (la première qui matche gagne).",
+      "editCategorization": "Modifier la catégorisation",
+      "newCategorization": "Nouvelle catégorisation",
+      "editRule": "Modifier la règle",
+      "newRule": "Nouvelle règle",
+      "deleteCategorization": "Supprimer cette catégorisation ?",
+      "deleteRule": "Supprimer cette règle ?",
+      "nameRequired": "Nom requis",
+      "namePlaceholder": "Ex: OS, Middleware, Applicatif...",
+      "categorizationRequired": "Catégorisation requise",
+      "patternRequired": "Pattern requis",
+      "uncategorizedVulns": "Vulnérabilités non catégorisées",
+      "launchReclassification": "Lancer la reclassification ({{count}} règle(s) créée(s))",
+      "proposals": {
+        "title": "Propositions en attente",
+        "colUser": "Soumise par",
+        "approve": "Approuver",
+        "editApprove": "Modifier et approuver",
+        "reject": "Rejeter",
+        "approved": "Proposition approuvée",
+        "rejected": "Proposition rejetée",
+        "editApproveTitle": "Approuver avec modifications",
+        "rejectTitle": "Rejeter la proposition",
+        "comment": "Commentaire",
+        "rejectPlaceholder": "Motif du rejet (optionnel)..."
+      }
+    },
+    "branding": {
+      "logoUpdated": "Logo mis à jour",
+      "uploadError": "Erreur lors de l'upload",
+      "logoReset": "Logo par défaut restauré",
+      "downloadError": "Erreur lors du téléchargement",
+      "footerSaved": "Texte du bas de page enregistré",
+      "bannerSaved": "Bandeau d'annonce enregistré",
+      "colorInfo": "Bleu (info)",
+      "colorWarning": "Jaune (warning)",
+      "colorAlert": "Rouge (alerte)",
+      "colorOther": "Gris (autre)",
+      "appLogo": "Logo de l'application",
+      "noLogo": "Aucun logo configuré",
+      "importLogo": "Importer un logo",
+      "restoreDefaultLogo": "Restaurer le logo par défaut",
+      "downloadTemplate": "Télécharger le gabarit SVG",
+      "logoFormats": "Formats acceptés : SVG, PNG, JPG (max 500 Ko). Taille recommandée : 200x50 pixels.",
+      "footer": "Bas de page",
+      "customText": "Texte personnalisé",
+      "footerHint": "Ce texte apparaîtra dans le bas de page. Laissez vide pour afficher « Qualys2Human ».",
+      "preview": "Aperçu :",
+      "banner": "Bandeau d'annonce",
+      "bannerMessage": "Message",
+      "bannerPlaceholder": "Maintenance prévue ce soir à 22h...",
+      "bannerColor": "Couleur",
+      "bannerVisibility": "Visibilité",
+      "visAll": "Tout le monde",
+      "visAdmin": "Admins uniquement",
+      "visNone": "Désactivé"
+    },
+    "ldap": {
+      "saved": "Configuration LDAP enregistrée",
+      "saveError": "Erreur lors de la sauvegarde",
+      "title": "Connexion LDAP / Active Directory",
+      "enableAd": "Activer l'authentification AD",
+      "defaultAuthMode": "Mode d'authentification par défaut",
+      "defaultAuthHelp": "Mode pré-sélectionné sur la page de connexion",
+      "serverUrl": "URL du serveur LDAP",
+      "serverUrlPlaceholder": "ldap://dc.domain.com:389  ou  ldaps://dc.domain.com:636",
+      "starttls": "STARTTLS",
+      "starttlsHint": "Upgrade la connexion LDAP en TLS (port 389)",
+      "upnTemplate": "Template UPN (User Principal Name)",
+      "upnHint": "Utilisez <1>{username}</1> comme variable. Exemples : <3>{username}@corp.local</3>, <5>DOMAIN\\{username}</5>",
+      "searchBase": "Base de recherche (Search Base DN)",
+      "searchBasePlaceholder": "DC=domain,DC=com",
+      "groupAttribute": "Attribut des groupes",
+      "groupAttributePlaceholder": "memberOf",
+      "tlsVerify": "Vérification TLS",
+      "tlsVerifyHint": "Activer pour vérifier le certificat du serveur (désactiver pour les certificats auto-signés)",
+      "caCert": "Certificat CA (optionnel)",
+      "caCertPlaceholder": "C:\\certs\\ca.pem",
+      "testConnection": "Tester la connexion",
+      "testTitle": "Tester la connexion LDAP",
+      "testUsername": "Nom d'utilisateur",
+      "testUsernamePlaceholder": "jdupont",
+      "testPassword": "Mot de passe",
+      "testPasswordPlaceholder": "Mot de passe AD",
+      "testBtn": "Tester",
+      "groupMapping": "Mapping des groupes AD",
+      "groupMappingDesc": "Indiquez le DN complet du groupe AD pour chaque profil. Priorité : Administrateur > Utilisateur > Monitoring. Si un utilisateur appartient à plusieurs groupes, le profil le plus élevé sera attribué."
+    }
+  },
+  "modals": {
+    "createRule": "Créer une règle de catégorisation",
+    "createRuleBtn": "Créer la règle",
+    "pattern": "Pattern (mot-clé)",
+    "patternPlaceholder": "Ex: windows, tomcat, tcp/ip...",
+    "targetField": "Champ cible",
+    "fieldTitle": "Titre (title)",
+    "fieldCategory": "Catégorie (category)",
+    "selectCategory": "Sélectionner une catégorisation",
+    "priority": "Priorité (plus haut = prioritaire)",
+    "matchCount": "Cette règle matchera {{count}} QID",
+    "newCategory": "Nouvelle catégorisation",
+    "categoryName": "Nom",
+    "categoryNameRequired": "Nom requis",
+    "categoryNamePlaceholder": "Ex: OS, Middleware, Applicatif...",
+    "color": "Couleur",
+    "position": "Position (ordre d'affichage)",
+    "sessionExpiring": "Session sur le point d'expirer",
+    "sessionLogout": "Se déconnecter",
+    "sessionStay": "Rester connecté",
+    "sessionExpiresIn": "Votre session expire dans",
+    "sessionStayHint": "Cliquez sur \"Rester connecté\" pour prolonger votre session.",
+    "busyImport": "Import en cours",
+    "busyCategorization": "Catégorisation en cours"
+  },
+  "pdf": {
+    "success": "PDF généré avec succès",
+    "error": "Erreur lors de la génération du PDF",
+    "filtersApplied": "Filtres appliqués :",
+    "severities": "Sévérités: ",
+    "types": "Types: ",
+    "categorization": "Catégorisation: ",
+    "freshness": "Fraîcheur: "
+  },
+  "whatsNew": {
+    "titleSingle": "Nouveautés v{{version}}",
+    "titleMultiple": "Nouveautés — {{count}} mises à jour",
+    "features": "Nouveautés",
+    "fixes": "Corrections",
+    "improvements": "Améliorations"
+  },
+  "errors": {
+    "ACCOUNT_LOCKED": "Compte verrouillé. Veuillez réessayer plus tard.",
+    "INVALID_CREDENTIALS": "Identifiants invalides",
+    "LDAP_NOT_ENABLED": "L'authentification Active Directory n'est pas activée",
+    "NO_MATCHING_AD_GROUP": "Aucun groupe Active Directory ne correspond à un profil autorisé",
+    "PROFILE_NOT_FOUND": "Profil introuvable en base",
+    "LOCAL_ACCOUNT_CONFLICT": "Un compte local existe déjà avec ce nom. Contactez l'administrateur.",
+    "INVALID_TIMEOUT_VALUE": "Le timeout doit être d'au moins 5 minutes",
+    "INVALID_WARNING_VALUE": "L'avertissement doit être d'au moins 1 minute",
+    "WARNING_EXCEEDS_TIMEOUT": "L'avertissement doit être inférieur au timeout",
+    "INVALID_DATE_FORMAT": "Format de date invalide (ISO-8601 attendu)",
+    "WATCH_PATH_DUPLICATE": "Ce répertoire est déjà surveillé",
+    "LDAP_URL_NOT_CONFIGURED": "Aucune URL de serveur LDAP configurée",
+    "RECLASSIFY_IN_PROGRESS": "Reclassification déjà en cours",
+    "LDAP_BIND_FAILED": "Échec de la connexion LDAP",
+    "LDAP_CONNECTION_ERROR": "Erreur de connexion LDAP",
+    "IMPORT_STARTED": "Import lancé en arrière-plan",
+    "RECLASSIFY_STARTED": "Reclassification lancée",
+    "CPU_CRITICAL": "CPU critique : {{value}}",
+    "CPU_HIGH": "CPU élevé : {{value}}",
+    "MEMORY_CRITICAL": "Mémoire critique : {{value}}",
+    "MEMORY_HIGH": "Mémoire élevée : {{value}}",
+    "DISK_CRITICAL": "Disque critique : {{value}}",
+    "DISK_HIGH": "Disque élevé : {{value}}",
+    "DB_UNREACHABLE": "Base de données inaccessible",
+    "FAILED_IMPORTS": "{{value}} import(s) en erreur"
+  },
+  "profile": {
+    "title": "Mon Profil",
+    "language": "Langue de l'interface",
+    "languageSaved": "Langue enregistrée",
+    "french": "Français",
+    "english": "English",
+    "spanish": "Español",
+    "german": "Deutsch"
+  },
+  "proposals": {
+    "pageTitle": "Mes propositions",
+    "modalTitle": "Proposer une règle de catégorisation",
+    "submit": "Soumettre la proposition",
+    "created": "Proposition soumise avec succès",
+    "duplicate": "Une proposition identique est déjà en attente",
+    "error": "Erreur lors de la soumission",
+    "patternRequired": "Le pattern est obligatoire",
+    "targetCategory": "Catégorie cible",
+    "categoryRequired": "Veuillez sélectionner une catégorie",
+    "selectCategory": "Sélectionner une catégorie...",
+    "cancelConfirmTitle": "Annuler la proposition ?",
+    "cancelConfirmContent": "Cette proposition sera définitivement supprimée.",
+    "cancelled": "Proposition annulée",
+    "empty": "Aucune proposition pour le moment. Vous pouvez proposer des règles depuis la page des QIDs non catégorisés ou les fiches de vulnérabilités.",
+    "colPattern": "Pattern",
+    "colMatchField": "Champ",
+    "colCategory": "Catégorie",
+    "colDate": "Date",
+    "colStatus": "Statut",
+    "colComment": "Commentaire admin",
+    "status_pending": "En attente",
+    "status_approved": "Approuvée",
+    "status_rejected": "Rejetée",
+    "propose": "Proposer une catégorisation",
+    "proposeShort": "Proposer",
+    "approved": "Proposition approuvée",
+    "rejected": "Proposition rejetée",
+    "approve": "Approuver",
+    "editAndApprove": "Modifier et approuver",
+    "reject": "Rejeter",
+    "pendingProposals": "Propositions en attente",
+    "comment": "Commentaire",
+    "commentPlaceholder": "Ajouter un commentaire (optionnel)...",
+    "rejectReason": "Motif du rejet",
+    "rejectReasonPlaceholder": "Expliquez pourquoi cette proposition a été rejetée (optionnel)...",
+    "duplicateWarning": "Une proposition identique est déjà en attente",
+    "submitBtn": "Soumettre la proposition",
+    "deleted": "Proposition annulée",
+    "deleteConfirmTitle": "Annuler la proposition ?",
+    "deleteConfirmContent": "Cette proposition sera définitivement supprimée.",
+    "createdAt": "Date",
+    "status": "Statut",
+    "adminComment": "Commentaire admin",
+    "emptyState": "Aucune proposition pour le moment. Vous pouvez proposer des règles depuis la page des QIDs non catégorisés ou les fiches de vulnérabilités."
+  },
+  "menu": {
+    "myProposals": "Mes propositions",
+    "uncategorized": "QIDs non catégorisés"
+  },
+  "orphans": {
+    "proposeRule": "Proposer une règle"
+  },
+  "help": {
+    "drawerTitle": "Aide",
+    "selectSection": "Sélectionnez une section pour afficher l'aide.",
+    "overview": {
+      "title": "Tableau de bord",
+      "intro": "Le tableau de bord affiche un résumé de l'état de sécurité de votre parc.",
+      "sections": {
+        "kpi": {
+          "title": "Indicateurs clés (KPI)",
+          "items": [
+            "Vulnérabilités totales — Nombre total de vulnérabilités détectées.",
+            "Serveurs — Nombre d'hôtes uniques analysés.",
+            "Critiques — Vulnérabilités de sévérité 4 et 5.",
+            "Moyenne / serveur — Ratio vulnérabilités par hôte."
+          ]
+        },
+        "distributions": {
+          "title": "Répartitions (triple donut)",
+          "items": [
+            "Trois graphiques circulaires côte à côte.",
+            "Criticités — Répartition par niveau de sévérité. Cliquez pour naviguer vers la liste filtrée.",
+            "Classe d'OS — Windows, NIX (Linux/Unix), Autre. Cliquez pour naviguer vers la liste des hôtes filtrée.",
+            "Catégorisation — Répartition par couche de catégorisation. Cliquez pour naviguer vers la liste filtrée."
+          ]
+        },
+        "widgets": {
+          "title": "Widgets",
+          "items": [
+            "Vous pouvez réorganiser les widgets par glisser-déposer (drag & drop).",
+            "Cliquez sur « Disposition par défaut » pour réinitialiser.",
+            "Votre disposition est sauvegardée automatiquement."
+          ]
+        },
+        "export": {
+          "title": "Export PDF",
+          "items": [
+            "Le bouton PDF génère un rapport complet incluant les KPI, graphiques et tableaux avec le logo personnalisé.",
+            "L'export fonctionne 100% hors-ligne."
+          ]
+        }
+      }
+    },
+    "vuln-detail": {
+      "title": "Détail vulnérabilité",
+      "intro": "Cette page affiche les détails d'une vulnérabilité spécifique (QID). Un bandeau orange identifie cette vue comme la fiche QID globale.",
+      "sections": {
+        "technical": {
+          "title": "Fiche technique",
+          "items": [
+            "Carte structurée avec tous les champs : QID, type, catégorie, catégorisation, scores CVSS (base + temporal), références CVE, Bugtraq, hôtes affectés et occurrences totales.",
+            "Les champs spécifiques à un serveur (statut, port, détections…) sont marqués « N/A »."
+          ]
+        },
+        "categorization": {
+          "title": "Catégorisation",
+          "items": [
+            "Les administrateurs peuvent assigner une catégorisation directement depuis la fiche via un sélecteur inline.",
+            "La mise à jour est instantanée (optimiste) et s'applique à toutes les occurrences du QID."
+          ]
+        },
+        "descriptions": {
+          "title": "Menace / Impact / Solution",
+          "items": [
+            "Descriptions détaillées issues de Qualys, affichées dans des cartes côte à côte."
+          ]
+        },
+        "servers": {
+          "title": "Serveurs affectés",
+          "items": [
+            "Tableau listant tous les hôtes touchés avec graphique de statut de détection interactif.",
+            "Cliquez sur une tranche du camembert pour filtrer le tableau."
+          ]
+        },
+        "export": {
+          "title": "Exports",
+          "items": [
+            "CSV — Exporte le tableau des serveurs.",
+            "PDF — Rapport complet avec fiche, graphiques et tableau."
+          ]
+        }
+      }
+    },
+    "host-detail": {
+      "title": "Détail hôte",
+      "intro": "Cette page affiche les informations d'un hôte et la liste de ses vulnérabilités.",
+      "sections": {
+        "charts": {
+          "title": "Graphiques interactifs",
+          "items": [
+            "Sévérités — Répartition des vulnérabilités par niveau. Cliquez sur une tranche pour filtrer le tableau.",
+            "Méthodes de suivi — Répartition par méthode de détection. Cliquez pour filtrer le tableau.",
+            "Les deux filtres sont cumulables. Des tags apparaissent au-dessus du tableau pour indiquer les filtres actifs."
+          ]
+        },
+        "table": {
+          "title": "Tableau des vulnérabilités",
+          "items": [
+            "Affiche QID, titre, sévérité, catégorisation, port, statut et dernière détection.",
+            "Cliquez sur une ligne pour voir le détail complet (hôte + vulnérabilité)."
+          ]
+        },
+        "export": {
+          "title": "Exports",
+          "items": [
+            "CSV — Exporte le tableau des vulnérabilités.",
+            "PDF — Rapport complet avec fiche hôte, graphiques et tableau."
+          ]
+        }
+      }
+    },
+    "full-detail": {
+      "title": "Détail complet",
+      "intro": "Fiche QID pour un serveur spécifique. Un bandeau bleu identifie le serveur concerné (IP, DNS, OS). La disposition est identique à la fiche QID globale pour retrouver chaque information au même endroit.",
+      "sections": {
+        "technical": {
+          "title": "Fiche technique",
+          "items": [
+            "Même carte structurée que la fiche QID globale, avec en plus les champs spécifiques au serveur : statut, port, protocole, FQDN, SSL, méthode de suivi, dates de détection, ticket, PCI, et les résultats du scan."
+          ]
+        },
+        "servers": {
+          "title": "Serveurs affectés",
+          "items": [
+            "Le tableau des serveurs impactés par ce QID est affiché en bas de page, comme sur la fiche globale.",
+            "La ligne du serveur courant est surlignée en bleu clair pour un repérage immédiat."
+          ]
+        }
+      }
+    },
+    "trends": {
+      "title": "Tendances",
+      "intro": "Analysez l'évolution temporelle des métriques de sécurité.",
+      "sections": {
+        "widgets": {
+          "title": "Widgets disponibles",
+          "items": [
+            "Moyenne vulns/serveur — Graphique combo avec courbe moyenne et barres nombre de serveurs.",
+            "Nombre de serveurs — Évolution du nombre de serveurs scannés.",
+            "Vulnérabilités critiques — Courbe des vulnérabilités de sévérité 4 et 5.",
+            "Taux de remédiation — Pourcentage de vulnérabilités corrigées par période.",
+            "Temps moyen de remédiation — Nombre de jours moyen pour corriger une vulnérabilité.",
+            "Âge moyen vulns ouvertes — Nombre de jours moyen depuis la détection des vulnérabilités non corrigées.",
+            "Répartition par catégorie — Courbes multiples par catégorisation (layer)."
+          ]
+        },
+        "controls": {
+          "title": "Contrôles",
+          "items": [
+            "Période — 3 mois, 6 mois, 1 an ou personnalisé.",
+            "Granularité — Jour, semaine ou mois.",
+            "Affichage — Afficher/masquer chaque widget. Glisser-déposer pour réordonner."
+          ]
+        },
+        "export": {
+          "title": "Export",
+          "items": [
+            "Export PDF — Capture tous les graphiques visibles dans un rapport PDF."
+          ]
+        }
+      }
+    },
+    "admin-imports": {
+      "title": "Gestion des imports",
+      "intro": "Gérez les imports de rapports CSV Qualys.",
+      "sections": {
+        "methods": {
+          "title": "Méthodes d'import",
+          "items": [
+            "Import manuel — Cliquez sur « Importer un CSV » pour uploader un fichier. L'import s'exécute en arrière-plan : un bandeau de progression s'affiche en haut de page et les données se rafraîchissent automatiquement à la fin.",
+            "Import automatique — Configurez le file watcher pour surveiller des répertoires et importer automatiquement les nouveaux fichiers CSV.",
+            "Historique — Consultez le statut de chaque import (en cours, terminé, erreur). La liste se met à jour automatiquement pendant les imports."
+          ]
+        },
+        "watcher": {
+          "title": "Répertoires surveillés",
+          "items": [
+            "Ajoutez des répertoires à surveiller avec un pattern de fichier (ex: *.csv), mode récursif optionnel, et une date d'exclusion.",
+            "Le watcher scanne les répertoires périodiquement et importe les nouveaux fichiers détectés."
+          ]
+        }
+      }
+    },
+    "admin-users": {
+      "title": "Gestion des utilisateurs",
+      "intro": "Créez, modifiez et supprimez les comptes utilisateurs.",
+      "sections": {
+        "profiles": {
+          "title": "Profils et comptes",
+          "items": [
+            "Profils — admin (accès complet), user (dashboard + export), monitoring (page monitoring uniquement), ou profil personnalisé avec permissions granulaires.",
+            "Désactivation — Désactivez un compte sans le supprimer.",
+            "Mot de passe — Forcez le changement à la prochaine connexion."
+          ]
+        },
+        "session": {
+          "title": "Paramètres de session",
+          "items": [
+            "Configurez le timeout d'inactivité et l'avertissement avant expiration, en haut de la page.",
+            "Par défaut : 2 heures de timeout, avertissement 5 minutes avant.",
+            "Un popup s'affiche quand la session est sur le point d'expirer, avec un compte à rebours et la possibilité de rester connecté ou de se déconnecter.",
+            "La fermeture de toutes les fenêtres du navigateur invalide automatiquement la session."
+          ]
+        },
+        "lockout": {
+          "title": "Verrouillage de compte",
+          "items": [
+            "Après 5 tentatives échouées, le compte est automatiquement verrouillé pendant 15 minutes.",
+            "La colonne « Statut » du tableau affiche un badge rouge « Verrouillé » avec le nombre de tentatives échouées.",
+            "Un administrateur peut déverrouiller manuellement un compte via le bouton cadenas dans la colonne Actions."
+          ]
+        }
+      }
+    },
+    "admin-rules": {
+      "title": "Règles entreprise",
+      "intro": "Définissez les filtres par défaut appliqués à tous les utilisateurs lors de leur première connexion ou via le bouton « Règles entreprise » dans la barre de filtres.",
+      "sections": {
+        "filters": {
+          "title": "Filtres configurables",
+          "items": [
+            "Sévérités — Cochez les niveaux visibles par défaut (1 à 5).",
+            "Types — Filtrez par type de vulnérabilité (Vuln, Practice, Info). Si aucun type n'est sélectionné, tous sont affichés.",
+            "Catégorisation — Sélectionnez les couches de catégorisation à inclure par défaut.",
+            "Classe d'OS — Restreignez par défaut à Windows, Linux/Unix, ou les deux. Si aucun n'est coché, toutes les classes sont affichées.",
+            "Fraîcheur par défaut — Valeur initiale du filtre fraîcheur pour chaque utilisateur (Active, Peut-être obsolète, Tout)."
+          ]
+        },
+        "freshness": {
+          "title": "Seuils de fraîcheur",
+          "items": [
+            "Peut-être obsolète — Nombre de jours sans détection avant de marquer une vulnérabilité comme potentiellement obsolète.",
+            "Masquée — Nombre de jours sans détection avant de masquer une vulnérabilité par défaut."
+          ]
+        }
+      }
+    },
+    "admin-layers": {
+      "title": "Catégorisation",
+      "intro": "Organisez vos vulnérabilités en couches (layers) pour les classifier selon votre contexte métier.",
+      "sections": {
+        "layers": {
+          "title": "Couches",
+          "items": [
+            "Créez des couches avec un nom, une couleur et un ordre de priorité.",
+            "Les couches apparaissent dans les graphiques du tableau de bord et dans les tableaux de vulnérabilités."
+          ]
+        },
+        "rules": {
+          "title": "Règles de classification",
+          "items": [
+            "Chaque couche peut avoir des règles automatiques basées sur un champ (titre, catégorie, type…) et un motif de correspondance.",
+            "Les règles sont appliquées par ordre de priorité."
+          ]
+        },
+        "reclassify": {
+          "title": "Reclassification",
+          "items": [
+            "Après modification des règles, cliquez sur « Reclassifier » pour appliquer les nouvelles règles à toutes les vulnérabilités existantes.",
+            "La progression est affichée en temps réel.",
+            "La reclassification travaille par QID unique (1 QID = 1 catégorisation)."
+          ]
+        },
+        "orphans": {
+          "title": "Vulnérabilités orphelines",
+          "items": [
+            "Le bouton « Catégoriser les orphelines » affiche un badge avec le nombre de QID non catégorisés.",
+            "Pour chaque QID, cliquez sur « Créer une règle » pour ouvrir un formulaire pré-rempli avec le titre de la vulnérabilité.",
+            "Un compteur temps réel indique combien de QID orphelins seront matchés par le pattern saisi.",
+            "Vous pouvez créer une nouvelle catégorisation directement depuis le formulaire via « + Créer une catégorisation ».",
+            "Une fois la règle enregistrée, les QID matchés disparaissent de la liste.",
+            "Après avoir créé vos règles, le bouton « Lancer la reclassification » apparaît pour appliquer les nouvelles règles."
+          ]
+        }
+      }
+    },
+    "admin-branding": {
+      "title": "Branding",
+      "intro": "Personnalisez l'apparence de l'application.",
+      "sections": {
+        "logo": {
+          "title": "Logo",
+          "items": [
+            "Formats — SVG, PNG, JPG (max 500 Ko).",
+            "Taille recommandée — 200x50 pixels.",
+            "Téléchargez le template SVG pour créer votre logo.",
+            "Le logo apparaît dans les exports PDF et sur la page de connexion."
+          ]
+        },
+        "footer": {
+          "title": "Bas de page",
+          "items": [
+            "Personnalisez le texte affiché dans le pied de page de l'application.",
+            "Laissez vide pour afficher « Qualys2Human » par défaut."
+          ]
+        },
+        "banner": {
+          "title": "Bandeau d'annonce",
+          "items": [
+            "Configurez un bandeau affiché sous le menu de navigation pour informer les utilisateurs (maintenance, mise à jour…).",
+            "Message — Texte affiché (max 500 caractères).",
+            "Couleur — Bleu (info), jaune (warning), rouge (alerte) ou gris (autre).",
+            "Visibilité — Tout le monde, admins uniquement, ou désactivé.",
+            "Les utilisateurs peuvent fermer le bandeau ; il réapparaît à la prochaine connexion ou si le message change."
+          ]
+        }
+      }
+    },
+    "admin-ldap": {
+      "title": "LDAP / Active Directory",
+      "intro": "Cette page permet de configurer l'authentification Active Directory via LDAP.",
+      "sections": {
+        "connection": {
+          "title": "Connexion LDAP",
+          "items": [
+            "URL du serveur — Adresse du contrôleur de domaine (ldap:// ou ldaps://).",
+            "STARTTLS — Upgrade la connexion en TLS sur le port 389 (non nécessaire avec ldaps://).",
+            "Template UPN — Format du nom principal utilisateur. Utilisez {username} comme variable.",
+            "Base de recherche — DN de base pour rechercher les utilisateurs et groupes (ex: DC=domain,DC=com).",
+            "Attribut groupes — Attribut LDAP contenant les groupes (défaut : memberOf).",
+            "Vérification TLS — Désactivez pour les certificats auto-signés (environnements air-gapped)."
+          ]
+        },
+        "mapping": {
+          "title": "Mapping des groupes",
+          "items": [
+            "Associez un DN de groupe AD à chaque profil Qualys2Human.",
+            "Lorsqu'un utilisateur se connecte via AD, ses groupes sont comparés aux mappings configurés.",
+            "Le profil le plus élevé s'applique (Administrateur > Utilisateur > Monitoring).",
+            "Si aucun groupe ne correspond, la connexion est refusée.",
+            "Les comptes AD sont automatiquement créés en base à la première connexion."
+          ]
+        },
+        "test": {
+          "title": "Test de connexion",
+          "items": [
+            "Le bouton « Tester la connexion » effectue un bind direct avec les identifiants fournis.",
+            "Cela permet de vérifier que l'URL, le template UPN et les paramètres TLS sont corrects avant d'activer l'authentification AD pour tous les utilisateurs."
+          ]
+        }
+      }
+    },
+    "monitoring": {
+      "title": "Monitoring",
+      "intro": "Surveillez la santé de l'application et du serveur.",
+      "sections": {
+        "services": {
+          "title": "Services et ressources",
+          "items": [
+            "Services — État de PostgreSQL et de l'API.",
+            "Ressources — CPU, mémoire et disque avec seuils d'alerte.",
+            "Pool DB — Connexions actives et disponibles.",
+            "Alertes — Notifications automatiques si un seuil est dépassé (CPU/RAM/disque > 80% = avertissement, > 95% = critique)."
+          ]
+        },
+        "refresh": {
+          "title": "Rafraîchissement",
+          "items": [
+            "La page se rafraîchit automatiquement toutes les 30 secondes."
+          ]
+        },
+        "retention": {
+          "title": "Rétention des données",
+          "items": [
+            "Les rapports plus anciens que la durée de rétention (configurable dans Admin > Paramètres) sont automatiquement purgés au démarrage.",
+            "Si des rapports dépassent la rétention, un bandeau apparaît avec un bouton de purge manuelle (admin uniquement)."
+          ]
+        }
+      }
+    },
+    "investigation": {
+      "title": "Investigation — Recherche",
+      "intro": "La page Recherche permet de trouver rapidement une vulnérabilité ou un serveur.",
+      "sections": {
+        "vulnSearch": {
+          "title": "Recherche de vulnérabilités",
+          "items": [
+            "Saisissez un QID (numéro) pour une recherche exacte, ou un mot-clé pour chercher dans les titres.",
+            "Si un seul résultat correspond, la navigation vers la fiche détail est automatique."
+          ]
+        },
+        "hostSearch": {
+          "title": "Recherche de serveurs",
+          "items": [
+            "Saisissez une adresse IP, un nom DNS ou un nom NetBIOS (même partiel).",
+            "La recherche s'effectue sur les trois champs simultanément."
+          ]
+        },
+        "results": {
+          "title": "Résultats",
+          "items": [
+            "Les résultats s'affichent dans un tableau. Cliquez sur une ligne pour accéder à la fiche détaillée.",
+            "Maximum 200 résultats affichés."
+          ]
+        }
+      }
+    },
+    "filters": {
+      "title": "Filtres",
+      "intro": "La barre de filtres permet de restreindre les données affichées sur toutes les pages.",
+      "sections": {
+        "dimensions": {
+          "title": "Dimensions de filtrage",
+          "items": [
+            "Sévérité — Cochez les niveaux à afficher (1=Minimal à 5=Urgent).",
+            "Type — Filtrez par type (Vuln, Practice, Info).",
+            "Catégorisation — Filtrez par couche de catégorisation.",
+            "Classe OS — Filtrez par système d'exploitation (Windows, NIX).",
+            "Fraîcheur — Actives, peut-être obsolètes, ou tout.",
+            "Dates — Restreignez à une plage de dates d'import."
+          ]
+        },
+        "actions": {
+          "title": "Actions rapides",
+          "items": [
+            "Réinitialiser — Remet tous les filtres à zéro.",
+            "Règles entreprise — Réapplique les filtres définis par l'administrateur.",
+            "Presets — Sauvegardez et chargez des combinaisons de filtres."
+          ]
+        },
+        "persistence": {
+          "title": "Persistance",
+          "items": [
+            "Les filtres s'appliquent en temps réel et sont sauvegardés automatiquement par utilisateur."
+          ]
+        }
+      }
+    },
+    "proposals": {
+      "title": "Propositions de règles",
+      "intro": "Proposez des règles de catégorisation pour validation par un administrateur. Vos propositions aident à organiser les vulnérabilités non catégorisées.",
+      "sections": {
+        "overview": {
+          "title": "Fonctionnement",
+          "items": [
+            "Tout utilisateur peut proposer une règle depuis les QIDs non catégorisés ou les fiches de vulnérabilités",
+            "Les administrateurs examinent, modifient si nécessaire, puis approuvent ou rejettent",
+            "Les propositions approuvées deviennent des règles actives — l'admin lance la reclassification manuellement"
+          ]
+        },
+        "propose": {
+          "title": "Proposer une règle",
+          "items": [
+            "Cliquez sur 'Proposer' sur un QID non catégorisé",
+            "Choisissez un pattern (mot-clé), le champ cible (titre ou catégorie) et la catégorie",
+            "Le compteur de correspondances montre combien de QIDs seraient affectés"
+          ]
+        },
+        "review": {
+          "title": "Validation admin",
+          "items": [
+            "Les propositions en attente apparaissent en haut de la page QIDs non catégorisés et de la page Règles",
+            "L'admin peut approuver directement, modifier puis approuver, ou rejeter avec un commentaire",
+            "Une fois toutes les propositions traitées, l'admin lance manuellement la reclassification"
+          ]
+        },
+        "status": {
+          "title": "Suivi des propositions",
+          "items": [
+            "Consultez vos propositions depuis 'Mes propositions' dans le menu utilisateur",
+            "Statuts : En attente (en cours d'examen), Approuvée (règle créée), Rejetée (avec retour admin)",
+            "Vous pouvez annuler une proposition en attente avant qu'elle ne soit examinée"
+          ]
+        }
+      }
+    },
+    "orphans": {
+      "title": "QIDs non catégorisés",
+      "intro": "Cette page liste les vulnérabilités qui n'ont été classées dans aucune catégorisation. Utilisez les filtres pour affiner la liste, puis proposez ou créez des règles de classement.",
+      "sections": {
+        "filters": {
+          "title": "Filtres et recherche",
+          "items": [
+            "Les filtres de sévérité et de type sont initialisés depuis la configuration entreprise (comme la Vue d'ensemble)",
+            "Utilisez la barre de recherche pour filtrer par titre ou catégorie de vulnérabilité",
+            "Le compteur en haut affiche le nombre de QIDs filtrés par rapport au total"
+          ]
+        },
+        "propose": {
+          "title": "Proposer une règle (utilisateur)",
+          "items": [
+            "Cliquez sur 'Proposer' en face d'un QID pour soumettre une suggestion à l'administrateur",
+            "Choisissez le pattern, le champ cible et la catégorisation souhaitée",
+            "Le compteur de correspondances vous aide à évaluer l'impact de votre proposition"
+          ]
+        },
+        "admin": {
+          "title": "Gestion admin",
+          "items": [
+            "Les administrateurs voient un panneau de propositions en attente en haut de la page",
+            "Ils peuvent approuver, modifier puis approuver, ou rejeter chaque proposition",
+            "Le bouton 'Créer une règle' permet de créer directement une règle sans passer par une proposition"
+          ]
+        },
+        "reclassify": {
+          "title": "Reclassification",
+          "items": [
+            "Après avoir créé ou approuvé des règles, un bouton 'Lancer la reclassification' apparaît",
+            "La reclassification est différée : traitez toutes les propositions d'abord, puis lancez en une fois",
+            "La progression de la reclassification est visible depuis la page Catégorisation (admin)"
+          ]
+        }
+      }
+    },
+    "admin-upgrade": {
+      "title": "Gestion des mises à jour",
+      "intro": "Cette page permet de gérer les mises à jour de l'application : téléverser un paquet, planifier l'installation et consulter l'historique.",
+      "sections": {
+        "upload": {
+          "title": "Téléversement",
+          "items": [
+            "Sélectionnez le fichier .zip du paquet de mise à jour et son fichier de signature .sig",
+            "Le téléversement est découpé en morceaux de 2 Mo pour fiabiliser le transfert",
+            "Une barre de progression indique l'avancement du téléversement"
+          ]
+        },
+        "validation": {
+          "title": "Validation",
+          "items": [
+            "Après téléversement, le paquet est automatiquement validé : intégrité ZIP, signature Ed25519, version",
+            "La version cible doit être plus récente que la version actuelle",
+            "Un résumé affiche le résultat de chaque vérification avec des icônes vert/rouge"
+          ]
+        },
+        "schedule": {
+          "title": "Planification",
+          "items": [
+            "Choisissez une date et heure pour la mise à jour (minimum 15 minutes dans le futur)",
+            "Configurez les seuils de notification pour avertir les utilisateurs avant la maintenance",
+            "Le bouton 'Lancer maintenant' démarre la mise à jour dans 60 secondes après confirmation"
+          ]
+        },
+        "history": {
+          "title": "Historique",
+          "items": [
+            "Consultez les 50 dernières mises à jour avec leur statut, durée et éventuelles erreurs",
+            "Les statuts possibles sont : Terminée (vert), Échouée (rouge), Restaurée (orange), Annulée (gris)"
+          ]
+        }
+      }
+    }
+  },
+  "maintenance": {
+    "scheduled": "Maintenance planifiée le {{date}} à {{time}}",
+    "warning": "Maintenance prévue à {{time}} (dans {{countdown}}) — pensez à sauvegarder votre travail",
+    "imminent": "Maintenance imminente à {{time}} (dans {{countdown}})",
+    "lessThanMinute": "moins d'une minute",
+    "cancel": "Annuler",
+    "upgradeInProgress": "Mise à jour en cours...",
+    "upgradeFailed": "Échec de la mise à jour : {{error}}"
+  }
+}

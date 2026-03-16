@@ -1,0 +1,1269 @@
+{
+  "nav": {
+    "overview": "Übersicht",
+    "trends": "Trends",
+    "investigation": "Untersuchung",
+    "search": "Suche",
+    "reports": "Berichte",
+    "admin": "Admin",
+    "monitoring": "Monitoring",
+    "profile": "Mein Profil",
+    "logout": "Abmelden",
+    "myProposals": "Meine Vorschläge",
+    "uncategorized": "Nicht kategorisierte QIDs"
+  },
+  "common": {
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "create": "Erstellen",
+    "edit": "Bearbeiten",
+    "close": "Schließen",
+    "back": "Zurück",
+    "reset": "Zurücksetzen",
+    "confirm": "Bestätigen",
+    "ok": "Verstanden",
+    "yes": "Ja",
+    "no": "Nein",
+    "error": "Fehler",
+    "loading": "Wird geladen...",
+    "noData": "Keine Daten",
+    "actions": "Aktionen",
+    "name": "Name",
+    "status": "Status",
+    "type": "Typ",
+    "category": "Kategorie",
+    "title": "Titel",
+    "date": "Datum",
+    "search": "Suchen",
+    "export": "Exportieren",
+    "refresh": "Aktualisieren",
+    "settings": "Einstellungen",
+    "enabled": "Aktiviert",
+    "disabled": "Deaktiviert",
+    "required": "Erforderlich",
+    "optional": "Optional",
+    "none": "Keiner",
+    "all": "Alle",
+    "backToOverview": "Zurück zur Übersicht",
+    "uncategorized": "Nicht kategorisiert",
+    "notApplicable": "k. A.",
+    "irreversibleAction": "Diese Aktion ist unwiderruflich."
+  },
+  "severity": {
+    "1": "Minimal (1)",
+    "2": "Mittel (2)",
+    "3": "Schwerwiegend (3)",
+    "4": "Kritisch (4)",
+    "5": "Dringend (5)"
+  },
+  "freshness": {
+    "active": "Aktive",
+    "stale": "Möglicherweise veraltet",
+    "all": "Alle"
+  },
+  "login": {
+    "title": "Anmeldung",
+    "username": "Benutzername",
+    "usernameRequired": "Benutzername erforderlich",
+    "password": "Passwort",
+    "passwordRequired": "Passwort erforderlich",
+    "submit": "Anmelden",
+    "error": "Anmeldefehler",
+    "localMode": "Lokal",
+    "adMode": "Active Directory"
+  },
+  "overview": {
+    "title": "Übersicht",
+    "kpiTitle": "Schlüsselkennzahlen",
+    "totalVulns": "Schwachstellen gesamt",
+    "hosts": "Hosts",
+    "criticals": "Kritisch (4-5)",
+    "avgPerHost": "Durchschn. / Host",
+    "distributions": "Verteilungen",
+    "severities": "Schweregrade",
+    "osClass": "Betriebssystemklasse",
+    "osDistribution": "Betriebssystemverteilung",
+    "categorization": "Kategorisierung",
+    "topVulnsChart": "Top-Schwachstellen (Diagramm)",
+    "topVulnsTable": "Top-Schwachstellen (Tabelle)",
+    "topHosts": "Top-Server",
+    "occurrences": "Vorkommen"
+  },
+  "vulnList": {
+    "title": "Schwachstellen",
+    "allVulns": "Alle Schwachstellen",
+    "loadError": "Ladefehler",
+    "hosts": "Hosts"
+  },
+  "vulnDetail": {
+    "detectionStatus": "Erkennungsstatus",
+    "hostsAffected": "Betroffene Hosts",
+    "totalOccurrences": "Vorkommen gesamt",
+    "threat": "Bedrohung",
+    "impact": "Auswirkung",
+    "solution": "Lösung",
+    "scanResults": "Scan-Ergebnisse",
+    "affectedServers": "Betroffene Server",
+    "createRule": "Regel erstellen",
+    "vendorRef": "Herstellerreferenz",
+    "port": "Port",
+    "protocol": "Protokoll",
+    "firstDetected": "Erstmals erkannt",
+    "lastDetected": "Zuletzt erkannt",
+    "trackingMethod": "Tracking-Methode",
+    "timesDetected": "Anz. Erkennungen",
+    "lastFixed": "Letzte Behebung",
+    "unknown": "Unbekannt",
+    "filter": "Filter:",
+    "proposeCategory": "Kategorisierung vorschlagen"
+  },
+  "hostList": {
+    "title": "Server",
+    "allHosts": "Alle Server",
+    "ip": "IP",
+    "dns": "DNS",
+    "os": "BS",
+    "vulns": "Schwachstellen"
+  },
+  "hostDetail": {
+    "title": "Host",
+    "vulnsFilter": "Schwachstellen — Filter:",
+    "filteredView": "Gefilterte Ansicht",
+    "showAll": "Alle anzeigen",
+    "filters": "Filter:",
+    "sevLabel": "Schw.",
+    "typesLabel": "Typen:",
+    "detectedLessThan": "Erkannt vor weniger als {{days}} Tagen",
+    "detectedBetween": "Erkannt zwischen {{staleDays}} und {{hideDays}} Tagen",
+    "noActiveFilter": "Kein globaler Filter aktiv",
+    "severitiesChart": "Schweregrade",
+    "trackingMethods": "Tracking-Methoden",
+    "netbios": "NetBIOS",
+    "firstSeen": "Erster Scan",
+    "lastSeen": "Letzter Scan",
+    "totalScans": "Scans gesamt",
+    "osCpe": "OS CPE"
+  },
+  "fullDetail": {
+    "title": "Detail",
+    "ssl": "SSL",
+    "fqdn": "FQDN",
+    "ticket": "Ticket",
+    "pciVuln": "PCI",
+    "osUnknown": "BS unbekannt",
+    "proposeCategory": "Kategorisierung vorschlagen"
+  },
+  "trends": {
+    "title": "Trends",
+    "avgVulnsPerHost": "Durchschnittliche Schwachstellen pro Host",
+    "hostCount": "Anzahl Server",
+    "loadError": "Fehler beim Laden der Trends",
+    "noData": "Keine Daten für diesen Zeitraum",
+    "period3m": "3 Monate",
+    "period6m": "6 Monate",
+    "period1y": "1 Jahr",
+    "periodCustom": "Benutzerdefiniert",
+    "granularity": "Granularität:",
+    "day": "Tag",
+    "week": "Woche",
+    "month": "Monat",
+    "chartsVisible": "Sichtbare Diagramme",
+    "display": "Anzeige",
+    "resetLayout": "Layout zurücksetzen",
+    "defaultLayout": "Standardlayout",
+    "criticalCount": "Kritische Schwachstellen",
+    "remediationRate": "Behebungsrate (%)",
+    "avgRemediationDays": "Durchschnittliche Behebungszeit (Tage)",
+    "avgOpenAgeDays": "Durchschnittsalter offener Schwachstellen (Tage)",
+    "categoryBreakdown": "Verteilung nach Kategorie",
+    "days": "Tage",
+    "percent": "%",
+    "loadingMetrics": "Metriken werden geladen…",
+    "loadingComputing": "Trends werden berechnet…",
+    "loadingCharts": "Diagramme werden vorbereitet…",
+    "hiddenForUsers": "Ausgeblendet",
+    "showToUsers": "Fur Benutzer anzeigen",
+    "hideFromUsers": "Fur Benutzer ausblenden",
+    "userView": "Benutzeransicht",
+    "adminView": "Adminansicht"
+  },
+  "monitoring": {
+    "title": "Monitoring",
+    "loadError": "Ladefehler",
+    "uptime": "Betriebszeit:",
+    "alerts": "Warnungen",
+    "services": "Dienste",
+    "systemResources": "Systemressourcen",
+    "cpu": "CPU",
+    "memory": "Arbeitsspeicher",
+    "disk": "Festplatte",
+    "connectionPool": "Verbindungspool",
+    "poolSize": "Poolgröße",
+    "activeConnections": "Aktive Verbindungen",
+    "available": "Verfügbar",
+    "overflow": "Überlauf",
+    "infoUnavailable": "Information nicht verfügbar",
+    "activity": "Aktivität",
+    "importedReports": "Importierte Berichte",
+    "users": "Benutzer",
+    "lastImport": "Letzter Import",
+    "dbSize": "Datenbankgröße",
+    "lastImportStatus": "Status des letzten Imports",
+    "cpuCritical": "CPU kritisch: {{value}}%",
+    "cpuHigh": "CPU hoch: {{value}}%",
+    "memCritical": "Arbeitsspeicher kritisch: {{value}}%",
+    "memHigh": "Arbeitsspeicher hoch: {{value}}%",
+    "diskCritical": "Festplatte kritisch: {{value}}%",
+    "diskHigh": "Festplatte hoch: {{value}}%",
+    "dbUnreachable": "Datenbank nicht erreichbar",
+    "unitMb": "MB",
+    "unitGb": "GB",
+    "uptimeDays": "T",
+    "uptimeHours": "h",
+    "uptimeMinutes": "min",
+    "purgeButton": "Abgelaufene Daten bereinigen",
+    "purgeConfirmTitle": "Bereinigung bestätigen",
+    "purgeConfirmContent": "{{count}} Bericht(e) werden dauerhaft mit allen zugehörigen Schwachstellen gelöscht. Diese Aktion ist unwiderruflich.",
+    "purgeResult": "Bereinigung abgeschlossen: {{reports}} Bericht(e) und {{vulns}} Schwachstelle(n) gelöscht.",
+    "purgeNone": "Keine Daten zum Bereinigen.",
+    "purgeableWarning": "{{count}} Bericht(e) überschreiten die Aufbewahrungsdauer — Bereinigung empfohlen",
+    "purgeImportConflict": "Bereinigung während eines laufenden Imports nicht möglich."
+  },
+  "settings": {
+    "freshnessTitle": "Anzeigeeinstellungen",
+    "staleDays": "Schwellenwert « möglicherweise veraltet » (Tage)",
+    "staleDaysTooltip": "Schwachstellen, die seit dieser Anzahl von Tagen nicht gesehen wurden, werden als möglicherweise veraltet markiert.",
+    "hideDays": "Schwellenwert « ausgeblendet » (Tage)",
+    "hideDaysTooltip": "Schwachstellen, die seit dieser Anzahl von Tagen nicht gesehen wurden, werden standardmäßig ausgeblendet.",
+    "required": "Wert erforderlich",
+    "saveSuccess": "Einstellungen gespeichert",
+    "loadError": "Einstellungen konnten nicht geladen werden",
+    "retentionTitle": "Datenaufbewahrung",
+    "retentionMonths": "Aufbewahrungsdauer (Monate)",
+    "retentionMonthsTooltip": "Berichte, die älter als dieser Zeitraum sind, werden beim Anwendungsstart automatisch bereinigt.",
+    "retentionSaveSuccess": "Aufbewahrungsdauer aktualisiert",
+    "retentionUnit": "Monate"
+  },
+  "search": {
+    "vulnerability": "Schwachstelle",
+    "server": "Server",
+    "vulnPlaceholder": "QID oder Titel...",
+    "hostPlaceholder": "IP, DNS oder NetBIOS...",
+    "noResults": "Keine Ergebnisse",
+    "results": "Ergebnisse"
+  },
+  "filters": {
+    "severity": "Schweregrad",
+    "type": "Typ",
+    "allTypes": "Alle Typen",
+    "categorization": "Kategorisierung",
+    "allCategories": "Alle",
+    "osClass": "BS-Klasse",
+    "allOsClasses": "Alle",
+    "freshness": "Aktualität",
+    "dateFrom": "Startdatum",
+    "dateTo": "Enddatum",
+    "resetTooltip": "Zurücksetzen",
+    "enterpriseTooltip": "Unternehmensregeln anwenden",
+    "enterpriseApplied": "Unternehmensregeln angewendet",
+    "presetEnterprise": "[Unternehmen]",
+    "presetPersonal": "[Persönlich]",
+    "presetApplied": "Filter \"{{name}}\" angewendet",
+    "noPreset": "Kein Preset",
+    "presetsTooltip": "Filter-Presets",
+    "osWindows": "Windows",
+    "osNix": "Linux / Unix"
+  },
+  "admin": {
+    "imports": "Importe",
+    "users": "Benutzer",
+    "enterpriseRules": "Unternehmensregeln",
+    "categorization": "Kategorisierung",
+    "brandingTab": "Branding",
+    "ldapTab": "LDAP / AD",
+    "upgradeTab": "Aktualisierung",
+    "upgrade": {
+      "title": "Aktualisierungsverwaltung",
+      "currentState": "Aktueller Status",
+      "currentVersion": "Aktuelle Version",
+      "lastUpgrade": "Letzte Aktualisierung",
+      "statusUpToDate": "Aktuell",
+      "statusScheduled": "Aktualisierung geplant",
+      "statusRunning": "Aktualisierung läuft",
+      "scheduledFor": "Geplant für {{date}} um {{time}}",
+      "cancelSchedule": "Abbrechen",
+      "launchNowBtn": "Jetzt starten",
+      "uploadAndSchedule": "Hochladen und planen",
+      "selectPackage": "Paket auswählen (.zip)",
+      "selectSignature": "Signatur auswählen (.sig)",
+      "uploading": "Wird hochgeladen...",
+      "uploadProgress": "{{percent}}% ({{sent}} / {{total}} MB)",
+      "uploadComplete": "Upload abgeschlossen",
+      "uploadCancel": "Upload abbrechen",
+      "validating": "Wird validiert...",
+      "validate": "Paket validieren",
+      "validationResult": "Validierungsergebnis",
+      "signatureOk": "Gültige Signatur",
+      "signatureFail": "Ungültige Signatur",
+      "versionOk": "Neuere Version",
+      "versionFail": "Ungültige Version",
+      "zipOk": "Gültiges Archiv",
+      "zipFail": "Ungültiges Archiv",
+      "targetVersion": "Zielversion",
+      "scheduledAt": "Datum und Uhrzeit",
+      "scheduleMinTime": "Mindestens 15 Minuten in der Zukunft",
+      "notificationThresholds": "Benachrichtigungsschwellen",
+      "minutesBefore": "Minuten vorher",
+      "levelInfo": "Information",
+      "levelWarning": "Warnung",
+      "levelDanger": "Dringend",
+      "addThreshold": "Schwelle hinzufügen",
+      "removeThreshold": "Entfernen",
+      "schedule": "Planen",
+      "launchNow": "Jetzt starten",
+      "launchNowConfirm": "Die Aktualisierung wird in 60 Sekunden gestartet. Die Anwendung ist vorübergehend nicht verfügbar. Fortfahren?",
+      "launchNowTitle": "Sofortiger Start",
+      "history": "Aktualisierungsverlauf",
+      "historySourceVersion": "Quellversion",
+      "historyTargetVersion": "Zielversion",
+      "historyDate": "Datum",
+      "historyDuration": "Dauer",
+      "historyStatus": "Status",
+      "historyInitiatedBy": "Gestartet von",
+      "historyError": "Fehler",
+      "statusCompleted": "Abgeschlossen",
+      "statusFailed": "Fehlgeschlagen",
+      "statusRolledBack": "Zurückgesetzt",
+      "statusCancelled": "Abgebrochen",
+      "statusPending": "Ausstehend",
+      "noHistory": "Kein Aktualisierungsverlauf",
+      "settings": "Benachrichtigungseinstellungen",
+      "defaultThresholds": "Standardschwellen",
+      "settingsSaved": "Einstellungen gespeichert",
+      "scheduleCreated": "Aktualisierung erfolgreich geplant",
+      "scheduleCancelled": "Planung abgebrochen",
+      "newUpload": "Neues Paket",
+      "packageReady": "Paket bereit",
+      "errors": {
+        "INVALID_UPLOAD_ID": "Ungültige Upload-ID",
+        "UPGRADE_IN_PROGRESS": "Eine Aktualisierung läuft bereits",
+        "INSUFFICIENT_DISK_SPACE": "Nicht genügend Speicherplatz",
+        "UPLOAD_EXPIRED_OR_NOT_FOUND": "Upload abgelaufen oder nicht gefunden",
+        "INVALID_ZIP_FILE": "Ungültige ZIP-Datei",
+        "SIGNATURE_FILE_MISSING": "Signaturdatei fehlt",
+        "INVALID_SIGNATURE": "Ungültige Signatur",
+        "VERSION_FILE_MISSING": "VERSION-Datei fehlt",
+        "VERSION_NOT_NEWER": "Version ist nicht neuer als die aktuelle",
+        "NO_PACKAGE_UPLOADED": "Kein Paket hochgeladen",
+        "PACKAGE_NOT_VALIDATED": "Paket nicht validiert",
+        "UPGRADE_ALREADY_SCHEDULED": "Eine Aktualisierung ist bereits geplant",
+        "NO_PENDING_UPGRADE": "Keine ausstehende Aktualisierung",
+        "SCHEDULED_TIME_TOO_SOON": "Die geplante Zeit muss mindestens 15 Minuten in der Zukunft liegen"
+      }
+    },
+    "import": {
+      "dirUpdated": "Verzeichnis aktualisiert",
+      "dirAdded": "Verzeichnis hinzugefügt",
+      "updateError": "Fehler bei der Aktualisierung",
+      "dirDeleted": "Verzeichnis gelöscht",
+      "deleteError": "Fehler beim Löschen",
+      "loadError": "Fehler beim Laden der Importe",
+      "reportDeleted": "Bericht erfolgreich gelöscht",
+      "dbReset": "Datenbank erfolgreich zurückgesetzt",
+      "importStarted": "Import im Hintergrund gestartet",
+      "importError": "Importfehler",
+      "watchedDirs": "Überwachte Verzeichnisse",
+      "addDir": "Verzeichnis hinzufügen",
+      "importManagement": "Importverwaltung",
+      "importCsv": "CSV importieren",
+      "resetAll": "Gesamte Datenbank zurücksetzen",
+      "resetTitle": "Gesamte Datenbank zurücksetzen",
+      "resetWarning": "Achtung: Diese Aktion löscht ALLE importierten Berichte, Schwachstellen und Hosts. Diese Aktion ist unwiderruflich.",
+      "resetTypeConfirm": "Geben Sie <1>BESTÄTIGEN</1> ein, um zu validieren:",
+      "editDir": "Verzeichnis bearbeiten",
+      "addWatchedDir": "Überwachtes Verzeichnis hinzufügen",
+      "dirPath": "Verzeichnispfad",
+      "dirPathRequired": "Pfad erforderlich",
+      "dirPathPlaceholder": "C:\\Qualys\\Reports oder \\\\server\\freigabe\\qualys",
+      "filePattern": "Dateimuster",
+      "recursiveScan": "Rekursiver Scan",
+      "ignoreFilesBefore": "Dateien vor diesem Datum ignorieren",
+      "active": "Aktiv",
+      "path": "Pfad",
+      "recursive": "Rekursiv",
+      "ignoreBefore": "Ignorieren vor",
+      "deleteWatchedDir": "Dieses überwachte Verzeichnis löschen?",
+      "file": "Datei",
+      "source": "Quelle",
+      "sourceAuto": "Auto",
+      "sourceManual": "Manuell",
+      "reportDate": "Berichtsdatum",
+      "progress": "Fortschritt",
+      "lines": "Zeilen",
+      "report": "Bericht",
+      "importDate": "Importdatum",
+      "deleteReport": "Diesen Bericht und alle zugehörigen Schwachstellen löschen?",
+      "noWatchedDir": "Kein überwachtes Verzeichnis",
+      "importInProgress": "Import läuft:",
+      "scanInProgress": "Scan läuft...",
+      "activeDirs": "{{count}} aktive(s) Verzeichnis(se) — {{imports}} Import(e)",
+      "noWatchedDirStatus": "Kein überwachtes Verzeichnis",
+      "lastError": "Letzter Fehler:"
+    },
+    "user": {
+      "loadError": "Fehler beim Laden der Benutzer",
+      "updated": "Benutzer aktualisiert",
+      "created": "Benutzer erstellt",
+      "deleteConfirm": "{{username}} löschen?",
+      "deleted": "Benutzer gelöscht",
+      "sessionSaved": "Sitzungseinstellungen gespeichert",
+      "validationError": "Validierungsfehler",
+      "profileAdmin": "Administrator",
+      "profileUser": "Benutzer",
+      "profileMonitoring": "Monitoring",
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "sessionSettings": "Sitzungseinstellungen",
+      "timeoutLabel": "Inaktivitäts-Zeitlimit (Minuten)",
+      "warningLabel": "Warnung vor Ablauf (Minuten)",
+      "management": "Benutzerverwaltung",
+      "newUser": "Neuer Benutzer",
+      "editUser": "{{username}} bearbeiten",
+      "username": "Benutzername",
+      "usernameRequired": "Benutzername erforderlich",
+      "password": "Passwort",
+      "passwordRequired": "Passwort erforderlich",
+      "newPassword": "Neues Passwort (leer lassen, um nicht zu ändern)",
+      "profile": "Profil",
+      "profileRequired": "Profil erforderlich",
+      "activeLabel": "Aktiv",
+      "forceChangePassword": "Passwortänderung erzwingen",
+      "displayName": "Name",
+      "authType": "Typ",
+      "lockStatus": "Status",
+      "locked": "Gesperrt",
+      "failedAttempts": "{{count}} Fehlversuch(e)",
+      "lastLogin": "Letzte Anmeldung",
+      "unlock": "Entsperren",
+      "unlocked": "{{username}} entsperrt"
+    },
+    "rules": {
+      "saved": "Regeln gespeichert",
+      "loadError": "Fehler beim Laden der Daten",
+      "description": "Diese Regeln definieren die Standardfilter, die auf alle Benutzer angewendet werden.",
+      "severitySection": "Sichtbare Schweregrade",
+      "typeSection": "Schwachstellentypen",
+      "noTypeFilter": "Kein Typfilter — alle Typen werden angezeigt.",
+      "categorizationSection": "Sichtbare Kategorisierungen",
+      "noCategorizationFilter": "Kein Kategorisierungsfilter — alle Kategorisierungen werden angezeigt.",
+      "osClassSection": "Betriebssystemklasse",
+      "noOsClassFilter": "Kein BS-Klassenfilter — alle Klassen werden angezeigt.",
+      "freshnessSection": "Standard-Aktualität",
+      "freshnessDefault": "Standard-Aktualitätsfilterwert, der bei der ersten Anmeldung jedes Benutzers angewendet wird.",
+      "freshnessThresholds": "Aktualitätsschwellen",
+      "staleThreshold": "Schwelle \"möglicherweise veraltet\" (Tage)",
+      "staleThresholdTooltip": "Schwachstellen, die seit dieser Anzahl von Tagen nicht gesehen wurden, werden als potenziell veraltet markiert.",
+      "hideThreshold": "Schwelle \"verborgen\" (Tage)",
+      "hideThresholdTooltip": "Schwachstellen, die seit dieser Anzahl von Tagen nicht gesehen wurden, werden standardmäßig ausgeblendet.",
+      "typeVuln": "Schwachstelle",
+      "typePractice": "Praxis",
+      "typeInfo": "Information",
+      "freshnessActive": "Aktiv",
+      "freshnessStale": "Möglicherweise veraltet",
+      "freshnessAll": "Alle"
+    },
+    "layer": {
+      "modified": "Kategorisierung geändert",
+      "created": "Kategorisierung erstellt",
+      "deleted": "Kategorisierung gelöscht",
+      "ruleModified": "Regel geändert",
+      "ruleCreated": "Regel erstellt",
+      "ruleDeleted": "Regel gelöscht",
+      "loadError": "Fehler beim Laden der Daten",
+      "createCategory": "+ Kategorisierung erstellen",
+      "reclassStarted": "Neuklassifizierung gestartet",
+      "reclassInProgress": "Kategorisierung läuft",
+      "relaunchCategorization": "Kategorisierung neu starten",
+      "categorizeOrphans": "Verwaiste kategorisieren",
+      "upToDate": "Aktuell",
+      "categorizationStale": "Kategorisierung veraltet — Kategorisierung neu starten",
+      "starting": "Wird gestartet...",
+      "reclassError": "Fehler: {{error}}",
+      "reclassComplete": "Neuklassifizierung abgeschlossen: {{count}} Schwachstellen klassifiziert",
+      "reclassProgress": "{{applied}}/{{total}} Regeln — {{classified}} Schwachstellen klassifiziert",
+      "categorizations": "Kategorisierungen",
+      "addCategorization": "Kategorisierung hinzufügen",
+      "categorizationDesc": "Kategorisierungen ermöglichen die Gruppierung von Schwachstellen nach Infrastrukturschicht (BS, Middleware, Anwendung, Netzwerk...).",
+      "classificationRules": "Klassifizierungsregeln",
+      "addRule": "Regel hinzufügen",
+      "ruleDesc": "Jede Regel verknüpft ein Muster (Schlüsselwort) mit einer Kategorisierung. Beim Import oder bei der Neuklassifizierung werden die Regeln nach absteigender Priorität ausgewertet (erster Treffer gewinnt).",
+      "editCategorization": "Kategorisierung bearbeiten",
+      "newCategorization": "Neue Kategorisierung",
+      "editRule": "Regel bearbeiten",
+      "newRule": "Neue Regel",
+      "deleteCategorization": "Diese Kategorisierung löschen?",
+      "deleteRule": "Diese Regel löschen?",
+      "nameRequired": "Name erforderlich",
+      "namePlaceholder": "Z. B.: BS, Middleware, Anwendung...",
+      "categorizationRequired": "Kategorisierung erforderlich",
+      "patternRequired": "Muster erforderlich",
+      "uncategorizedVulns": "Nicht kategorisierte Schwachstellen",
+      "launchReclassification": "Neuklassifizierung starten ({{count}} Regel(n) erstellt)",
+      "proposals": {
+        "title": "Ausstehende Vorschläge",
+        "colUser": "Eingereicht von",
+        "approve": "Genehmigen",
+        "editApprove": "Bearbeiten & genehmigen",
+        "reject": "Ablehnen",
+        "approved": "Vorschlag genehmigt",
+        "rejected": "Vorschlag abgelehnt",
+        "editApproveTitle": "Mit Änderungen genehmigen",
+        "rejectTitle": "Vorschlag ablehnen",
+        "comment": "Kommentar",
+        "rejectPlaceholder": "Ablehnungsgrund (optional)..."
+      }
+    },
+    "branding": {
+      "logoUpdated": "Logo aktualisiert",
+      "uploadError": "Fehler beim Hochladen",
+      "logoReset": "Standard-Logo wiederhergestellt",
+      "downloadError": "Fehler beim Herunterladen",
+      "footerSaved": "Fußzeilentext gespeichert",
+      "bannerSaved": "Ankündigungsbanner gespeichert",
+      "colorInfo": "Blau (Information)",
+      "colorWarning": "Gelb (Warnung)",
+      "colorAlert": "Rot (Alarm)",
+      "colorOther": "Grau (Sonstiges)",
+      "appLogo": "Anwendungslogo",
+      "noLogo": "Kein Logo konfiguriert",
+      "importLogo": "Logo importieren",
+      "restoreDefaultLogo": "Standard-Logo wiederherstellen",
+      "downloadTemplate": "SVG-Vorlage herunterladen",
+      "logoFormats": "Akzeptierte Formate: SVG, PNG, JPG (max. 500 KB). Empfohlene Größe: 200x50 Pixel.",
+      "footer": "Fußzeile",
+      "customText": "Benutzerdefinierter Text",
+      "footerHint": "Dieser Text erscheint in der Fußzeile. Lassen Sie das Feld leer, um « Qualys2Human » anzuzeigen.",
+      "preview": "Vorschau:",
+      "banner": "Ankündigungsbanner",
+      "bannerMessage": "Nachricht",
+      "bannerPlaceholder": "Geplante Wartung heute Abend um 22 Uhr...",
+      "bannerColor": "Farbe",
+      "bannerVisibility": "Sichtbarkeit",
+      "visAll": "Alle",
+      "visAdmin": "Nur Administratoren",
+      "visNone": "Deaktiviert"
+    },
+    "ldap": {
+      "saved": "LDAP-Konfiguration gespeichert",
+      "saveError": "Fehler beim Speichern der Konfiguration",
+      "title": "LDAP / Active Directory-Verbindung",
+      "enableAd": "AD-Authentifizierung aktivieren",
+      "defaultAuthMode": "Standard-Authentifizierungsmodus",
+      "defaultAuthHelp": "Vorausgewählter Modus auf der Anmeldeseite",
+      "serverUrl": "LDAP-Server-URL",
+      "serverUrlPlaceholder": "ldap://dc.domain.com:389  oder  ldaps://dc.domain.com:636",
+      "starttls": "STARTTLS",
+      "starttlsHint": "LDAP-Verbindung auf TLS aktualisieren (Port 389)",
+      "upnTemplate": "UPN-Vorlage (User Principal Name)",
+      "upnHint": "Verwenden Sie <1>{username}</1> als Variable. Beispiele: <3>{username}@corp.local</3>, <5>DOMAIN\\{username}</5>",
+      "searchBase": "Suchbasis (Search Base DN)",
+      "searchBasePlaceholder": "DC=domain,DC=com",
+      "groupAttribute": "Gruppenattribut",
+      "groupAttributePlaceholder": "memberOf",
+      "tlsVerify": "TLS-Überprüfung",
+      "tlsVerifyHint": "Aktivieren, um das Serverzertifikat zu überprüfen (deaktivieren für selbstsignierte Zertifikate)",
+      "caCert": "CA-Zertifikat (optional)",
+      "caCertPlaceholder": "C:\\certs\\ca.pem",
+      "testConnection": "Verbindung testen",
+      "testTitle": "LDAP-Verbindung testen",
+      "testUsername": "Benutzername",
+      "testUsernamePlaceholder": "jschmidt",
+      "testPassword": "Passwort",
+      "testPasswordPlaceholder": "AD-Passwort",
+      "testBtn": "Testen",
+      "groupMapping": "AD-Gruppenzuordnung",
+      "groupMappingDesc": "Geben Sie den vollständigen DN der AD-Gruppe für jedes Profil ein. Priorität: Administrator > Benutzer > Monitoring. Wenn ein Benutzer mehreren Gruppen angehört, wird das höchste Profil zugewiesen."
+    }
+  },
+  "modals": {
+    "createRule": "Kategorisierungsregel erstellen",
+    "createRuleBtn": "Regel erstellen",
+    "pattern": "Muster (Schlüsselwort)",
+    "patternPlaceholder": "Z. B.: windows, tomcat, tcp/ip...",
+    "targetField": "Zielfeld",
+    "fieldTitle": "Titel (title)",
+    "fieldCategory": "Kategorie (category)",
+    "selectCategory": "Kategorisierung auswählen",
+    "priority": "Priorität (höher = vorrangiger)",
+    "matchCount": "Diese Regel trifft auf {{count}} QIDs zu",
+    "newCategory": "Neue Kategorisierung",
+    "categoryName": "Name",
+    "categoryNameRequired": "Name erforderlich",
+    "categoryNamePlaceholder": "Z. B.: BS, Middleware, Anwendung...",
+    "color": "Farbe",
+    "position": "Position (Anzeigereihenfolge)",
+    "sessionExpiring": "Sitzung läuft bald ab",
+    "sessionLogout": "Abmelden",
+    "sessionStay": "Angemeldet bleiben",
+    "sessionExpiresIn": "Ihre Sitzung läuft ab in",
+    "sessionStayHint": "Klicken Sie auf \"Angemeldet bleiben\", um Ihre Sitzung zu verlängern.",
+    "busyImport": "Import läuft",
+    "busyCategorization": "Kategorisierung läuft"
+  },
+  "pdf": {
+    "success": "PDF erfolgreich erstellt",
+    "error": "Fehler bei der PDF-Erstellung",
+    "filtersApplied": "Angewendete Filter:",
+    "severities": "Schweregrade: ",
+    "types": "Typen: ",
+    "categorization": "Kategorisierung: ",
+    "freshness": "Aktualität: "
+  },
+  "whatsNew": {
+    "titleSingle": "Neuigkeiten in v{{version}}",
+    "titleMultiple": "Neuigkeiten — {{count}} Updates",
+    "features": "Neuigkeiten",
+    "fixes": "Fehlerbehebungen",
+    "improvements": "Verbesserungen"
+  },
+  "errors": {
+    "ACCOUNT_LOCKED": "Konto gesperrt. Bitte versuchen Sie es später erneut.",
+    "INVALID_CREDENTIALS": "Ungültige Anmeldedaten",
+    "LDAP_NOT_ENABLED": "Active Directory-Authentifizierung ist nicht aktiviert",
+    "NO_MATCHING_AD_GROUP": "Keine Active Directory-Gruppe entspricht einem autorisierten Profil",
+    "PROFILE_NOT_FOUND": "Profil in der Datenbank nicht gefunden",
+    "LOCAL_ACCOUNT_CONFLICT": "Ein lokales Konto mit diesem Namen existiert bereits. Kontaktieren Sie den Administrator.",
+    "INVALID_TIMEOUT_VALUE": "Das Zeitlimit muss mindestens 5 Minuten betragen",
+    "INVALID_WARNING_VALUE": "Die Warnung muss mindestens 1 Minute betragen",
+    "WARNING_EXCEEDS_TIMEOUT": "Die Warnung muss kürzer als das Zeitlimit sein",
+    "INVALID_DATE_FORMAT": "Ungültiges Datumsformat (ISO-8601 erwartet)",
+    "WATCH_PATH_DUPLICATE": "Dieses Verzeichnis wird bereits überwacht",
+    "LDAP_URL_NOT_CONFIGURED": "Keine LDAP-Server-URL konfiguriert",
+    "RECLASSIFY_IN_PROGRESS": "Neuklassifizierung läuft bereits",
+    "LDAP_BIND_FAILED": "LDAP-Bindung fehlgeschlagen",
+    "LDAP_CONNECTION_ERROR": "LDAP-Verbindungsfehler",
+    "IMPORT_STARTED": "Import im Hintergrund gestartet",
+    "RECLASSIFY_STARTED": "Reklassifizierung gestartet",
+    "CPU_CRITICAL": "CPU kritisch: {{value}}",
+    "CPU_HIGH": "CPU hoch: {{value}}",
+    "MEMORY_CRITICAL": "Speicher kritisch: {{value}}",
+    "MEMORY_HIGH": "Speicher hoch: {{value}}",
+    "DISK_CRITICAL": "Festplatte kritisch: {{value}}",
+    "DISK_HIGH": "Festplatte hoch: {{value}}",
+    "DB_UNREACHABLE": "Datenbank nicht erreichbar",
+    "FAILED_IMPORTS": "{{value}} fehlgeschlagene(r) Import(e)"
+  },
+  "profile": {
+    "title": "Mein Profil",
+    "language": "Sprache der Benutzeroberfläche",
+    "languageSaved": "Sprache gespeichert",
+    "french": "Français",
+    "english": "English",
+    "spanish": "Español",
+    "german": "Deutsch"
+  },
+  "proposals": {
+    "pageTitle": "Meine Vorschläge",
+    "modalTitle": "Kategorisierungsregel vorschlagen",
+    "submit": "Vorschlag einreichen",
+    "created": "Vorschlag erfolgreich eingereicht",
+    "duplicate": "Ein identischer Vorschlag ist bereits ausstehend",
+    "error": "Fehler beim Einreichen des Vorschlags",
+    "patternRequired": "Muster ist erforderlich",
+    "targetCategory": "Zielkategorie",
+    "categoryRequired": "Bitte wählen Sie eine Kategorie",
+    "selectCategory": "Kategorie auswählen...",
+    "cancelConfirmTitle": "Vorschlag abbrechen?",
+    "cancelConfirmContent": "Dieser Vorschlag wird dauerhaft gelöscht.",
+    "cancelled": "Vorschlag abgebrochen",
+    "empty": "Noch keine Vorschläge. Sie können Regeln auf der Seite der nicht kategorisierten QIDs oder den Schwachstellen-Detailseiten vorschlagen.",
+    "colPattern": "Muster",
+    "colMatchField": "Feld",
+    "colCategory": "Kategorie",
+    "colDate": "Datum",
+    "colStatus": "Status",
+    "colComment": "Admin-Kommentar",
+    "status_pending": "Ausstehend",
+    "status_approved": "Genehmigt",
+    "status_rejected": "Abgelehnt",
+    "propose": "Kategorisierung vorschlagen",
+    "proposeShort": "Vorschlagen",
+    "approved": "Vorschlag genehmigt",
+    "rejected": "Vorschlag abgelehnt",
+    "approve": "Genehmigen",
+    "editAndApprove": "Bearbeiten & genehmigen",
+    "reject": "Ablehnen",
+    "pendingProposals": "Ausstehende Vorschläge",
+    "comment": "Kommentar",
+    "commentPlaceholder": "Kommentar hinzufügen (optional)...",
+    "rejectReason": "Ablehnungsgrund",
+    "rejectReasonPlaceholder": "Erklären Sie, warum dieser Vorschlag abgelehnt wurde (optional)...",
+    "duplicateWarning": "Ein identischer Vorschlag ist bereits ausstehend",
+    "submitBtn": "Vorschlag einreichen",
+    "deleted": "Vorschlag abgebrochen",
+    "deleteConfirmTitle": "Vorschlag abbrechen?",
+    "deleteConfirmContent": "Dieser Vorschlag wird dauerhaft gelöscht.",
+    "createdAt": "Datum",
+    "status": "Status",
+    "adminComment": "Admin-Kommentar",
+    "emptyState": "Noch keine Vorschläge. Sie können Regeln auf der Seite der nicht kategorisierten QIDs oder den Schwachstellen-Detailseiten vorschlagen."
+  },
+  "menu": {
+    "myProposals": "Meine Vorschläge",
+    "uncategorized": "Nicht kategorisierte QIDs"
+  },
+  "orphans": {
+    "proposeRule": "Regel vorschlagen"
+  },
+  "help": {
+    "drawerTitle": "Hilfe",
+    "selectSection": "Wählen Sie einen Bereich aus, um die Hilfe anzuzeigen.",
+    "overview": {
+      "title": "Dashboard",
+      "intro": "Das Dashboard zeigt eine Zusammenfassung des Sicherheitsstatus Ihrer Infrastruktur.",
+      "sections": {
+        "kpi": {
+          "title": "Schlüsselkennzahlen (KPI)",
+          "items": [
+            "Schwachstellen gesamt — Gesamtzahl der erkannten Schwachstellen.",
+            "Server — Anzahl der eindeutig analysierten Hosts.",
+            "Kritisch — Schwachstellen mit Schweregrad 4 und 5.",
+            "Durchschnitt / Host — Verhältnis Schwachstellen pro Host."
+          ]
+        },
+        "distributions": {
+          "title": "Verteilungen (Dreifach-Donut)",
+          "items": [
+            "Drei nebeneinander angeordnete Kreisdiagramme.",
+            "Schweregrade — Verteilung nach Schweregrad. Klicken Sie, um zur gefilterten Liste zu navigieren.",
+            "Betriebssystemklasse — Windows, NIX (Linux/Unix), Sonstige. Klicken Sie, um zur gefilterten Host-Liste zu navigieren.",
+            "Kategorisierung — Verteilung nach Kategorisierungsschicht. Klicken Sie, um zur gefilterten Liste zu navigieren."
+          ]
+        },
+        "widgets": {
+          "title": "Widgets",
+          "items": [
+            "Sie können Widgets per Drag & Drop neu anordnen.",
+            "Klicken Sie auf « Standardlayout », um zurückzusetzen.",
+            "Ihr Layout wird automatisch gespeichert."
+          ]
+        },
+        "export": {
+          "title": "PDF-Export",
+          "items": [
+            "Die PDF-Schaltfläche erstellt einen vollständigen Bericht mit KPIs, Diagrammen und Tabellen sowie dem benutzerdefinierten Logo.",
+            "Der Export funktioniert 100% offline."
+          ]
+        }
+      }
+    },
+    "vuln-detail": {
+      "title": "Schwachstellendetail",
+      "intro": "Diese Seite zeigt die Details einer bestimmten Schwachstelle (QID). Ein orangefarbenes Banner kennzeichnet diese Ansicht als die globale QID-Karte.",
+      "sections": {
+        "technical": {
+          "title": "Technische Karte",
+          "items": [
+            "Strukturierte Karte mit allen Feldern: QID, Typ, Kategorie, Kategorisierung, CVSS-Bewertungen (Basis + Temporal), CVE-Referenzen, Bugtraq, betroffene Hosts und Gesamtvorkommen.",
+            "Serverspezifische Felder (Status, Port, Erkennungen…) sind mit « k. A. » gekennzeichnet."
+          ]
+        },
+        "categorization": {
+          "title": "Kategorisierung",
+          "items": [
+            "Administratoren können eine Kategorisierung direkt über einen Inline-Selektor auf der Karte zuweisen.",
+            "Die Aktualisierung erfolgt sofort (optimistisch) und gilt für alle Vorkommen der QID."
+          ]
+        },
+        "descriptions": {
+          "title": "Bedrohung / Auswirkung / Lösung",
+          "items": [
+            "Detaillierte Beschreibungen von Qualys, nebeneinander in Karten dargestellt."
+          ]
+        },
+        "servers": {
+          "title": "Betroffene Server",
+          "items": [
+            "Tabelle mit allen betroffenen Hosts und interaktivem Erkennungsstatus-Diagramm.",
+            "Klicken Sie auf ein Kreissegment, um die Tabelle zu filtern."
+          ]
+        },
+        "export": {
+          "title": "Exporte",
+          "items": [
+            "CSV — Exportiert die Servertabelle.",
+            "PDF — Vollständiger Bericht mit Karte, Diagrammen und Tabelle."
+          ]
+        }
+      }
+    },
+    "host-detail": {
+      "title": "Hostdetail",
+      "intro": "Diese Seite zeigt die Host-Informationen und seine Schwachstellenliste.",
+      "sections": {
+        "charts": {
+          "title": "Interaktive Diagramme",
+          "items": [
+            "Schweregrade — Schwachstellenverteilung nach Stufe. Klicken Sie auf ein Segment, um die Tabelle zu filtern.",
+            "Tracking-Methoden — Verteilung nach Erkennungsmethode. Klicken Sie, um die Tabelle zu filtern.",
+            "Beide Filter sind kumulierbar. Tags erscheinen über der Tabelle, um aktive Filter anzuzeigen."
+          ]
+        },
+        "table": {
+          "title": "Schwachstellentabelle",
+          "items": [
+            "Zeigt QID, Titel, Schweregrad, Kategorisierung, Port, Status und letzte Erkennung.",
+            "Klicken Sie auf eine Zeile, um das vollständige Detail (Host + Schwachstelle) anzuzeigen."
+          ]
+        },
+        "export": {
+          "title": "Exporte",
+          "items": [
+            "CSV — Exportiert die Schwachstellentabelle.",
+            "PDF — Vollständiger Bericht mit Host-Karte, Diagrammen und Tabelle."
+          ]
+        }
+      }
+    },
+    "full-detail": {
+      "title": "Vollständiges Detail",
+      "intro": "QID-Karte für einen bestimmten Server. Ein blaues Banner kennzeichnet den Server (IP, DNS, BS). Das Layout ist identisch mit der globalen QID-Karte, damit Sie jede Information am gleichen Ort finden.",
+      "sections": {
+        "technical": {
+          "title": "Technische Karte",
+          "items": [
+            "Gleiche strukturierte Karte wie die globale QID-Karte, mit zusätzlichen serverspezifischen Feldern: Status, Port, Protokoll, FQDN, SSL, Tracking-Methode, Erkennungsdaten, Ticket, PCI und Scan-Ergebnisse."
+          ]
+        },
+        "servers": {
+          "title": "Betroffene Server",
+          "items": [
+            "Die Tabelle der von dieser QID betroffenen Server wird am Seitenende angezeigt, wie auf der globalen Karte.",
+            "Die Zeile des aktuellen Servers ist in Hellblau hervorgehoben zur sofortigen Identifikation."
+          ]
+        }
+      }
+    },
+    "trends": {
+      "title": "Trends",
+      "intro": "Analysieren Sie die zeitliche Entwicklung der Sicherheitskennzahlen.",
+      "sections": {
+        "widgets": {
+          "title": "Verfügbare Widgets",
+          "items": [
+            "Durchschn. Schwachst./Host — Kombi-Diagramm mit Durchschnittslinie und Server-Balken.",
+            "Anzahl Server — Entwicklung der gescannten Server.",
+            "Kritische Schwachstellen — Trendlinie für Schweregrad 4 und 5.",
+            "Behebungsrate — Prozentsatz behobener Schwachstellen pro Zeitraum.",
+            "Durchschn. Behebungszeit — Durchschnittliche Anzahl Tage zur Behebung einer Schwachstelle.",
+            "Durchschn. Alter offener Schwachst. — Durchschnittliche Tage seit Erkennung unbehobener Schwachstellen.",
+            "Verteilung nach Kategorie — Mehrere Linien pro Kategorisierung."
+          ]
+        },
+        "controls": {
+          "title": "Steuerung",
+          "items": [
+            "Zeitraum — 3 Monate, 6 Monate, 1 Jahr oder benutzerdefiniert.",
+            "Granularität — Tag, Woche oder Monat.",
+            "Anzeige — Widgets ein-/ausblenden. Drag & Drop zum Umordnen."
+          ]
+        },
+        "export": {
+          "title": "Export",
+          "items": [
+            "PDF-Export — Erfasst alle sichtbaren Diagramme in einem PDF-Bericht."
+          ]
+        }
+      }
+    },
+    "admin-imports": {
+      "title": "Importverwaltung",
+      "intro": "Verwalten Sie die Importe von Qualys-CSV-Berichten.",
+      "sections": {
+        "methods": {
+          "title": "Importmethoden",
+          "items": [
+            "Manueller Import — Klicken Sie auf « CSV importieren », um eine Datei hochzuladen. Der Import läuft im Hintergrund: Ein Fortschrittsbanner erscheint oben auf der Seite und die Daten werden nach Abschluss automatisch aktualisiert.",
+            "Automatischer Import — Konfigurieren Sie den Dateiüberwacher, um Verzeichnisse zu überwachen und neue CSV-Dateien automatisch zu importieren.",
+            "Verlauf — Sehen Sie den Status jedes Imports ein (laufend, abgeschlossen, Fehler). Die Liste aktualisiert sich während der Importe automatisch."
+          ]
+        },
+        "watcher": {
+          "title": "Überwachte Verzeichnisse",
+          "items": [
+            "Fügen Sie Verzeichnisse zur Überwachung mit einem Dateimuster (z. B.: *.csv), optionalem rekursiven Modus und einem Ausschlussdatum hinzu.",
+            "Der Überwacher scannt die Verzeichnisse regelmäßig und importiert neu erkannte Dateien."
+          ]
+        }
+      }
+    },
+    "admin-users": {
+      "title": "Benutzerverwaltung",
+      "intro": "Erstellen, bearbeiten und löschen Sie Benutzerkonten.",
+      "sections": {
+        "profiles": {
+          "title": "Profile und Konten",
+          "items": [
+            "Profile — Admin (Vollzugriff), Benutzer (Dashboard + Export), Monitoring (nur Monitoring-Seite) oder benutzerdefiniertes Profil mit granularen Berechtigungen.",
+            "Deaktivierung — Deaktivieren Sie ein Konto, ohne es zu löschen.",
+            "Passwort — Erzwingen Sie eine Passwortänderung bei der nächsten Anmeldung."
+          ]
+        },
+        "session": {
+          "title": "Sitzungseinstellungen",
+          "items": [
+            "Konfigurieren Sie das Inaktivitäts-Zeitlimit und die Vorablaufwarnung oben auf der Seite.",
+            "Standard: 2 Stunden Zeitlimit, Warnung 5 Minuten vorher.",
+            "Ein Popup erscheint, wenn die Sitzung kurz vor dem Ablauf steht, mit einem Countdown und der Option, angemeldet zu bleiben oder sich abzumelden.",
+            "Das Schließen aller Browserfenster macht die Sitzung automatisch ungültig."
+          ]
+        },
+        "lockout": {
+          "title": "Kontosperre",
+          "items": [
+            "Nach 5 Fehlversuchen wird das Konto automatisch für 15 Minuten gesperrt.",
+            "Die Spalte « Status » in der Tabelle zeigt ein rotes Badge « Gesperrt » mit der Anzahl der Fehlversuche.",
+            "Ein Administrator kann ein Konto manuell über die Schloss-Schaltfläche in der Spalte Aktionen entsperren."
+          ]
+        }
+      }
+    },
+    "admin-rules": {
+      "title": "Unternehmensregeln",
+      "intro": "Definieren Sie die Standardfilter, die bei der ersten Anmeldung aller Benutzer oder über die Schaltfläche « Unternehmensregeln » in der Filterleiste angewendet werden.",
+      "sections": {
+        "filters": {
+          "title": "Konfigurierbare Filter",
+          "items": [
+            "Schweregrade — Wählen Sie die standardmäßig sichtbaren Stufen (1 bis 5).",
+            "Typen — Filtern Sie nach Schwachstellentyp (Vuln, Practice, Info). Wenn kein Typ ausgewählt ist, werden alle angezeigt.",
+            "Kategorisierung — Wählen Sie die standardmäßig einzuschließenden Kategorisierungsschichten.",
+            "Betriebssystemklasse — Beschränken Sie standardmäßig auf Windows, Linux/Unix oder beides. Wenn keines markiert ist, werden alle Klassen angezeigt.",
+            "Standard-Aktualität — Anfangswert des Aktualitätsfilters für jeden Benutzer (Aktiv, Möglicherweise veraltet, Alle)."
+          ]
+        },
+        "freshness": {
+          "title": "Aktualitätsschwellen",
+          "items": [
+            "Möglicherweise veraltet — Anzahl der Tage ohne Erkennung, bevor eine Schwachstelle als potenziell veraltet markiert wird.",
+            "Verborgen — Anzahl der Tage ohne Erkennung, bevor eine Schwachstelle standardmäßig ausgeblendet wird."
+          ]
+        }
+      }
+    },
+    "admin-layers": {
+      "title": "Kategorisierung",
+      "intro": "Organisieren Sie Ihre Schwachstellen in Schichten (Layers), um sie nach Ihrem Geschäftskontext zu klassifizieren.",
+      "sections": {
+        "layers": {
+          "title": "Schichten",
+          "items": [
+            "Erstellen Sie Schichten mit einem Namen, einer Farbe und einer Prioritätsreihenfolge.",
+            "Schichten erscheinen in den Dashboard-Diagrammen und Schwachstellentabellen."
+          ]
+        },
+        "rules": {
+          "title": "Klassifizierungsregeln",
+          "items": [
+            "Jede Schicht kann automatische Regeln basierend auf einem Feld (Titel, Kategorie, Typ…) und einem Suchmuster haben.",
+            "Regeln werden in Prioritätsreihenfolge angewendet."
+          ]
+        },
+        "reclassify": {
+          "title": "Neuklassifizierung",
+          "items": [
+            "Nach Änderung der Regeln klicken Sie auf « Neuklassifizieren », um die neuen Regeln auf alle vorhandenen Schwachstellen anzuwenden.",
+            "Der Fortschritt wird in Echtzeit angezeigt.",
+            "Die Neuklassifizierung arbeitet nach eindeutiger QID (1 QID = 1 Kategorisierung)."
+          ]
+        },
+        "orphans": {
+          "title": "Verwaiste Schwachstellen",
+          "items": [
+            "Die Schaltfläche « Verwaiste kategorisieren » zeigt ein Badge mit der Anzahl der nicht kategorisierten QIDs.",
+            "Für jede QID klicken Sie auf « Regel erstellen », um ein vorausgefülltes Formular mit dem Schwachstellentitel zu öffnen.",
+            "Ein Echtzeit-Zähler zeigt, wie viele verwaiste QIDs durch das eingegebene Muster zugeordnet werden.",
+            "Sie können eine neue Kategorisierung direkt im Formular über « + Kategorisierung erstellen » anlegen.",
+            "Nach dem Speichern der Regel verschwinden die zugeordneten QIDs aus der Liste.",
+            "Nach dem Erstellen Ihrer Regeln erscheint die Schaltfläche « Neuklassifizierung starten », um die neuen Regeln anzuwenden."
+          ]
+        }
+      }
+    },
+    "admin-branding": {
+      "title": "Branding",
+      "intro": "Passen Sie das Erscheinungsbild der Anwendung an.",
+      "sections": {
+        "logo": {
+          "title": "Logo",
+          "items": [
+            "Formate — SVG, PNG, JPG (max. 500 KB).",
+            "Empfohlene Größe — 200x50 Pixel.",
+            "Laden Sie die SVG-Vorlage herunter, um Ihr Logo zu erstellen.",
+            "Das Logo erscheint in PDF-Exporten und auf der Anmeldeseite."
+          ]
+        },
+        "footer": {
+          "title": "Fußzeile",
+          "items": [
+            "Passen Sie den Text in der Fußzeile der Anwendung an.",
+            "Lassen Sie das Feld leer, um standardmäßig « Qualys2Human » anzuzeigen."
+          ]
+        },
+        "banner": {
+          "title": "Ankündigungsbanner",
+          "items": [
+            "Konfigurieren Sie ein Banner unter dem Navigationsmenü, um Benutzer zu informieren (Wartung, Update…).",
+            "Nachricht — Angezeigter Text (max. 500 Zeichen).",
+            "Farbe — Blau (Information), Gelb (Warnung), Rot (Alarm) oder Grau (Sonstiges).",
+            "Sichtbarkeit — Alle, nur Administratoren oder deaktiviert.",
+            "Benutzer können das Banner schließen; es erscheint bei der nächsten Anmeldung oder bei Nachrichtenänderung erneut."
+          ]
+        }
+      }
+    },
+    "admin-ldap": {
+      "title": "LDAP / Active Directory",
+      "intro": "Diese Seite ermöglicht die Konfiguration der Active Directory-Authentifizierung über LDAP.",
+      "sections": {
+        "connection": {
+          "title": "LDAP-Verbindung",
+          "items": [
+            "Server-URL — Adresse des Domänencontrollers (ldap:// oder ldaps://).",
+            "STARTTLS — Aktualisiert die Verbindung auf TLS über Port 389 (nicht erforderlich bei ldaps://).",
+            "UPN-Vorlage — Format des Benutzerprinzipalnamens. Verwenden Sie {username} als Variable.",
+            "Suchbasis — Basis-DN für die Suche nach Benutzern und Gruppen (z. B.: DC=domain,DC=com).",
+            "Gruppenattribut — LDAP-Attribut mit den Gruppen (Standard: memberOf).",
+            "TLS-Überprüfung — Deaktivieren für selbstsignierte Zertifikate (Air-Gap-Umgebungen)."
+          ]
+        },
+        "mapping": {
+          "title": "Gruppenzuordnung",
+          "items": [
+            "Ordnen Sie einen AD-Gruppen-DN jedem Qualys2Human-Profil zu.",
+            "Wenn sich ein Benutzer über AD anmeldet, werden seine Gruppen mit den konfigurierten Zuordnungen verglichen.",
+            "Das höchste Profil wird angewendet (Administrator > Benutzer > Monitoring).",
+            "Wenn keine Gruppe übereinstimmt, wird die Anmeldung verweigert.",
+            "AD-Konten werden bei der ersten Anmeldung automatisch in der Datenbank erstellt."
+          ]
+        },
+        "test": {
+          "title": "Verbindungstest",
+          "items": [
+            "Die Schaltfläche « Verbindung testen » führt einen direkten Bind mit den angegebenen Anmeldedaten durch.",
+            "Dies überprüft, ob URL, UPN-Vorlage und TLS-Einstellungen korrekt sind, bevor die AD-Authentifizierung für alle Benutzer aktiviert wird."
+          ]
+        }
+      }
+    },
+    "monitoring": {
+      "title": "Monitoring",
+      "intro": "Überwachen Sie den Zustand der Anwendung und des Servers.",
+      "sections": {
+        "services": {
+          "title": "Dienste und Ressourcen",
+          "items": [
+            "Dienste — Status von PostgreSQL und der API.",
+            "Ressourcen — CPU, Arbeitsspeicher und Festplatte mit Warnschwellen.",
+            "DB-Pool — Aktive und verfügbare Verbindungen.",
+            "Warnungen — Automatische Benachrichtigungen bei Schwellenüberschreitung (CPU/RAM/Festplatte > 80% = Warnung, > 95% = Kritisch)."
+          ]
+        },
+        "refresh": {
+          "title": "Automatische Aktualisierung",
+          "items": [
+            "Die Seite wird automatisch alle 30 Sekunden aktualisiert."
+          ]
+        },
+        "retention": {
+          "title": "Datenaufbewahrung",
+          "items": [
+            "Berichte, die älter als die Aufbewahrungsdauer sind (konfigurierbar in Admin > Einstellungen), werden beim Start automatisch bereinigt.",
+            "Wenn Berichte die Aufbewahrungsdauer überschreiten, erscheint ein Banner mit einem manuellen Bereinigungs-Button (nur für Administratoren)."
+          ]
+        }
+      }
+    },
+    "investigation": {
+      "title": "Untersuchung — Suche",
+      "intro": "Die Suchseite ermöglicht das schnelle Auffinden einer Schwachstelle oder eines Servers.",
+      "sections": {
+        "vulnSearch": {
+          "title": "Schwachstellensuche",
+          "items": [
+            "Geben Sie eine QID (Nummer) für eine exakte Suche ein oder ein Schlüsselwort, um in den Titeln zu suchen.",
+            "Wenn nur ein Ergebnis übereinstimmt, erfolgt die Navigation zur Detailkarte automatisch."
+          ]
+        },
+        "hostSearch": {
+          "title": "Serversuche",
+          "items": [
+            "Geben Sie eine IP-Adresse, einen DNS-Namen oder einen NetBIOS-Namen ein (auch teilweise).",
+            "Die Suche erfolgt gleichzeitig über alle drei Felder."
+          ]
+        },
+        "results": {
+          "title": "Ergebnisse",
+          "items": [
+            "Die Ergebnisse werden in einer Tabelle angezeigt. Klicken Sie auf eine Zeile, um zur Detailkarte zu gelangen.",
+            "Maximal 200 angezeigte Ergebnisse."
+          ]
+        }
+      }
+    },
+    "filters": {
+      "title": "Filter",
+      "intro": "Die Filterleiste ermöglicht die Einschränkung der auf allen Seiten angezeigten Daten.",
+      "sections": {
+        "dimensions": {
+          "title": "Filterdimensionen",
+          "items": [
+            "Schweregrad — Wählen Sie die anzuzeigenden Stufen (1=Minimal bis 5=Dringend).",
+            "Typ — Filtern Sie nach Typ (Vuln, Practice, Info).",
+            "Kategorisierung — Filtern Sie nach Kategorisierungsschicht.",
+            "BS-Klasse — Filtern Sie nach Betriebssystem (Windows, NIX).",
+            "Aktualität — Aktiv, möglicherweise veraltet oder alle.",
+            "Datum — Beschränken Sie auf einen Import-Datumsbereich."
+          ]
+        },
+        "actions": {
+          "title": "Schnellaktionen",
+          "items": [
+            "Zurücksetzen — Löscht alle Filter.",
+            "Unternehmensregeln — Wendet die vom Administrator definierten Filter erneut an.",
+            "Presets — Speichern und laden Sie Filterkombinationen."
+          ]
+        },
+        "persistence": {
+          "title": "Persistenz",
+          "items": [
+            "Filter werden in Echtzeit angewendet und automatisch pro Benutzer gespeichert."
+          ]
+        }
+      }
+    },
+    "proposals": {
+      "title": "Regelvorschläge",
+      "intro": "Schlagen Sie Kategorisierungsregeln zur Überprüfung durch einen Administrator vor. Ihre Vorschläge helfen bei der Organisation nicht kategorisierter Schwachstellen.",
+      "sections": {
+        "overview": {
+          "title": "So funktioniert es",
+          "items": [
+            "Jeder Benutzer kann eine Regel von nicht kategorisierten QIDs oder Schwachstellen-Details vorschlagen",
+            "Administratoren prüfen, ändern bei Bedarf und genehmigen oder lehnen ab",
+            "Genehmigte Vorschläge werden zu aktiven Regeln — der Admin startet die Reklassifizierung manuell"
+          ]
+        },
+        "propose": {
+          "title": "Regel vorschlagen",
+          "items": [
+            "Klicken Sie auf 'Vorschlagen' bei einem nicht kategorisierten QID",
+            "Wählen Sie ein Muster (Schlüsselwort), Zielfeld (Titel oder Kategorie) und Kategorie",
+            "Der Zähler zeigt, wie viele QIDs Ihre Regel betreffen würde"
+          ]
+        },
+        "review": {
+          "title": "Admin-Überprüfung",
+          "items": [
+            "Ausstehende Vorschläge erscheinen oben auf der Seite Nicht kategorisierte QIDs und der Regelseite",
+            "Der Admin kann direkt genehmigen, bearbeiten und genehmigen oder mit Kommentar ablehnen",
+            "Nach Prüfung aller Vorschläge startet der Admin die Reklassifizierung manuell"
+          ]
+        },
+        "status": {
+          "title": "Vorschläge verfolgen",
+          "items": [
+            "Sehen Sie alle Vorschläge unter 'Meine Vorschläge' im Benutzermenü",
+            "Status: Ausstehend (in Prüfung), Genehmigt (Regel erstellt), Abgelehnt (mit Admin-Feedback)",
+            "Sie können ausstehende Vorschläge abbrechen, bevor sie geprüft werden"
+          ]
+        }
+      }
+    },
+    "orphans": {
+      "title": "Nicht kategorisierte QIDs",
+      "intro": "Diese Seite listet Schwachstellen auf, die keiner Kategorisierung zugeordnet sind. Verwenden Sie Filter, um die Liste einzugrenzen, und schlagen Sie dann Klassifizierungsregeln vor oder erstellen Sie sie.",
+      "sections": {
+        "filters": {
+          "title": "Filter und Suche",
+          "items": [
+            "Schweregrad- und Typfilter werden aus der Unternehmenskonfiguration initialisiert (wie in der Übersicht)",
+            "Verwenden Sie die Suchleiste, um nach Schwachstellen-Titel oder -Kategorie zu filtern",
+            "Der Zähler oben zeigt gefilterte QIDs im Verhältnis zur Gesamtzahl"
+          ]
+        },
+        "propose": {
+          "title": "Regel vorschlagen (Benutzer)",
+          "items": [
+            "Klicken Sie auf 'Vorschlagen' neben einem QID, um dem Administrator einen Vorschlag zu senden",
+            "Wählen Sie das Muster, das Zielfeld und die gewünschte Kategorisierung",
+            "Der Übereinstimmungszähler hilft Ihnen, die Auswirkung Ihres Vorschlags einzuschätzen"
+          ]
+        },
+        "admin": {
+          "title": "Admin-Verwaltung",
+          "items": [
+            "Administratoren sehen ein Panel mit ausstehenden Vorschlägen oben auf der Seite",
+            "Sie können jeden Vorschlag genehmigen, bearbeiten und genehmigen oder ablehnen",
+            "Die Schaltfläche 'Regel erstellen' ermöglicht das direkte Erstellen einer Regel ohne Vorschlag"
+          ]
+        },
+        "reclassify": {
+          "title": "Reklassifizierung",
+          "items": [
+            "Nach dem Erstellen oder Genehmigen von Regeln erscheint die Schaltfläche 'Reklassifizierung starten'",
+            "Die Reklassifizierung ist verzögert: Bearbeiten Sie zuerst alle Vorschläge, dann starten Sie einmalig",
+            "Der Fortschritt der Reklassifizierung ist auf der Kategorisierungsseite (Admin) sichtbar"
+          ]
+        }
+      }
+    },
+    "admin-upgrade": {
+      "title": "Aktualisierungsverwaltung",
+      "intro": "Diese Seite ermöglicht die Verwaltung von Anwendungsaktualisierungen: Paket hochladen, Installation planen und Verlauf einsehen.",
+      "sections": {
+        "upload": {
+          "title": "Hochladen",
+          "items": [
+            "Wählen Sie die .zip-Aktualisierungsdatei und die zugehörige .sig-Signaturdatei aus",
+            "Der Upload wird in 2-MB-Teile aufgeteilt für eine zuverlässige Übertragung",
+            "Ein Fortschrittsbalken zeigt den Upload-Fortschritt an"
+          ]
+        },
+        "validation": {
+          "title": "Validierung",
+          "items": [
+            "Nach dem Upload wird das Paket automatisch validiert: ZIP-Integrität, Ed25519-Signatur, Version",
+            "Die Zielversion muss neuer als die aktuelle Version sein",
+            "Eine Zusammenfassung zeigt das Ergebnis jeder Prüfung mit grünen/roten Symbolen"
+          ]
+        },
+        "schedule": {
+          "title": "Planung",
+          "items": [
+            "Wählen Sie Datum und Uhrzeit für die Aktualisierung (mindestens 15 Minuten in der Zukunft)",
+            "Konfigurieren Sie Benachrichtigungsschwellen, um Benutzer vor der Wartung zu warnen",
+            "Die Schaltfläche 'Jetzt starten' startet die Aktualisierung nach Bestätigung in 60 Sekunden"
+          ]
+        },
+        "history": {
+          "title": "Verlauf",
+          "items": [
+            "Sehen Sie die 50 neuesten Aktualisierungen mit Status, Dauer und möglichen Fehlern ein",
+            "Mögliche Status: Abgeschlossen (grün), Fehlgeschlagen (rot), Zurückgesetzt (orange), Abgebrochen (grau)"
+          ]
+        }
+      }
+    }
+  },
+  "maintenance": {
+    "scheduled": "Geplante Wartung am {{date}} um {{time}}",
+    "warning": "Wartung geplant um {{time}} (in {{countdown}}) -- bitte speichern Sie Ihre Arbeit",
+    "imminent": "Wartung um {{time}} (in {{countdown}})",
+    "lessThanMinute": "weniger als eine Minute",
+    "cancel": "Abbrechen",
+    "upgradeInProgress": "Update wird durchgeführt...",
+    "upgradeFailed": "Update fehlgeschlagen: {{error}}"
+  }
+}
