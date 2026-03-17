@@ -1,0 +1,11 @@
+server:
+  host: 127.0.0.1
+  port: 8443
+
+database:
+  host: localhost
+  port: 5432
+  name: qualys2human
+  user: q2h
+  password: CHANGE_ME
+  encryption_key_file: ./keys/master.key

@@ -1,0 +1,1269 @@
+{
+  "nav": {
+    "overview": "Overview",
+    "trends": "Trends",
+    "investigation": "Investigation",
+    "search": "Search",
+    "reports": "Reports",
+    "admin": "Admin",
+    "monitoring": "Monitoring",
+    "profile": "My Profile",
+    "logout": "Log out",
+    "myProposals": "My Proposals",
+    "uncategorized": "Uncategorized QIDs"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "create": "Create",
+    "edit": "Edit",
+    "close": "Close",
+    "back": "Back",
+    "reset": "Reset",
+    "confirm": "Confirm",
+    "ok": "OK",
+    "yes": "Yes",
+    "no": "No",
+    "error": "Error",
+    "loading": "Loading...",
+    "noData": "No data",
+    "actions": "Actions",
+    "name": "Name",
+    "status": "Status",
+    "type": "Type",
+    "category": "Category",
+    "title": "Title",
+    "date": "Date",
+    "search": "Search",
+    "export": "Export",
+    "refresh": "Refresh",
+    "settings": "Settings",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "required": "Required",
+    "optional": "Optional",
+    "none": "None",
+    "all": "All",
+    "backToOverview": "Back to overview",
+    "uncategorized": "Uncategorized",
+    "notApplicable": "N/A",
+    "irreversibleAction": "This action is irreversible."
+  },
+  "severity": {
+    "1": "Minimal (1)",
+    "2": "Medium (2)",
+    "3": "Serious (3)",
+    "4": "Critical (4)",
+    "5": "Urgent (5)"
+  },
+  "freshness": {
+    "active": "Active",
+    "stale": "Possibly stale",
+    "all": "All"
+  },
+  "login": {
+    "title": "Login",
+    "username": "Username",
+    "usernameRequired": "Username is required",
+    "password": "Password",
+    "passwordRequired": "Password is required",
+    "submit": "Log in",
+    "error": "Login error",
+    "localMode": "Local",
+    "adMode": "Active Directory"
+  },
+  "overview": {
+    "title": "Overview",
+    "kpiTitle": "Key indicators",
+    "totalVulns": "Total vulnerabilities",
+    "hosts": "Hosts",
+    "criticals": "Critical (4-5)",
+    "avgPerHost": "Avg. / host",
+    "distributions": "Distributions",
+    "severities": "Severities",
+    "osClass": "OS class",
+    "osDistribution": "OS Distribution",
+    "categorization": "Categorization",
+    "topVulnsChart": "Top vulnerabilities (chart)",
+    "topVulnsTable": "Top vulnerabilities (table)",
+    "topHosts": "Top hosts",
+    "occurrences": "Occurrences"
+  },
+  "vulnList": {
+    "title": "Vulnerabilities",
+    "allVulns": "All vulnerabilities",
+    "loadError": "Loading error",
+    "hosts": "Hosts"
+  },
+  "vulnDetail": {
+    "detectionStatus": "Detection status",
+    "hostsAffected": "Affected hosts",
+    "totalOccurrences": "Total occurrences",
+    "threat": "Threat",
+    "impact": "Impact",
+    "solution": "Solution",
+    "scanResults": "Scan results",
+    "affectedServers": "Affected servers",
+    "createRule": "Create a rule",
+    "vendorRef": "Vendor ref.",
+    "port": "Port",
+    "protocol": "Protocol",
+    "firstDetected": "First detected",
+    "lastDetected": "Last detected",
+    "trackingMethod": "Tracking method",
+    "timesDetected": "Times detected",
+    "lastFixed": "Last fixed",
+    "unknown": "Unknown",
+    "filter": "filter:",
+    "proposeCategory": "Propose a categorization"
+  },
+  "hostList": {
+    "title": "Servers",
+    "allHosts": "All servers",
+    "ip": "IP",
+    "dns": "DNS",
+    "os": "OS",
+    "vulns": "Vulnerabilities"
+  },
+  "hostDetail": {
+    "title": "Host",
+    "vulnsFilter": "Vulnerabilities — filter:",
+    "filteredView": "Filtered view",
+    "showAll": "Show all",
+    "filters": "Filters:",
+    "sevLabel": "Sev.",
+    "typesLabel": "Types:",
+    "detectedLessThan": "Detected less than {{days}} days ago",
+    "detectedBetween": "Detected between {{staleDays}} and {{hideDays}} days ago",
+    "noActiveFilter": "No active global filter",
+    "severitiesChart": "Severities",
+    "trackingMethods": "Tracking methods",
+    "netbios": "NetBIOS",
+    "firstSeen": "First scan",
+    "lastSeen": "Last scan",
+    "totalScans": "Total scans",
+    "osCpe": "OS CPE"
+  },
+  "fullDetail": {
+    "title": "Detail",
+    "ssl": "SSL",
+    "fqdn": "FQDN",
+    "ticket": "Ticket",
+    "pciVuln": "PCI",
+    "osUnknown": "Unknown OS",
+    "proposeCategory": "Propose a categorization"
+  },
+  "trends": {
+    "title": "Trends",
+    "avgVulnsPerHost": "Average vulnerabilities per host",
+    "hostCount": "Host count",
+    "loadError": "Error loading trends",
+    "noData": "No data for this period",
+    "period3m": "3 months",
+    "period6m": "6 months",
+    "period1y": "1 year",
+    "periodCustom": "Custom",
+    "granularity": "Granularity:",
+    "day": "Day",
+    "week": "Week",
+    "month": "Month",
+    "chartsVisible": "Visible charts",
+    "display": "Display",
+    "resetLayout": "Reset layout",
+    "defaultLayout": "Default layout",
+    "criticalCount": "Critical vulnerabilities",
+    "remediationRate": "Remediation rate (%)",
+    "avgRemediationDays": "Average remediation time (days)",
+    "avgOpenAgeDays": "Average open vulnerability age (days)",
+    "categoryBreakdown": "Breakdown by category",
+    "days": "days",
+    "percent": "%",
+    "loadingMetrics": "Loading metrics…",
+    "loadingComputing": "Computing trends…",
+    "loadingCharts": "Preparing charts…",
+    "hiddenForUsers": "Hidden",
+    "showToUsers": "Show to users",
+    "hideFromUsers": "Hide from users",
+    "userView": "User view",
+    "adminView": "Admin view"
+  },
+  "monitoring": {
+    "title": "Monitoring",
+    "loadError": "Loading error",
+    "uptime": "Uptime:",
+    "alerts": "Alerts",
+    "services": "Services",
+    "systemResources": "System resources",
+    "cpu": "CPU",
+    "memory": "Memory",
+    "disk": "Disk",
+    "connectionPool": "Connection pool",
+    "poolSize": "Pool size",
+    "activeConnections": "Active connections",
+    "available": "Available",
+    "overflow": "Overflow",
+    "infoUnavailable": "Information unavailable",
+    "activity": "Activity",
+    "importedReports": "Imported reports",
+    "users": "Users",
+    "lastImport": "Last import",
+    "dbSize": "Database size",
+    "lastImportStatus": "Last import status",
+    "cpuCritical": "CPU critical: {{value}}%",
+    "cpuHigh": "CPU high: {{value}}%",
+    "memCritical": "Memory critical: {{value}}%",
+    "memHigh": "Memory high: {{value}}%",
+    "diskCritical": "Disk critical: {{value}}%",
+    "diskHigh": "Disk high: {{value}}%",
+    "dbUnreachable": "Database unreachable",
+    "unitMb": "MB",
+    "unitGb": "GB",
+    "uptimeDays": "d",
+    "uptimeHours": "h",
+    "uptimeMinutes": "min",
+    "purgeButton": "Purge expired data",
+    "purgeConfirmTitle": "Confirm purge",
+    "purgeConfirmContent": "{{count}} report(s) will be permanently deleted with all their vulnerabilities. This action is irreversible.",
+    "purgeResult": "Purge complete: {{reports}} report(s) and {{vulns}} vulnerability(ies) deleted.",
+    "purgeNone": "No data to purge.",
+    "purgeableWarning": "{{count}} report(s) exceed the retention period — purge recommended",
+    "purgeImportConflict": "Cannot purge while an import is in progress."
+  },
+  "settings": {
+    "freshnessTitle": "Display settings",
+    "staleDays": "Possibly stale threshold (days)",
+    "staleDaysTooltip": "Vulnerabilities not seen for this number of days will be marked as possibly stale.",
+    "hideDays": "Hidden threshold (days)",
+    "hideDaysTooltip": "Vulnerabilities not seen for this number of days will be hidden by default.",
+    "required": "Value required",
+    "saveSuccess": "Settings saved",
+    "loadError": "Unable to load settings",
+    "retentionTitle": "Data retention",
+    "retentionMonths": "Retention period (months)",
+    "retentionMonthsTooltip": "Reports older than this period will be automatically purged at application startup.",
+    "retentionSaveSuccess": "Retention period updated",
+    "retentionUnit": "months"
+  },
+  "search": {
+    "vulnerability": "Vulnerability",
+    "server": "Server",
+    "vulnPlaceholder": "QID or title...",
+    "hostPlaceholder": "IP, DNS, or NetBIOS...",
+    "noResults": "No results",
+    "results": "Results"
+  },
+  "filters": {
+    "severity": "Severity",
+    "type": "Type",
+    "allTypes": "All types",
+    "categorization": "Categorization",
+    "allCategories": "All",
+    "osClass": "OS class",
+    "allOsClasses": "All",
+    "freshness": "Freshness",
+    "dateFrom": "Start date",
+    "dateTo": "End date",
+    "resetTooltip": "Reset",
+    "enterpriseTooltip": "Apply enterprise rules",
+    "enterpriseApplied": "Enterprise rules applied",
+    "presetEnterprise": "[Enterprise]",
+    "presetPersonal": "[Personal]",
+    "presetApplied": "Filter \"{{name}}\" applied",
+    "noPreset": "No preset",
+    "presetsTooltip": "Filter presets",
+    "osWindows": "Windows",
+    "osNix": "Linux / Unix"
+  },
+  "admin": {
+    "imports": "Imports",
+    "users": "Users",
+    "enterpriseRules": "Enterprise rules",
+    "categorization": "Categorization",
+    "brandingTab": "Branding",
+    "ldapTab": "LDAP / AD",
+    "upgradeTab": "Update",
+    "upgrade": {
+      "title": "Update Management",
+      "currentState": "Current State",
+      "currentVersion": "Current version",
+      "lastUpgrade": "Last upgrade",
+      "statusUpToDate": "Up to date",
+      "statusScheduled": "Update scheduled",
+      "statusRunning": "Update in progress",
+      "scheduledFor": "Scheduled for {{date}} at {{time}}",
+      "cancelSchedule": "Cancel",
+      "launchNowBtn": "Launch now",
+      "uploadAndSchedule": "Upload & Schedule",
+      "selectPackage": "Select package (.zip)",
+      "selectSignature": "Select signature (.sig)",
+      "uploading": "Uploading...",
+      "uploadProgress": "{{percent}}% ({{sent}} / {{total}} MB)",
+      "uploadComplete": "Upload complete",
+      "uploadCancel": "Cancel upload",
+      "validating": "Validating...",
+      "validate": "Validate package",
+      "validationResult": "Validation result",
+      "signatureOk": "Valid signature",
+      "signatureFail": "Invalid signature",
+      "versionOk": "Newer version",
+      "versionFail": "Invalid version",
+      "zipOk": "Valid archive",
+      "zipFail": "Invalid archive",
+      "targetVersion": "Target version",
+      "scheduledAt": "Date and time",
+      "scheduleMinTime": "Minimum 15 minutes in the future",
+      "notificationThresholds": "Notification thresholds",
+      "minutesBefore": "minutes before",
+      "levelInfo": "Information",
+      "levelWarning": "Warning",
+      "levelDanger": "Urgent",
+      "addThreshold": "Add threshold",
+      "removeThreshold": "Remove",
+      "schedule": "Schedule",
+      "launchNow": "Launch now",
+      "launchNowConfirm": "The update will start in 60 seconds. The application will be temporarily unavailable. Continue?",
+      "launchNowTitle": "Immediate Launch",
+      "history": "Update History",
+      "historySourceVersion": "Source version",
+      "historyTargetVersion": "Target version",
+      "historyDate": "Date",
+      "historyDuration": "Duration",
+      "historyStatus": "Status",
+      "historyInitiatedBy": "Initiated by",
+      "historyError": "Error",
+      "statusCompleted": "Completed",
+      "statusFailed": "Failed",
+      "statusRolledBack": "Rolled back",
+      "statusCancelled": "Cancelled",
+      "statusPending": "Pending",
+      "noHistory": "No update history",
+      "settings": "Notification Settings",
+      "defaultThresholds": "Default thresholds",
+      "settingsSaved": "Settings saved",
+      "scheduleCreated": "Update scheduled successfully",
+      "scheduleCancelled": "Schedule cancelled",
+      "newUpload": "New package",
+      "packageReady": "Package ready",
+      "errors": {
+        "INVALID_UPLOAD_ID": "Invalid upload ID",
+        "UPGRADE_IN_PROGRESS": "An upgrade is already in progress",
+        "INSUFFICIENT_DISK_SPACE": "Insufficient disk space",
+        "UPLOAD_EXPIRED_OR_NOT_FOUND": "Upload expired or not found",
+        "INVALID_ZIP_FILE": "Invalid ZIP file",
+        "SIGNATURE_FILE_MISSING": "Signature file missing",
+        "INVALID_SIGNATURE": "Invalid signature",
+        "VERSION_FILE_MISSING": "VERSION file missing",
+        "VERSION_NOT_NEWER": "Version is not newer than current",
+        "NO_PACKAGE_UPLOADED": "No package uploaded",
+        "PACKAGE_NOT_VALIDATED": "Package not validated",
+        "UPGRADE_ALREADY_SCHEDULED": "An upgrade is already scheduled",
+        "NO_PENDING_UPGRADE": "No pending upgrade",
+        "SCHEDULED_TIME_TOO_SOON": "Scheduled time must be at least 15 minutes in the future"
+      }
+    },
+    "import": {
+      "dirUpdated": "Directory updated",
+      "dirAdded": "Directory added",
+      "updateError": "Error during update",
+      "dirDeleted": "Directory deleted",
+      "deleteError": "Error during deletion",
+      "loadError": "Error loading imports",
+      "reportDeleted": "Report deleted successfully",
+      "dbReset": "Database reset successfully",
+      "importStarted": "Import started in background",
+      "importError": "Import error",
+      "watchedDirs": "Watched directories",
+      "addDir": "Add a directory",
+      "importManagement": "Import management",
+      "importCsv": "Import a CSV",
+      "resetAll": "Reset entire database",
+      "resetTitle": "Reset entire database",
+      "resetWarning": "Warning: this action will delete ALL imported reports, vulnerabilities, and hosts. This action is irreversible.",
+      "resetTypeConfirm": "Type <1>CONFIRM</1> to validate:",
+      "editDir": "Edit directory",
+      "addWatchedDir": "Add a watched directory",
+      "dirPath": "Directory path",
+      "dirPathRequired": "Path is required",
+      "dirPathPlaceholder": "C:\\Qualys\\Reports or \\\\server\\share\\qualys",
+      "filePattern": "File pattern",
+      "recursiveScan": "Recursive scan",
+      "ignoreFilesBefore": "Ignore files before",
+      "active": "Active",
+      "path": "Path",
+      "recursive": "Recursive",
+      "ignoreBefore": "Ignore before",
+      "deleteWatchedDir": "Delete this watched directory?",
+      "file": "File",
+      "source": "Source",
+      "sourceAuto": "Auto",
+      "sourceManual": "Manual",
+      "reportDate": "Report date",
+      "progress": "Progress",
+      "lines": "lines",
+      "report": "Report",
+      "importDate": "Import date",
+      "deleteReport": "Delete this report and all associated vulnerabilities?",
+      "noWatchedDir": "No watched directory",
+      "importInProgress": "Import in progress:",
+      "scanInProgress": "Scanning...",
+      "activeDirs": "{{count}} active directory(ies) — {{imports}} import(s)",
+      "noWatchedDirStatus": "No watched directory",
+      "lastError": "Last error:"
+    },
+    "user": {
+      "loadError": "Error loading users",
+      "updated": "User updated",
+      "created": "User created",
+      "deleteConfirm": "Delete {{username}}?",
+      "deleted": "User deleted",
+      "sessionSaved": "Session settings saved",
+      "validationError": "Validation error",
+      "profileAdmin": "Administrator",
+      "profileUser": "User",
+      "profileMonitoring": "Monitoring",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "sessionSettings": "Session settings",
+      "timeoutLabel": "Inactivity timeout (minutes)",
+      "warningLabel": "Warning before expiration (minutes)",
+      "management": "User management",
+      "newUser": "New user",
+      "editUser": "Edit {{username}}",
+      "username": "Username",
+      "usernameRequired": "Username is required",
+      "password": "Password",
+      "passwordRequired": "Password is required",
+      "newPassword": "New password (leave empty to keep current)",
+      "profile": "Profile",
+      "profileRequired": "Profile is required",
+      "activeLabel": "Active",
+      "forceChangePassword": "Force password change",
+      "displayName": "Name",
+      "authType": "Type",
+      "lockStatus": "Status",
+      "locked": "Locked",
+      "failedAttempts": "{{count}} failure(s)",
+      "lastLogin": "Last login",
+      "unlock": "Unlock",
+      "unlocked": "{{username}} unlocked"
+    },
+    "rules": {
+      "saved": "Rules saved",
+      "loadError": "Error loading data",
+      "description": "These rules define the default filters applied to all users.",
+      "severitySection": "Visible severities",
+      "typeSection": "Vulnerability types",
+      "noTypeFilter": "No type filter — all types are displayed.",
+      "categorizationSection": "Visible categorizations",
+      "noCategorizationFilter": "No categorization filter — all categorizations are displayed.",
+      "osClassSection": "OS class",
+      "noOsClassFilter": "No OS class filter — all classes are displayed.",
+      "freshnessSection": "Default freshness",
+      "freshnessDefault": "Default freshness filter value applied on each user's first login.",
+      "freshnessThresholds": "Freshness thresholds",
+      "staleThreshold": "\"Possibly stale\" threshold (days)",
+      "staleThresholdTooltip": "Vulnerabilities not seen for this many days will be marked as potentially stale.",
+      "hideThreshold": "\"Hidden\" threshold (days)",
+      "hideThresholdTooltip": "Vulnerabilities not seen for this many days will be hidden by default.",
+      "typeVuln": "Vulnerability",
+      "typePractice": "Practice",
+      "typeInfo": "Information",
+      "freshnessActive": "Active",
+      "freshnessStale": "Possibly stale",
+      "freshnessAll": "All"
+    },
+    "layer": {
+      "modified": "Categorization modified",
+      "created": "Categorization created",
+      "deleted": "Categorization deleted",
+      "ruleModified": "Rule modified",
+      "ruleCreated": "Rule created",
+      "ruleDeleted": "Rule deleted",
+      "loadError": "Error loading data",
+      "createCategory": "+ Create a categorization",
+      "reclassStarted": "Reclassification started",
+      "reclassInProgress": "Categorization in progress",
+      "relaunchCategorization": "Relaunch categorization",
+      "categorizeOrphans": "Categorize orphans",
+      "upToDate": "Up to date",
+      "categorizationStale": "Categorization outdated — relaunch categorization",
+      "starting": "Starting...",
+      "reclassError": "Error: {{error}}",
+      "reclassComplete": "Reclassification complete: {{count}} vulnerabilities classified",
+      "reclassProgress": "{{applied}}/{{total}} rules — {{classified}} vulns classified",
+      "categorizations": "Categorizations",
+      "addCategorization": "Add a categorization",
+      "categorizationDesc": "Categorizations allow grouping vulnerabilities by infrastructure layer (OS, Middleware, Application, Network...).",
+      "classificationRules": "Classification rules",
+      "addRule": "Add a rule",
+      "ruleDesc": "Each rule associates a pattern (keyword) with a categorization. During import or reclassification, rules are evaluated by decreasing priority (first match wins).",
+      "editCategorization": "Edit categorization",
+      "newCategorization": "New categorization",
+      "editRule": "Edit rule",
+      "newRule": "New rule",
+      "deleteCategorization": "Delete this categorization?",
+      "deleteRule": "Delete this rule?",
+      "nameRequired": "Name is required",
+      "namePlaceholder": "E.g.: OS, Middleware, Application...",
+      "categorizationRequired": "Categorization is required",
+      "patternRequired": "Pattern is required",
+      "uncategorizedVulns": "Uncategorized vulnerabilities",
+      "launchReclassification": "Launch reclassification ({{count}} rule(s) created)",
+      "proposals": {
+        "title": "Pending proposals",
+        "colUser": "Submitted by",
+        "approve": "Approve",
+        "editApprove": "Edit & Approve",
+        "reject": "Reject",
+        "approved": "Proposal approved",
+        "rejected": "Proposal rejected",
+        "editApproveTitle": "Approve with modifications",
+        "rejectTitle": "Reject proposal",
+        "comment": "Comment",
+        "rejectPlaceholder": "Reason for rejection (optional)..."
+      }
+    },
+    "branding": {
+      "logoUpdated": "Logo updated",
+      "uploadError": "Error during upload",
+      "logoReset": "Default logo restored",
+      "downloadError": "Error during download",
+      "footerSaved": "Footer text saved",
+      "bannerSaved": "Announcement banner saved",
+      "colorInfo": "Blue (info)",
+      "colorWarning": "Yellow (warning)",
+      "colorAlert": "Red (alert)",
+      "colorOther": "Gray (other)",
+      "appLogo": "Application logo",
+      "noLogo": "No logo configured",
+      "importLogo": "Import a logo",
+      "restoreDefaultLogo": "Restore default logo",
+      "downloadTemplate": "Download SVG template",
+      "logoFormats": "Accepted formats: SVG, PNG, JPG (max 500 KB). Recommended size: 200x50 pixels.",
+      "footer": "Footer",
+      "customText": "Custom text",
+      "footerHint": "This text will appear in the footer. Leave empty to display \"Qualys2Human\".",
+      "preview": "Preview:",
+      "banner": "Announcement banner",
+      "bannerMessage": "Message",
+      "bannerPlaceholder": "Scheduled maintenance tonight at 10pm...",
+      "bannerColor": "Color",
+      "bannerVisibility": "Visibility",
+      "visAll": "Everyone",
+      "visAdmin": "Admins only",
+      "visNone": "Disabled"
+    },
+    "ldap": {
+      "saved": "LDAP configuration saved",
+      "saveError": "Error saving configuration",
+      "title": "LDAP / Active Directory connection",
+      "enableAd": "Enable AD authentication",
+      "defaultAuthMode": "Default authentication mode",
+      "defaultAuthHelp": "Pre-selected mode on the login page",
+      "serverUrl": "LDAP server URL",
+      "serverUrlPlaceholder": "ldap://dc.domain.com:389  or  ldaps://dc.domain.com:636",
+      "starttls": "STARTTLS",
+      "starttlsHint": "Upgrade LDAP connection to TLS (port 389)",
+      "upnTemplate": "UPN Template (User Principal Name)",
+      "upnHint": "Use <1>{username}</1> as a variable. Examples: <3>{username}@corp.local</3>, <5>DOMAIN\\{username}</5>",
+      "searchBase": "Search Base DN",
+      "searchBasePlaceholder": "DC=domain,DC=com",
+      "groupAttribute": "Group attribute",
+      "groupAttributePlaceholder": "memberOf",
+      "tlsVerify": "TLS verification",
+      "tlsVerifyHint": "Enable to verify server certificate (disable for self-signed certificates)",
+      "caCert": "CA certificate (optional)",
+      "caCertPlaceholder": "C:\\certs\\ca.pem",
+      "testConnection": "Test connection",
+      "testTitle": "Test LDAP connection",
+      "testUsername": "Username",
+      "testUsernamePlaceholder": "jsmith",
+      "testPassword": "Password",
+      "testPasswordPlaceholder": "AD password",
+      "testBtn": "Test",
+      "groupMapping": "AD group mapping",
+      "groupMappingDesc": "Enter the full DN of the AD group for each profile. Priority: Administrator > User > Monitoring. If a user belongs to multiple groups, the highest profile will be assigned."
+    }
+  },
+  "modals": {
+    "createRule": "Create a categorization rule",
+    "createRuleBtn": "Create rule",
+    "pattern": "Pattern (keyword)",
+    "patternPlaceholder": "E.g.: windows, tomcat, tcp/ip...",
+    "targetField": "Target field",
+    "fieldTitle": "Title (title)",
+    "fieldCategory": "Category (category)",
+    "selectCategory": "Select a categorization",
+    "priority": "Priority (higher = more priority)",
+    "matchCount": "This rule will match {{count}} QIDs",
+    "newCategory": "New categorization",
+    "categoryName": "Name",
+    "categoryNameRequired": "Name is required",
+    "categoryNamePlaceholder": "E.g.: OS, Middleware, Application...",
+    "color": "Color",
+    "position": "Position (display order)",
+    "sessionExpiring": "Session about to expire",
+    "sessionLogout": "Log out",
+    "sessionStay": "Stay logged in",
+    "sessionExpiresIn": "Your session expires in",
+    "sessionStayHint": "Click \"Stay logged in\" to extend your session.",
+    "busyImport": "Import in progress",
+    "busyCategorization": "Categorization in progress"
+  },
+  "pdf": {
+    "success": "PDF generated successfully",
+    "error": "Error generating PDF",
+    "filtersApplied": "Filters applied:",
+    "severities": "Severities: ",
+    "types": "Types: ",
+    "categorization": "Categorization: ",
+    "freshness": "Freshness: "
+  },
+  "whatsNew": {
+    "titleSingle": "What's new in v{{version}}",
+    "titleMultiple": "What's new — {{count}} updates",
+    "features": "New features",
+    "fixes": "Fixes",
+    "improvements": "Improvements"
+  },
+  "errors": {
+    "ACCOUNT_LOCKED": "Account locked. Please try again later.",
+    "INVALID_CREDENTIALS": "Invalid credentials",
+    "LDAP_NOT_ENABLED": "Active Directory authentication is not enabled",
+    "NO_MATCHING_AD_GROUP": "No Active Directory group matches an authorized profile",
+    "PROFILE_NOT_FOUND": "Profile not found in database",
+    "LOCAL_ACCOUNT_CONFLICT": "A local account already exists with this name. Contact the administrator.",
+    "INVALID_TIMEOUT_VALUE": "Timeout must be at least 5 minutes",
+    "INVALID_WARNING_VALUE": "Warning must be at least 1 minute",
+    "WARNING_EXCEEDS_TIMEOUT": "Warning must be less than timeout",
+    "INVALID_DATE_FORMAT": "Invalid date format (ISO-8601 expected)",
+    "WATCH_PATH_DUPLICATE": "This directory is already being watched",
+    "LDAP_URL_NOT_CONFIGURED": "No LDAP server URL configured",
+    "RECLASSIFY_IN_PROGRESS": "Reclassification already in progress",
+    "LDAP_BIND_FAILED": "LDAP bind failed",
+    "LDAP_CONNECTION_ERROR": "LDAP connection error",
+    "IMPORT_STARTED": "Import started in background",
+    "RECLASSIFY_STARTED": "Reclassification started",
+    "CPU_CRITICAL": "CPU critical: {{value}}",
+    "CPU_HIGH": "CPU high: {{value}}",
+    "MEMORY_CRITICAL": "Memory critical: {{value}}",
+    "MEMORY_HIGH": "Memory high: {{value}}",
+    "DISK_CRITICAL": "Disk critical: {{value}}",
+    "DISK_HIGH": "Disk high: {{value}}",
+    "DB_UNREACHABLE": "Database unreachable",
+    "FAILED_IMPORTS": "{{value}} failed import(s)"
+  },
+  "profile": {
+    "title": "My Profile",
+    "language": "Interface language",
+    "languageSaved": "Language saved",
+    "french": "Français",
+    "english": "English",
+    "spanish": "Español",
+    "german": "Deutsch"
+  },
+  "proposals": {
+    "pageTitle": "My Proposals",
+    "modalTitle": "Propose a categorization rule",
+    "submit": "Submit proposal",
+    "created": "Proposal submitted successfully",
+    "duplicate": "An identical proposal is already pending",
+    "error": "Failed to submit proposal",
+    "patternRequired": "Pattern is required",
+    "targetCategory": "Target category",
+    "categoryRequired": "Please select a category",
+    "selectCategory": "Select a category...",
+    "cancelConfirmTitle": "Cancel proposal?",
+    "cancelConfirmContent": "This proposal will be permanently deleted.",
+    "cancelled": "Proposal cancelled",
+    "empty": "No proposals yet. You can propose categorization rules from the uncategorized QIDs page or vulnerability detail pages.",
+    "colPattern": "Pattern",
+    "colMatchField": "Field",
+    "colCategory": "Category",
+    "colDate": "Date",
+    "colStatus": "Status",
+    "colComment": "Admin comment",
+    "status_pending": "Pending",
+    "status_approved": "Approved",
+    "status_rejected": "Rejected",
+    "propose": "Propose a categorization",
+    "proposeShort": "Propose",
+    "approved": "Proposal approved",
+    "rejected": "Proposal rejected",
+    "approve": "Approve",
+    "editAndApprove": "Edit & Approve",
+    "reject": "Reject",
+    "pendingProposals": "Pending proposals",
+    "comment": "Comment",
+    "commentPlaceholder": "Add a comment (optional)...",
+    "rejectReason": "Reason for rejection",
+    "rejectReasonPlaceholder": "Explain why this proposal was rejected (optional)...",
+    "duplicateWarning": "An identical proposal is already pending",
+    "submitBtn": "Submit proposal",
+    "deleted": "Proposal cancelled",
+    "deleteConfirmTitle": "Cancel proposal?",
+    "deleteConfirmContent": "This proposal will be permanently deleted.",
+    "createdAt": "Date",
+    "status": "Status",
+    "adminComment": "Admin comment",
+    "emptyState": "No proposals yet. You can propose categorization rules from the uncategorized QIDs page or vulnerability detail pages."
+  },
+  "menu": {
+    "myProposals": "My Proposals",
+    "uncategorized": "Uncategorized QIDs"
+  },
+  "orphans": {
+    "proposeRule": "Propose rule"
+  },
+  "help": {
+    "drawerTitle": "Help",
+    "selectSection": "Select a section to display help.",
+    "overview": {
+      "title": "Dashboard",
+      "intro": "The dashboard displays a summary of the security status of your infrastructure.",
+      "sections": {
+        "kpi": {
+          "title": "Key Performance Indicators (KPI)",
+          "items": [
+            "Total vulnerabilities — Total number of detected vulnerabilities.",
+            "Servers — Number of unique analyzed hosts.",
+            "Critical — Vulnerabilities with severity 4 and 5.",
+            "Average / host — Vulnerability-to-host ratio."
+          ]
+        },
+        "distributions": {
+          "title": "Distributions (triple donut)",
+          "items": [
+            "Three side-by-side pie charts.",
+            "Severities — Distribution by severity level. Click to navigate to the filtered list.",
+            "OS class — Windows, NIX (Linux/Unix), Other. Click to navigate to the filtered host list.",
+            "Categorization — Distribution by categorization layer. Click to navigate to the filtered list."
+          ]
+        },
+        "widgets": {
+          "title": "Widgets",
+          "items": [
+            "You can rearrange widgets by drag & drop.",
+            "Click \"Default layout\" to reset.",
+            "Your layout is saved automatically."
+          ]
+        },
+        "export": {
+          "title": "PDF Export",
+          "items": [
+            "The PDF button generates a complete report including KPIs, charts, and tables with the custom logo.",
+            "Export works 100% offline."
+          ]
+        }
+      }
+    },
+    "vuln-detail": {
+      "title": "Vulnerability detail",
+      "intro": "This page displays the details of a specific vulnerability (QID). An orange banner identifies this view as the global QID card.",
+      "sections": {
+        "technical": {
+          "title": "Technical card",
+          "items": [
+            "Structured card with all fields: QID, type, category, categorization, CVSS scores (base + temporal), CVE references, Bugtraq, affected hosts, and total occurrences.",
+            "Server-specific fields (status, port, detections…) are marked \"N/A\"."
+          ]
+        },
+        "categorization": {
+          "title": "Categorization",
+          "items": [
+            "Administrators can assign a categorization directly from the card via an inline selector.",
+            "The update is instant (optimistic) and applies to all occurrences of the QID."
+          ]
+        },
+        "descriptions": {
+          "title": "Threat / Impact / Solution",
+          "items": [
+            "Detailed descriptions from Qualys, displayed in side-by-side cards."
+          ]
+        },
+        "servers": {
+          "title": "Affected servers",
+          "items": [
+            "Table listing all affected hosts with an interactive detection status chart.",
+            "Click on a pie chart slice to filter the table."
+          ]
+        },
+        "export": {
+          "title": "Exports",
+          "items": [
+            "CSV — Exports the server table.",
+            "PDF — Complete report with card, charts, and table."
+          ]
+        }
+      }
+    },
+    "host-detail": {
+      "title": "Host detail",
+      "intro": "This page displays host information and its list of vulnerabilities.",
+      "sections": {
+        "charts": {
+          "title": "Interactive charts",
+          "items": [
+            "Severities — Vulnerability distribution by level. Click on a slice to filter the table.",
+            "Tracking methods — Distribution by detection method. Click to filter the table.",
+            "Both filters are cumulative. Tags appear above the table to indicate active filters."
+          ]
+        },
+        "table": {
+          "title": "Vulnerability table",
+          "items": [
+            "Displays QID, title, severity, categorization, port, status, and last detection.",
+            "Click on a row to view the full detail (host + vulnerability)."
+          ]
+        },
+        "export": {
+          "title": "Exports",
+          "items": [
+            "CSV — Exports the vulnerability table.",
+            "PDF — Complete report with host card, charts, and table."
+          ]
+        }
+      }
+    },
+    "full-detail": {
+      "title": "Full detail",
+      "intro": "QID card for a specific server. A blue banner identifies the server (IP, DNS, OS). The layout is identical to the global QID card so you can find every piece of information in the same place.",
+      "sections": {
+        "technical": {
+          "title": "Technical card",
+          "items": [
+            "Same structured card as the global QID card, with additional server-specific fields: status, port, protocol, FQDN, SSL, tracking method, detection dates, ticket, PCI, and scan results."
+          ]
+        },
+        "servers": {
+          "title": "Affected servers",
+          "items": [
+            "The table of servers affected by this QID is displayed at the bottom of the page, just like on the global card.",
+            "The current server's row is highlighted in light blue for immediate identification."
+          ]
+        }
+      }
+    },
+    "trends": {
+      "title": "Trends",
+      "intro": "Analyze the time-based evolution of security metrics.",
+      "sections": {
+        "widgets": {
+          "title": "Available widgets",
+          "items": [
+            "Avg vulns/host — Combo chart with average line and host count bars.",
+            "Host count — Evolution of scanned hosts over time.",
+            "Critical vulnerabilities — Trend line for severity 4 and 5 vulnerabilities.",
+            "Remediation rate — Percentage of fixed vulnerabilities per period.",
+            "Avg remediation time — Average number of days to fix a vulnerability.",
+            "Avg open vuln age — Average number of days since detection for unfixed vulnerabilities.",
+            "Breakdown by category — Multiple lines, one per categorization (layer)."
+          ]
+        },
+        "controls": {
+          "title": "Controls",
+          "items": [
+            "Period — 3 months, 6 months, 1 year, or custom.",
+            "Granularity — Day, week, or month.",
+            "Display — Show/hide each widget. Drag and drop to reorder."
+          ]
+        },
+        "export": {
+          "title": "Export",
+          "items": [
+            "PDF export — Captures all visible charts into a PDF report."
+          ]
+        }
+      }
+    },
+    "admin-imports": {
+      "title": "Import management",
+      "intro": "Manage Qualys CSV report imports.",
+      "sections": {
+        "methods": {
+          "title": "Import methods",
+          "items": [
+            "Manual import — Click \"Import a CSV\" to upload a file. The import runs in the background: a progress banner appears at the top of the page and data refreshes automatically when complete.",
+            "Automatic import — Configure the file watcher to monitor directories and automatically import new CSV files.",
+            "History — View the status of each import (in progress, complete, error). The list updates automatically during imports."
+          ]
+        },
+        "watcher": {
+          "title": "Watched directories",
+          "items": [
+            "Add directories to watch with a file pattern (e.g.: *.csv), optional recursive mode, and an exclusion date.",
+            "The watcher scans directories periodically and imports newly detected files."
+          ]
+        }
+      }
+    },
+    "admin-users": {
+      "title": "User management",
+      "intro": "Create, edit, and delete user accounts.",
+      "sections": {
+        "profiles": {
+          "title": "Profiles and accounts",
+          "items": [
+            "Profiles — admin (full access), user (dashboard + export), monitoring (monitoring page only), or custom profile with granular permissions.",
+            "Deactivation — Disable an account without deleting it.",
+            "Password — Force a password change on next login."
+          ]
+        },
+        "session": {
+          "title": "Session settings",
+          "items": [
+            "Configure the inactivity timeout and pre-expiration warning at the top of the page.",
+            "Default: 2-hour timeout, warning 5 minutes before.",
+            "A popup appears when the session is about to expire, with a countdown and the option to stay logged in or log out.",
+            "Closing all browser windows automatically invalidates the session."
+          ]
+        },
+        "lockout": {
+          "title": "Account lockout",
+          "items": [
+            "After 5 failed attempts, the account is automatically locked for 15 minutes.",
+            "The \"Status\" column in the table displays a red \"Locked\" badge with the number of failed attempts.",
+            "An administrator can manually unlock an account via the lock button in the Actions column."
+          ]
+        }
+      }
+    },
+    "admin-rules": {
+      "title": "Enterprise rules",
+      "intro": "Define the default filters applied to all users on their first login or via the \"Enterprise rules\" button in the filter bar.",
+      "sections": {
+        "filters": {
+          "title": "Configurable filters",
+          "items": [
+            "Severities — Check the levels visible by default (1 to 5).",
+            "Types — Filter by vulnerability type (Vuln, Practice, Info). If no type is selected, all are displayed.",
+            "Categorization — Select the categorization layers to include by default.",
+            "OS class — Restrict by default to Windows, Linux/Unix, or both. If none is checked, all classes are displayed.",
+            "Default freshness — Initial freshness filter value for each user (Active, Possibly stale, All)."
+          ]
+        },
+        "freshness": {
+          "title": "Freshness thresholds",
+          "items": [
+            "Possibly stale — Number of days without detection before marking a vulnerability as potentially stale.",
+            "Hidden — Number of days without detection before hiding a vulnerability by default."
+          ]
+        }
+      }
+    },
+    "admin-layers": {
+      "title": "Categorization",
+      "intro": "Organize your vulnerabilities into layers to classify them according to your business context.",
+      "sections": {
+        "layers": {
+          "title": "Layers",
+          "items": [
+            "Create layers with a name, color, and priority order.",
+            "Layers appear in dashboard charts and vulnerability tables."
+          ]
+        },
+        "rules": {
+          "title": "Classification rules",
+          "items": [
+            "Each layer can have automatic rules based on a field (title, category, type…) and a matching pattern.",
+            "Rules are applied in priority order."
+          ]
+        },
+        "reclassify": {
+          "title": "Reclassification",
+          "items": [
+            "After modifying rules, click \"Reclassify\" to apply the new rules to all existing vulnerabilities.",
+            "Progress is displayed in real time.",
+            "Reclassification works by unique QID (1 QID = 1 categorization)."
+          ]
+        },
+        "orphans": {
+          "title": "Orphan vulnerabilities",
+          "items": [
+            "The \"Categorize orphans\" button displays a badge with the number of uncategorized QIDs.",
+            "For each QID, click \"Create a rule\" to open a pre-filled form with the vulnerability title.",
+            "A real-time counter shows how many orphan QIDs will be matched by the entered pattern.",
+            "You can create a new categorization directly from the form via \"+ Create a categorization\".",
+            "Once the rule is saved, matched QIDs disappear from the list.",
+            "After creating your rules, the \"Run reclassification\" button appears to apply the new rules."
+          ]
+        }
+      }
+    },
+    "admin-branding": {
+      "title": "Branding",
+      "intro": "Customize the appearance of the application.",
+      "sections": {
+        "logo": {
+          "title": "Logo",
+          "items": [
+            "Formats — SVG, PNG, JPG (max 500 KB).",
+            "Recommended size — 200x50 pixels.",
+            "Download the SVG template to create your logo.",
+            "The logo appears in PDF exports and on the login page."
+          ]
+        },
+        "footer": {
+          "title": "Footer",
+          "items": [
+            "Customize the text displayed in the application footer.",
+            "Leave empty to display \"Qualys2Human\" by default."
+          ]
+        },
+        "banner": {
+          "title": "Announcement banner",
+          "items": [
+            "Configure a banner displayed under the navigation menu to inform users (maintenance, update…).",
+            "Message — Displayed text (max 500 characters).",
+            "Color — Blue (info), yellow (warning), red (alert), or gray (other).",
+            "Visibility — Everyone, admins only, or disabled.",
+            "Users can dismiss the banner; it reappears on next login or if the message changes."
+          ]
+        }
+      }
+    },
+    "admin-ldap": {
+      "title": "LDAP / Active Directory",
+      "intro": "This page allows you to configure Active Directory authentication via LDAP.",
+      "sections": {
+        "connection": {
+          "title": "LDAP connection",
+          "items": [
+            "Server URL — Domain controller address (ldap:// or ldaps://).",
+            "STARTTLS — Upgrades the connection to TLS on port 389 (not needed with ldaps://).",
+            "UPN template — User principal name format. Use {username} as a variable.",
+            "Search base — Base DN for searching users and groups (e.g.: DC=domain,DC=com).",
+            "Group attribute — LDAP attribute containing groups (default: memberOf).",
+            "TLS verification — Disable for self-signed certificates (air-gapped environments)."
+          ]
+        },
+        "mapping": {
+          "title": "Group mapping",
+          "items": [
+            "Associate an AD group DN with each Qualys2Human profile.",
+            "When a user logs in via AD, their groups are compared to the configured mappings.",
+            "The highest profile applies (Administrator > User > Monitoring).",
+            "If no group matches, login is denied.",
+            "AD accounts are automatically created in the database on first login."
+          ]
+        },
+        "test": {
+          "title": "Connection test",
+          "items": [
+            "The \"Test connection\" button performs a direct bind with the provided credentials.",
+            "This verifies that the URL, UPN template, and TLS settings are correct before enabling AD authentication for all users."
+          ]
+        }
+      }
+    },
+    "monitoring": {
+      "title": "Monitoring",
+      "intro": "Monitor the health of the application and server.",
+      "sections": {
+        "services": {
+          "title": "Services and resources",
+          "items": [
+            "Services — PostgreSQL and API status.",
+            "Resources — CPU, memory, and disk with alert thresholds.",
+            "DB pool — Active and available connections.",
+            "Alerts — Automatic notifications when a threshold is exceeded (CPU/RAM/disk > 80% = warning, > 95% = critical)."
+          ]
+        },
+        "refresh": {
+          "title": "Auto-refresh",
+          "items": [
+            "The page refreshes automatically every 30 seconds."
+          ]
+        },
+        "retention": {
+          "title": "Data retention",
+          "items": [
+            "Reports older than the retention period (configurable in Admin > Settings) are automatically purged at startup.",
+            "If reports exceed the retention period, a banner appears with a manual purge button (admin only)."
+          ]
+        }
+      }
+    },
+    "investigation": {
+      "title": "Investigation — Search",
+      "intro": "The Search page allows you to quickly find a vulnerability or a server.",
+      "sections": {
+        "vulnSearch": {
+          "title": "Vulnerability search",
+          "items": [
+            "Enter a QID (number) for an exact search, or a keyword to search titles.",
+            "If only one result matches, navigation to the detail card is automatic."
+          ]
+        },
+        "hostSearch": {
+          "title": "Server search",
+          "items": [
+            "Enter an IP address, DNS name, or NetBIOS name (even partial).",
+            "The search is performed on all three fields simultaneously."
+          ]
+        },
+        "results": {
+          "title": "Results",
+          "items": [
+            "Results are displayed in a table. Click on a row to access the detailed card.",
+            "Maximum 200 results displayed."
+          ]
+        }
+      }
+    },
+    "filters": {
+      "title": "Filters",
+      "intro": "The filter bar allows you to restrict the data displayed on all pages.",
+      "sections": {
+        "dimensions": {
+          "title": "Filter dimensions",
+          "items": [
+            "Severity — Check the levels to display (1=Minimal to 5=Urgent).",
+            "Type — Filter by type (Vuln, Practice, Info).",
+            "Categorization — Filter by categorization layer.",
+            "OS class — Filter by operating system (Windows, NIX).",
+            "Freshness — Active, possibly stale, or all.",
+            "Dates — Restrict to an import date range."
+          ]
+        },
+        "actions": {
+          "title": "Quick actions",
+          "items": [
+            "Reset — Clears all filters.",
+            "Enterprise rules — Reapplies the filters defined by the administrator.",
+            "Presets — Save and load filter combinations."
+          ]
+        },
+        "persistence": {
+          "title": "Persistence",
+          "items": [
+            "Filters are applied in real time and saved automatically per user."
+          ]
+        }
+      }
+    },
+    "proposals": {
+      "title": "Rule Proposals",
+      "intro": "Propose categorization rules for admin review. Your proposals help organize uncategorized vulnerabilities.",
+      "sections": {
+        "overview": {
+          "title": "How it works",
+          "items": [
+            "Any user can propose a categorization rule from uncategorized QIDs or vulnerability details",
+            "Admins review, modify if needed, and approve or reject proposals",
+            "Approved proposals become active rules — admin triggers reclassification manually"
+          ]
+        },
+        "propose": {
+          "title": "Proposing a rule",
+          "items": [
+            "Click 'Propose' on any uncategorized QID",
+            "Choose a pattern (keyword), target field (title or category), and category",
+            "The match count shows how many QIDs your rule would affect"
+          ]
+        },
+        "review": {
+          "title": "Admin review",
+          "items": [
+            "Pending proposals appear at the top of both the Uncategorized QIDs page and the Rules page",
+            "Admins can approve directly, modify then approve, or reject with a comment",
+            "Once all proposals are reviewed, admin triggers reclassification manually"
+          ]
+        },
+        "status": {
+          "title": "Tracking proposals",
+          "items": [
+            "View all your proposals from 'My Proposals' in the user menu",
+            "Statuses: Pending (under review), Approved (rule created), Rejected (with admin feedback)",
+            "You can cancel pending proposals before they are reviewed"
+          ]
+        }
+      }
+    },
+    "orphans": {
+      "title": "Uncategorized QIDs",
+      "intro": "This page lists vulnerabilities that haven't been assigned to any categorization. Use filters to narrow the list, then propose or create classification rules.",
+      "sections": {
+        "filters": {
+          "title": "Filters and search",
+          "items": [
+            "Severity and type filters are initialized from the enterprise configuration (same as Overview)",
+            "Use the search bar to filter by vulnerability title or category",
+            "The counter at the top shows filtered QIDs vs. total count"
+          ]
+        },
+        "propose": {
+          "title": "Proposing a rule (user)",
+          "items": [
+            "Click 'Propose' next to a QID to submit a suggestion to the administrator",
+            "Choose the pattern, target field, and desired categorization",
+            "The match counter helps you assess the impact of your proposal"
+          ]
+        },
+        "admin": {
+          "title": "Admin management",
+          "items": [
+            "Admins see a pending proposals panel at the top of the page",
+            "They can approve, modify then approve, or reject each proposal",
+            "The 'Create rule' button allows directly creating a rule without going through a proposal"
+          ]
+        },
+        "reclassify": {
+          "title": "Reclassification",
+          "items": [
+            "After creating or approving rules, a 'Launch reclassification' button appears",
+            "Reclassification is deferred: process all proposals first, then launch once",
+            "Reclassification progress is visible from the Categorization page (admin)"
+          ]
+        }
+      }
+    },
+    "admin-upgrade": {
+      "title": "Update Management",
+      "intro": "This page lets you manage application updates: upload a package, schedule installation, and view history.",
+      "sections": {
+        "upload": {
+          "title": "Upload",
+          "items": [
+            "Select the .zip update package file and its .sig signature file",
+            "The upload is split into 2 MB chunks for reliable transfer",
+            "A progress bar shows upload progress"
+          ]
+        },
+        "validation": {
+          "title": "Validation",
+          "items": [
+            "After upload, the package is automatically validated: ZIP integrity, Ed25519 signature, version",
+            "The target version must be newer than the current version",
+            "A summary shows the result of each check with green/red icons"
+          ]
+        },
+        "schedule": {
+          "title": "Scheduling",
+          "items": [
+            "Choose a date and time for the update (minimum 15 minutes in the future)",
+            "Configure notification thresholds to warn users before maintenance",
+            "The 'Launch now' button starts the update in 60 seconds after confirmation"
+          ]
+        },
+        "history": {
+          "title": "History",
+          "items": [
+            "View the 50 most recent updates with their status, duration, and any errors",
+            "Possible statuses: Completed (green), Failed (red), Rolled back (orange), Cancelled (grey)"
+          ]
+        }
+      }
+    }
+  },
+  "maintenance": {
+    "scheduled": "Scheduled maintenance on {{date}} at {{time}}",
+    "warning": "Maintenance scheduled at {{time}} (in {{countdown}}) -- please save your work",
+    "imminent": "Maintenance imminent at {{time}} (in {{countdown}})",
+    "lessThanMinute": "less than a minute",
+    "cancel": "Cancel",
+    "upgradeInProgress": "Upgrade in progress...",
+    "upgradeFailed": "Upgrade failed: {{error}}"
+  }
+}

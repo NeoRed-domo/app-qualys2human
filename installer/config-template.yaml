@@ -1,0 +1,30 @@
+##############################################
+# Qualys2Human — Configuration Reference
+#
+# This file is for reference only.
+# The installer generates config.yaml automatically
+# with secure random passwords.
+##############################################
+
+server:
+  host: "0.0.0.0"
+  port: 8443
+  tls_cert: "./certs/server.crt"
+  tls_key: "./certs/server.key"
+
+database:
+  host: "localhost"
+  port: 5432
+  name: "qualys2human"
+  user: "q2h"
+  password: ""  # Generated automatically by installer
+  encryption_key_file: "./keys/master.key"
+
+watcher:
+  enabled: false
+  # Add paths to monitor for auto-import (local or UNC)
+  paths: []
+  #  - "C:\\QualysReports"
+  #  - "\\\\server\\share\\qualys"
+  poll_interval: 10     # seconds between scans
+  stable_seconds: 5     # wait for file to stop growing
