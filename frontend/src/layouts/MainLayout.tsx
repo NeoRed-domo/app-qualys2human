@@ -75,6 +75,7 @@ export default function MainLayout() {
         const savedLang = prefsRes.data.language;
         if (savedLang) {
           i18n.changeLanguage(savedLang);
+          localStorage.setItem('q2h_language', savedLang);
         }
         if (!lastSeen) {
           // First login — silently set version, no popup

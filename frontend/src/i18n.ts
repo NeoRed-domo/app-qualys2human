@@ -19,8 +19,9 @@ i18n
     },
     fallbackLng: 'en',
     detection: {
-      order: ['navigator'],
-      caches: [],
+      order: ['localStorage', 'navigator'],
+      lookupLocalStorage: 'q2h_language',
+      caches: ['localStorage'],
     },
     interpolation: {
       escapeValue: false,

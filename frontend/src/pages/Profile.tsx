@@ -28,6 +28,7 @@ export default function Profile() {
   const handleLanguageChange = async (lang: string) => {
     setLanguage(lang);
     i18n.changeLanguage(lang);
+    localStorage.setItem('q2h_language', lang);
     try {
       await api.put('/user/preferences', { language: lang });
       message.success(t('profile.languageSaved'));
