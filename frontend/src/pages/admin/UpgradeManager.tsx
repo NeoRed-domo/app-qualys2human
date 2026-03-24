@@ -429,6 +429,18 @@ export default function UpgradeManager() {
     }
   };
 
+  const handleResetState = async () => {
+    try {
+      const resp = await api.post('/upgrade/reset-state');
+      message.success(t('admin.upgrade.stateReset', { count: resp.data.reset_count }));
+      fetchSchedule();
+      fetchHistory();
+    } catch (err) {
+      const code = getErrorCode(err);
+      message.error(t(`admin.upgrade.errors.${code}`, code));
+    }
+  };
+
   // ── Settings ──────────────────────────────────────────────────────────────
 
   const handleSaveSettings = async () => {
@@ -691,9 +703,26 @@ export default function UpgradeManager() {
                 </>
               )}
               {isRunning && schedule && (
-                <Text>
-                  {t('admin.upgrade.targetVersion')}: <Tag color="blue">{schedule.target_version}</Tag>
-                </Text>
+                <>
+                  <Text>
+                    {t('admin.upgrade.targetVersion')}: <Tag color="blue">{schedule.target_version}</Tag>
+                  </Text>
+                  <Button
+                    danger
+                    size="small"
+                    onClick={() => {
+                      Modal.confirm({
+                        title: t('admin.upgrade.resetStateConfirmTitle'),
+                        content: t('admin.upgrade.resetStateConfirmContent'),
+                        okText: t('common.confirm'),
+                        okType: 'danger',
+                        onOk: handleResetState,
+                      });
+                    }}
+                  >
+                    {t('admin.upgrade.resetState')}
+                  </Button>
+                </>
               )}
             </Space>
           </Descriptions.Item>

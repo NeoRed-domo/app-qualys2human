@@ -56,9 +56,9 @@ def backup_database(ctx: UpgradeContext):
 
     ctx.logger.info("pg_dump -> %s", dump_file)
     try:
-        result = subprocess.run(cmd, env=env, capture_output=True, text=True, timeout=3600)
+        result = subprocess.run(cmd, env=env, capture_output=True, text=True, timeout=7200)
     except subprocess.TimeoutExpired:
-        raise StepError("pg_dump timed out after 3600s")
+        raise StepError("pg_dump timed out after 7200s (2h)")
 
     if result.returncode != 0:
         raise StepError(f"pg_dump failed (rc={result.returncode}): {result.stderr[:500]}")
@@ -223,7 +223,7 @@ def refresh_matview(ctx: UpgradeContext):
             [psql, "-U", str(db.get("user", "q2h")), "-h", "localhost",
              "-d", str(db.get("name", "qualys2human")),
              "-c", refresh_sql],
-            env=env, capture_output=True, text=True, timeout=600,
+            env=env, capture_output=True, text=True, timeout=3600,
         )
         if refresh_result.returncode != 0:
             ctx.logger.error("Matview refresh failed (non-fatal): %s",
@@ -303,14 +303,14 @@ def rollback(ctx: UpgradeContext):
             subprocess.run(
                 [psql, "-U", db_user, "-h", "localhost", "-d", db_name,
                  "-c", "DROP SCHEMA public CASCADE; CREATE SCHEMA public;"],
-                env=env, capture_output=True, text=True, timeout=30,
+                env=env, capture_output=True, text=True, timeout=120,
             )
             # Restore dump
-            ctx.logger.info("Restoring database (timeout 3600s)...")
+            ctx.logger.info("Restoring database (timeout 7200s / 2h)...")
             result = subprocess.run(
                 [psql, "-U", db_user, "-h", "localhost", "-d", db_name,
                  "-f", str(dump_file)],
-                env=env, capture_output=True, text=True, timeout=3600,
+                env=env, capture_output=True, text=True, timeout=7200,
             )
             if result.returncode == 0:
                 ctx.logger.info("Database restored")

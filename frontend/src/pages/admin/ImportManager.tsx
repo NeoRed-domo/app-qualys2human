@@ -572,6 +572,26 @@ export default function ImportManager() {
               {t('common.refresh')}
             </Button>
             <Button
+              icon={<SyncOutlined />}
+              onClick={() => {
+                Modal.confirm({
+                  title: t('admin.import.rescanTitle'),
+                  content: t('admin.import.rescanContent'),
+                  okText: t('common.confirm'),
+                  onOk: async () => {
+                    try {
+                      await api.post('/watcher/rescan');
+                      message.success(t('admin.import.rescanStarted'));
+                    } catch {
+                      message.error(t('common.error'));
+                    }
+                  },
+                });
+              }}
+            >
+              {t('admin.import.rescanSources')}
+            </Button>
+            <Button
               danger
               icon={<ExclamationCircleOutlined />}
               onClick={() => setResetModalOpen(true)}

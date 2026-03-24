@@ -28,7 +28,7 @@ from pathlib import Path
 from zipfile import ZipFile, ZIP_DEFLATED
 
 ROOT = Path(__file__).absolute().parent.parent
-VERSION = "1.1.13.9"
+VERSION = "1.1.14.0"
 
 
 def ensure_build(build_dir: Path):

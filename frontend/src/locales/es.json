@@ -343,6 +343,10 @@
       "settingsSaved": "Configuración guardada",
       "scheduleCreated": "Actualización programada con éxito",
       "scheduleCancelled": "Programación cancelada",
+      "stateReset": "Estado de actualización reiniciado ({{count}} operación(es))",
+      "resetState": "Reiniciar estado",
+      "resetStateConfirmTitle": "¿Reiniciar el estado de actualización?",
+      "resetStateConfirmContent": "Esto cancelará cualquier actualización en curso o bloqueada.",
       "newUpload": "Nuevo paquete",
       "packageReady": "Paquete listo",
       "errors": {
@@ -377,6 +381,10 @@
       "addDir": "Añadir un directorio",
       "importManagement": "Gestión de importaciones",
       "importCsv": "Importar un CSV",
+      "rescanSources": "Rescan fuentes",
+      "rescanTitle": "¿Rescanear fuentes?",
+      "rescanContent": "Los directorios vigilados serán re-escaneados. Los archivos ya importados serán ignorados.",
+      "rescanStarted": "Rescan iniciado",
       "resetAll": "Restablecer toda la base",
       "resetTitle": "Restablecer toda la base",
       "resetWarning": "Atención: esta acción eliminará TODOS los informes, vulnerabilidades y hosts importados. Esta acción es irreversible.",
@@ -893,7 +901,8 @@
           "title": "Directorios vigilados",
           "items": [
             "Añada directorios a vigilar con un patrón de archivo (ej: *.csv), modo recursivo opcional y una fecha de exclusión.",
-            "El vigilante escanea los directorios periódicamente e importa los archivos recién detectados."
+            "El vigilante escanea los directorios periódicamente e importa los archivos recién detectados.",
+            "Rescan fuentes — Fuerza un re-escaneo completo de todos los directorios. Útil tras una restauración de base de datos."
           ]
         }
       }
@@ -1251,7 +1260,8 @@
           "title": "Historial",
           "items": [
             "Consulte las 50 actualizaciones más recientes con su estado, duración y posibles errores",
-            "Estados posibles: Completada (verde), Fallida (rojo), Restaurada (naranja), Cancelada (gris)"
+            "Estados posibles: Completada (verde), Fallida (rojo), Restaurada (naranja), Cancelada (gris)",
+            "Reiniciar estado — Si la app está bloqueada en modo 'Actualización en curso', el botón rojo fuerza un reinicio del estado."
           ]
         }
       }

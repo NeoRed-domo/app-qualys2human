@@ -471,6 +471,44 @@ async def cancel_schedule(
     return {"status": "cancelled"}
 
 
+@router.post("/reset-state")
+async def reset_upgrade_state(
+    db: AsyncSession = Depends(get_db),
+    admin: dict = Depends(require_admin),
+):
+    """Force-reset any stuck upgrade state (running, pending → cancelled).
+
+    Use when: DB restored from backup, upgrade failed mid-way, or app stuck
+    in "upgrade in progress" mode.
+    """
+    now = datetime.now(timezone.utc).replace(tzinfo=None)
+    stuck = (await db.execute(
+        select(UpgradeSchedule).where(UpgradeSchedule.status.in_(["running", "pending"]))
+    )).scalars().all()
+
+    if not stuck:
+        return {"status": "ok", "reset_count": 0, "message": "No stuck upgrades found"}
+
+    for schedule in stuck:
+        schedule.status = "cancelled"
+        schedule.completed_at = now
+        schedule.error_message = "Manual reset by admin"
+
+    db.add(AuditLog(
+        user_id=int(admin["sub"]),
+        action="upgrade_reset",
+        detail=f"Reset {len(stuck)} stuck upgrade(s) to cancelled",
+    ))
+
+    await db.commit()
+
+    return {
+        "status": "ok",
+        "reset_count": len(stuck),
+        "message": f"Reset {len(stuck)} stuck upgrade(s)",
+    }
+
+
 @router.post("/launch-now")
 async def launch_now(
     db: AsyncSession = Depends(get_db),

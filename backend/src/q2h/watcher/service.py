@@ -59,6 +59,15 @@ class FileWatcherService:
         logger.info("File watcher started")
         return self._task
 
+    def rescan(self):
+        """Clear known files — next poll cycle will rediscover and import missing files.
+
+        Files already in DB are protected by dedup in _auto_import (main.py).
+        """
+        count = len(self._known_files)
+        self._known_files.clear()
+        logger.info("Rescan triggered: cleared %d known files — will rediscover on next poll", count)
+
     async def stop(self):
         """Stop the watcher loop."""
         self._running = False

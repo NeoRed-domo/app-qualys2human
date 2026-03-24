@@ -343,6 +343,10 @@
       "settingsSaved": "Einstellungen gespeichert",
       "scheduleCreated": "Aktualisierung erfolgreich geplant",
       "scheduleCancelled": "Planung abgebrochen",
+      "stateReset": "Upgrade-Status zurückgesetzt ({{count}} Vorgang/Vorgänge)",
+      "resetState": "Status zurücksetzen",
+      "resetStateConfirmTitle": "Upgrade-Status zurücksetzen?",
+      "resetStateConfirmContent": "Dies bricht alle laufenden oder blockierten Upgrades ab.",
       "newUpload": "Neues Paket",
       "packageReady": "Paket bereit",
       "errors": {
@@ -377,6 +381,10 @@
       "addDir": "Verzeichnis hinzufügen",
       "importManagement": "Importverwaltung",
       "importCsv": "CSV importieren",
+      "rescanSources": "Quellen erneut scannen",
+      "rescanTitle": "Quellen erneut scannen?",
+      "rescanContent": "Überwachte Verzeichnisse werden erneut gescannt. Bereits importierte Dateien werden übersprungen.",
+      "rescanStarted": "Rescan gestartet",
       "resetAll": "Gesamte Datenbank zurücksetzen",
       "resetTitle": "Gesamte Datenbank zurücksetzen",
       "resetWarning": "Achtung: Diese Aktion löscht ALLE importierten Berichte, Schwachstellen und Hosts. Diese Aktion ist unwiderruflich.",
@@ -893,7 +901,8 @@
           "title": "Überwachte Verzeichnisse",
           "items": [
             "Fügen Sie Verzeichnisse zur Überwachung mit einem Dateimuster (z. B.: *.csv), optionalem rekursiven Modus und einem Ausschlussdatum hinzu.",
-            "Der Überwacher scannt die Verzeichnisse regelmäßig und importiert neu erkannte Dateien."
+            "Der Überwacher scannt die Verzeichnisse regelmäßig und importiert neu erkannte Dateien.",
+            "Quellen erneut scannen — Erzwingt einen vollständigen Re-Scan aller Verzeichnisse. Nützlich nach einer Datenbankwiederherstellung."
           ]
         }
       }
@@ -1251,7 +1260,8 @@
           "title": "Verlauf",
           "items": [
             "Sehen Sie die 50 neuesten Aktualisierungen mit Status, Dauer und möglichen Fehlern ein",
-            "Mögliche Status: Abgeschlossen (grün), Fehlgeschlagen (rot), Zurückgesetzt (orange), Abgebrochen (grau)"
+            "Mögliche Status: Abgeschlossen (grün), Fehlgeschlagen (rot), Zurückgesetzt (orange), Abgebrochen (grau)",
+            "Status zurücksetzen — Wenn die App im Modus 'Update läuft' blockiert ist, erzwingt der rote Button ein Zurücksetzen."
           ]
         }
       }

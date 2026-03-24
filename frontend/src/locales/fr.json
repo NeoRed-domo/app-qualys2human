@@ -343,6 +343,10 @@
       "settingsSaved": "Paramètres enregistrés",
       "scheduleCreated": "Mise à jour planifiée avec succès",
       "scheduleCancelled": "Planification annulée",
+      "stateReset": "État de mise à jour réinitialisé ({{count}} opération(s))",
+      "resetState": "Réinitialiser l'état",
+      "resetStateConfirmTitle": "Réinitialiser l'état de mise à jour ?",
+      "resetStateConfirmContent": "Cela annulera toute mise à jour en cours ou bloquée. Utilisez cette option si l'application est bloquée en mode 'Mise à jour en cours' après une restauration ou un échec.",
       "newUpload": "Nouveau paquet",
       "packageReady": "Paquet prêt",
       "errors": {
@@ -377,6 +381,10 @@
       "addDir": "Ajouter un répertoire",
       "importManagement": "Gestion des imports",
       "importCsv": "Importer un CSV",
+      "rescanSources": "Rescan sources",
+      "rescanTitle": "Rescanner les sources ?",
+      "rescanContent": "Les répertoires surveillés seront re-scannés. Les fichiers déjà importés en base seront ignorés. Les fichiers manquants seront importés automatiquement.",
+      "rescanStarted": "Rescan lancé — les imports manquants arriveront dans quelques instants",
       "resetAll": "Réinitialiser toute la base",
       "resetTitle": "Réinitialiser toute la base",
       "resetWarning": "Attention : cette action va supprimer TOUS les rapports, vulnérabilités et hôtes importés. Cette action est irréversible.",
@@ -893,7 +901,8 @@
           "title": "Répertoires surveillés",
           "items": [
             "Ajoutez des répertoires à surveiller avec un pattern de fichier (ex: *.csv), mode récursif optionnel, et une date d'exclusion.",
-            "Le watcher scanne les répertoires périodiquement et importe les nouveaux fichiers détectés."
+            "Le watcher scanne les répertoires périodiquement et importe les nouveaux fichiers détectés.",
+            "Rescan sources — Force le re-scan de tous les répertoires. Utile après une restauration de base de données pour réimporter les fichiers manquants."
           ]
         }
       }
@@ -1251,7 +1260,8 @@
           "title": "Historique",
           "items": [
             "Consultez les 50 dernières mises à jour avec leur statut, durée et éventuelles erreurs",
-            "Les statuts possibles sont : Terminée (vert), Échouée (rouge), Restaurée (orange), Annulée (gris)"
+            "Les statuts possibles sont : Terminée (vert), Échouée (rouge), Restaurée (orange), Annulée (gris)",
+            "Réinitialiser l'état — Si l'application est bloquée en mode 'Mise à jour en cours' (ex: après une restauration de base), le bouton rouge permet de forcer la réinitialisation."
           ]
         }
       }

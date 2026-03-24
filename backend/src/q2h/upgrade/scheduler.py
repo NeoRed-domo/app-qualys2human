@@ -30,10 +30,11 @@ logger = logging.getLogger("q2h.upgrade")
 async def _check_preflight(db: AsyncSession, package_path: str) -> tuple[bool, str]:
     """Run pre-flight checks before starting upgrade.
 
-    Checks: no import running, sufficient disk space.
+    Checks: no import running, no reclassification running, sufficient disk space.
     Returns (ok, reason).
     """
     from q2h.api.imports import _import_state
+    from q2h.api.layers import _reclassify
     from q2h.upgrade.chunked_upload import check_disk_space
 
     # Check import in progress
@@ -45,6 +46,10 @@ async def _check_preflight(db: AsyncSession, package_path: str) -> tuple[bool, s
     )).first()
     if active_imports:
         return False, f"Import job #{active_imports[0]} in progress"
+
+    # Check reclassification in progress
+    if _reclassify.running:
+        return False, "Reclassification in progress"
 
     # Check disk space (3x package size)
     try:

@@ -75,13 +75,32 @@ _REMEDIATION_METRICS = {
 
 async def recompute_all_snapshots(db: AsyncSession) -> None:
     """Full recompute of all snapshots. Used after reset-all or when
-    dimensions may have changed globally (reclassify, delete_layer)."""
+    dimensions may have changed globally (delete_layer)."""
     logger.info("Recomputing ALL trend snapshots...")
     await db.execute(text("DELETE FROM trend_snapshots"))
     for gran in _GRANULARITIES:
         await _compute_granularity(db, gran, period_filter=None)
     await db.commit()
     logger.info("Trend snapshots fully recomputed")
+
+
+async def recompute_layer_snapshots(db: AsyncSession) -> None:
+    """Recompute only layer-dimension snapshots. Used after reclassify
+    where only layer_id changed — severity, os_class, type, total are unaffected.
+
+    ~80% faster than recompute_all_snapshots.
+    """
+    logger.info("Recomputing layer-dimension trend snapshots...")
+
+    # Delete only layer-dimension snapshots
+    await db.execute(text("DELETE FROM trend_snapshots WHERE dimension = 'layer'"))
+
+    # Recompute only the layer dimension for all metrics and granularities
+    for gran in _GRANULARITIES:
+        await _compute_granularity_for_dimension(db, gran, "layer")
+
+    await db.commit()
+    logger.info("Layer-dimension trend snapshots recomputed")
 
 
 async def recompute_snapshots_for_reports(db: AsyncSession, report_ids: list[int]) -> None:
@@ -119,6 +138,56 @@ async def recompute_snapshots_for_reports(db: AsyncSession, report_ids: list[int
 
     await db.commit()
     logger.info("Trend snapshots updated for reports %s", report_ids)
+
+
+async def _compute_granularity_for_dimension(
+    db: AsyncSession, gran: str, dim_name: str
+) -> None:
+    """Compute all metrics for a single dimension and granularity.
+
+    Used by recompute_layer_snapshots to avoid recomputing unaffected dimensions.
+    """
+    date_expr = f"DATE_TRUNC('{gran}', COALESCE(sr.report_date, sr.imported_at))::date"
+    dim_expr = _DIMENSIONS[dim_name]
+    needs_host_join = (dim_name == "os_class")
+    host_join = "JOIN hosts h ON h.id = v.host_id" if needs_host_join else ""
+
+    # Standard metrics
+    for metric_name, metric_expr in _METRICS.items():
+        sql = (
+            f"INSERT INTO trend_snapshots "
+            f"(period, granularity, metric, dimension, dimension_value, value, computed_at) "
+            f"SELECT {date_expr}, '{gran}', '{metric_name}', '{dim_name}', "
+            f"{dim_expr}, {metric_expr}, now() "
+            f"FROM vulnerabilities v "
+            f"JOIN scan_reports sr ON sr.id = v.scan_report_id "
+            f"{host_join} "
+            f"GROUP BY 1, {dim_expr} "
+            f"ON CONFLICT ON CONSTRAINT uq_trend_snapshot "
+            f"DO UPDATE SET value = EXCLUDED.value, computed_at = EXCLUDED.computed_at"
+        )
+        await db.execute(text(sql))
+
+    # Remediation metrics
+    for metric_name, meta in _REMEDIATION_METRICS.items():
+        metric_expr = meta["expr"]
+        extra_where = meta["where"]
+        full_where = f"WHERE {extra_where}" if extra_where else ""
+
+        sql = (
+            f"INSERT INTO trend_snapshots "
+            f"(period, granularity, metric, dimension, dimension_value, value, computed_at) "
+            f"SELECT {date_expr}, '{gran}', '{metric_name}', '{dim_name}', "
+            f"{dim_expr}, {metric_expr}, now() "
+            f"FROM vulnerabilities v "
+            f"JOIN scan_reports sr ON sr.id = v.scan_report_id "
+            f"{host_join} {full_where} "
+            f"GROUP BY 1, {dim_expr} "
+            f"HAVING {metric_expr} IS NOT NULL "
+            f"ON CONFLICT ON CONSTRAINT uq_trend_snapshot "
+            f"DO UPDATE SET value = EXCLUDED.value, computed_at = EXCLUDED.computed_at"
+        )
+        await db.execute(text(sql))
 
 
 async def _compute_granularity(db: AsyncSession, gran: str, period_filter: str | None) -> None:

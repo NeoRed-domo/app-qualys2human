@@ -1,3 +1,4 @@
+import asyncio
 import logging
 from datetime import date, datetime, timedelta
 from typing import Literal, Optional
@@ -258,6 +259,40 @@ async def _read_from_snapshots(
     return results
 
 
+# Dimension mapping for group_by → snapshot dimension name
+_GROUP_BY_TO_DIMENSION = {
+    "layer": "layer",
+    "severity": "severity",
+    "type": "type",
+    "category": "layer",  # category breakdown uses layer dimension
+}
+
+
+async def _read_grouped_from_snapshots(
+    db: AsyncSession, metric: str, dimension: str, body: TrendQueryRequest,
+) -> list[TrendDataPoint]:
+    """Read grouped snapshots (fast path for group_by without filters)."""
+    q = (
+        select(TrendSnapshot.period, TrendSnapshot.dimension_value, TrendSnapshot.value)
+        .where(
+            TrendSnapshot.granularity == body.granularity,
+            TrendSnapshot.metric == metric,
+            TrendSnapshot.dimension == dimension,
+            TrendSnapshot.dimension_value != "__all__",
+        )
+        .order_by(TrendSnapshot.period)
+    )
+    if body.date_from:
+        q = q.where(TrendSnapshot.period >= body.date_from)
+    if body.date_to:
+        q = q.where(TrendSnapshot.period < body.date_to + timedelta(days=1))
+    rows = (await db.execute(q)).all()
+    return [
+        TrendDataPoint(date=str(row.period), value=float(row.value), group=row.dimension_value)
+        for row in rows if row.value is not None
+    ]
+
+
 async def _live_query_metric(
     db: AsyncSession, metric: str, body: TrendQueryRequest,
 ) -> list[TrendDataPoint]:
@@ -385,17 +420,48 @@ async def _execute_trend_query(body: TrendQueryRequest, db: AsyncSession):
     cfg_result = await db.execute(select(TrendConfig).limit(1))
     cfg = cfg_result.scalar_one_or_none()
     timeout_sec = max(1, min(300, int(cfg.query_timeout_seconds) if cfg else 30))
-    # SET does not support bind parameters — int() cast + clamp ensures safety
     await db.execute(text(f"SET LOCAL statement_timeout = '{timeout_sec}s'"))
 
-    # Fast path: no filters and no group_by → read from pre-aggregated snapshots
-    if not _has_filters(body) and not body.group_by:
+    has_filters = _has_filters(body)
+
+    # Fast path 1: no filters, no group_by → snapshots (instant)
+    if not has_filters and not body.group_by:
         return TrendQueryResponse(
             results=await _read_from_snapshots(db, metrics, body)
         )
 
-    # Slow path: filters active or group_by → live query on vulnerabilities table
-    results: dict[str, list[TrendDataPoint]] = {}
-    for metric in metrics:
-        results[metric] = await _live_query_metric(db, metric, body)
-    return TrendQueryResponse(results=results)
+    # Fast path 2: group_by with a known dimension, no filters → grouped snapshots
+    if not has_filters and body.group_by and body.group_by in _GROUP_BY_TO_DIMENSION:
+        dimension = _GROUP_BY_TO_DIMENSION[body.group_by]
+        results: dict[str, list[TrendDataPoint]] = {}
+        for metric in metrics:
+            results[metric] = await _read_grouped_from_snapshots(db, metric, dimension, body)
+        return TrendQueryResponse(results=results)
+
+    # Slow path: filters active or unknown group_by → live query with fallback
+    try:
+        # Parallel execution of all metrics (instead of sequential)
+        async def _query_one(m: str) -> tuple[str, list[TrendDataPoint]]:
+            return m, await _live_query_metric(db, m, body)
+
+        tasks = [_query_one(m) for m in metrics]
+        results_list = await asyncio.gather(*tasks)
+        return TrendQueryResponse(results=dict(results_list))
+
+    except Exception as e:
+        # Fallback on DB/timeout errors (lock contention during reclassify, statement_timeout).
+        # Re-raise HTTP and programming errors.
+        if isinstance(e, (HTTPException, ValueError, KeyError, TypeError)):
+            raise
+        logger.warning("Live trend query failed (%s), falling back to snapshots", e)
+        if not body.group_by:
+            return TrendQueryResponse(
+                results=await _read_from_snapshots(db, metrics, body)
+            )
+        if body.group_by in _GROUP_BY_TO_DIMENSION:
+            dimension = _GROUP_BY_TO_DIMENSION[body.group_by]
+            results = {}
+            for metric in metrics:
+                results[metric] = await _read_grouped_from_snapshots(db, metric, dimension, body)
+            return TrendQueryResponse(results=results)
+        raise

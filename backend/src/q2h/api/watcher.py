@@ -197,3 +197,20 @@ async def get_status(
         last_error=last_error,
         import_count=import_count,
     )
+
+
+@router.post("/rescan")
+async def rescan_sources(
+    admin: dict = Depends(require_admin),
+):
+    """Clear watcher memory and rescan all sources on next poll cycle.
+
+    Files already imported (by report_date + asset_group dedup) will be skipped.
+    Files missing from DB will be imported automatically.
+    Respects the 'ignore_before' setting on each source.
+    """
+    if not _watcher_service:
+        raise HTTPException(503, "WATCHER_NOT_RUNNING")
+
+    _watcher_service.rescan()
+    return {"status": "ok", "message": "Watcher memory cleared — rescan will start on next poll cycle"}

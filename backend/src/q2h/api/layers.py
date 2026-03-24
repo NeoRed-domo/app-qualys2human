@@ -326,14 +326,12 @@ async def delete_rule(
 
 # --- Reclassify (async with progress) ---
 
-_BATCH_SIZE = 2000
-
-
 async def _run_reclassify():
     """Background task that reclassifies all vulnerabilities.
 
-    Optimised path: classify per unique QID in Python (title/category are
-    QID-level properties), then batch-update all rows in a single pass.
+    Optimised: single SQL UPDATE with CASE WHEN (all matching done in DB),
+    only rows whose layer_id actually changes are written (IS DISTINCT FROM).
+    Snapshot recompute limited to layer dimension only.
     """
     state = _reclassify
     try:
@@ -342,80 +340,66 @@ async def _run_reclassify():
             rules_result = await db.execute(
                 select(VulnLayerRule).order_by(VulnLayerRule.created_at.desc())
             )
-            rules = [
-                (r.match_field, r.pattern.lower(), r.layer_id)
-                for r in rules_result.scalars().all()
-            ]
+            rules = list(rules_result.scalars().all())
             state.total_rules = len(rules)
 
             if state.total_rules == 0:
+                # No rules → clear all layer_ids (only where set)
+                await db.execute(
+                    text("UPDATE vulnerabilities SET layer_id = NULL WHERE layer_id IS NOT NULL")
+                )
+                await db.commit()
+                await db.execute(text("REFRESH MATERIALIZED VIEW CONCURRENTLY latest_vulns"))
+                await db.commit()
                 state.progress = 100
+                state.dirty = False
                 state.running = False
                 return
 
             state.progress = 5
 
-            # 2. Fetch distinct QIDs with their title/category
-            distinct_result = await db.execute(
-                select(
-                    Vulnerability.qid,
-                    Vulnerability.title,
-                    Vulnerability.category,
-                ).distinct(Vulnerability.qid)
-            )
-            qid_rows = distinct_result.all()
-            state.progress = 15
+            # 2. Build SQL CASE WHEN from rules (first match wins = first WHEN clause)
+            from q2h.api._filters import escape_like
+            when_clauses = []
+            for r in rules:
+                # Escape LIKE wildcards (%, _) and SQL quotes
+                pattern_safe = escape_like(r.pattern.lower()).replace("'", "''")
+                field = "LOWER(title)" if r.match_field == "title" else "LOWER(category)"
+                when_clauses.append(
+                    f"WHEN {field} LIKE '%{pattern_safe}%' THEN {r.layer_id}"
+                )
 
-            # 3. Match rules in Python — first match wins per QID
-            qid_to_layer: dict[int, int] = {}
-            for qid, title_raw, category_raw in qid_rows:
-                title_low = (title_raw or "").lower()
-                cat_low = (category_raw or "").lower()
-                for match_field, pattern_low, layer_id in rules:
-                    value = title_low if match_field == "title" else cat_low
-                    if pattern_low in value:
-                        qid_to_layer[qid] = layer_id
-                        break
+            case_expr = "CASE " + " ".join(when_clauses) + " ELSE NULL END"
+            state.progress = 10
 
+            # 3. Count how many QIDs will be classified (for progress reporting)
+            count_result = await db.execute(text(
+                f"SELECT COUNT(DISTINCT qid) FROM vulnerabilities WHERE ({case_expr}) IS NOT NULL"
+            ))
+            state.classified = count_result.scalar() or 0
             state.rules_applied = state.total_rules
-            state.classified = len(qid_to_layer)
-            state.progress = 25
+            state.progress = 20
 
-            # 4. Reset all layer_ids
-            await db.execute(update(Vulnerability).values(layer_id=None))
-            state.progress = 35
-
-            # 5. Batch UPDATE using VALUES join
-            classified_items = list(qid_to_layer.items())
-            total_batches = max(1, (len(classified_items) + _BATCH_SIZE - 1) // _BATCH_SIZE)
-
-            for batch_idx in range(total_batches):
-                start = batch_idx * _BATCH_SIZE
-                batch = classified_items[start : start + _BATCH_SIZE]
-                if not batch:
-                    break
-                # Build VALUES clause: (qid, layer_id), ...
-                values_clause = ", ".join(
-                    f"({qid}, {lid})" for qid, lid in batch
-                )
-                stmt = text(
-                    f"UPDATE vulnerabilities v SET layer_id = m.lid "
-                    f"FROM (VALUES {values_clause}) AS m(qid, lid) "
-                    f"WHERE v.qid = m.qid"
-                )
-                await db.execute(stmt)
-                state.progress = 35 + int(55 * (batch_idx + 1) / total_batches)
-
+            # 4. Single UPDATE via CTE — evaluates CASE WHEN once per row, not twice
+            await db.execute(text(
+                f"WITH classified AS ("
+                f"  SELECT id, ({case_expr}) AS new_layer_id FROM vulnerabilities"
+                f") "
+                f"UPDATE vulnerabilities v SET layer_id = c.new_layer_id "
+                f"FROM classified c "
+                f"WHERE v.id = c.id AND v.layer_id IS DISTINCT FROM c.new_layer_id"
+            ))
             await db.commit()
-            state.progress = 92
+            state.progress = 70
 
-            # 6. Refresh materialized view so dashboard reflects new layer_ids
+            # 5. Refresh materialized view
             await db.execute(text("REFRESH MATERIALIZED VIEW CONCURRENTLY latest_vulns"))
             await db.commit()
+            state.progress = 85
 
-            # 7. Recompute trend snapshots (layer dimension changed)
-            from q2h.services.trend_snapshots import recompute_all_snapshots
-            await recompute_all_snapshots(db)
+            # 6. Recompute trend snapshots — only layer dimension changed
+            from q2h.services.trend_snapshots import recompute_layer_snapshots
+            await recompute_layer_snapshots(db)
 
             state.progress = 100
             state.dirty = False

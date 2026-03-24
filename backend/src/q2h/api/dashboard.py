@@ -136,151 +136,127 @@ async def dashboard_overview(
 
 
 async def _build_overview(db, fargs, freshness):
+    import asyncio
     severities, date_from, date_to, report_id, types, layers, os_classes = fargs
     thresholds = await get_freshness_thresholds(db)
 
-    # --- Total vulns ---
-    total_q = select(func.count(LatestVuln.id))
-    total_q = _apply_filters(total_q, *fargs)
-    total_q = apply_freshness(total_q, LatestVuln.last_detected, freshness or "active", thresholds)
-    total_vulns = (await db.execute(total_q)).scalar() or 0
+    def _fresh(q):
+        return apply_freshness(q, LatestVuln.last_detected, freshness or "active", thresholds)
 
-    # --- Distinct host count ---
-    host_q = select(func.count(func.distinct(LatestVuln.host_id)))
-    host_q = _apply_filters(host_q, *fargs)
-    host_q = apply_freshness(host_q, LatestVuln.last_detected, freshness or "active", thresholds)
-    host_count = (await db.execute(host_q)).scalar() or 0
-
-    # --- Critical count (severity 4 + 5) ---
-    crit_q = select(func.count(LatestVuln.id)).where(LatestVuln.severity >= 4)
-    crit_q = _apply_filters(crit_q, *fargs)
-    crit_q = apply_freshness(crit_q, LatestVuln.last_detected, freshness or "active", thresholds)
-    critical_count = (await db.execute(crit_q)).scalar() or 0
-
-    # --- Severity distribution ---
-    sev_q = (
-        select(LatestVuln.severity, func.count(LatestVuln.id).label("count"))
-        .group_by(LatestVuln.severity)
-        .order_by(LatestVuln.severity.desc())
-    )
-    sev_q = _apply_filters(sev_q, *fargs)
-    sev_q = apply_freshness(sev_q, LatestVuln.last_detected, freshness or "active", thresholds)
-    sev_rows = (await db.execute(sev_q)).all()
-    severity_distribution = [
-        SeverityCount(severity=row.severity, count=row.count) for row in sev_rows
-    ]
-
-    # --- Top 10 vulns by frequency ---
-    top_v_q = (
-        select(
-            LatestVuln.qid,
-            LatestVuln.title,
-            LatestVuln.severity,
-            func.count(LatestVuln.id).label("count"),
-            VulnLayer.name.label("layer_name"),
-            VulnLayer.color.label("layer_color"),
+    # --- Group 1: KPIs + severity distribution (single scan) ---
+    async def _kpis_and_severity():
+        sev_q = (
+            select(LatestVuln.severity, func.count(LatestVuln.id).label("count"))
+            .group_by(LatestVuln.severity)
+            .order_by(LatestVuln.severity.desc())
         )
-        .outerjoin(VulnLayer, LatestVuln.layer_id == VulnLayer.id)
-        .group_by(LatestVuln.qid, LatestVuln.title, LatestVuln.severity, VulnLayer.name, VulnLayer.color)
-        .order_by(func.count(LatestVuln.id).desc())
-        .limit(10)
-    )
-    top_v_q = _apply_filters(top_v_q, *fargs)
-    top_v_q = apply_freshness(top_v_q, LatestVuln.last_detected, freshness or "active", thresholds)
-    top_v_rows = (await db.execute(top_v_q)).all()
-    top_vulns = [
-        TopVuln(qid=r.qid, title=r.title, severity=r.severity, count=r.count,
-                layer_name=r.layer_name, layer_color=r.layer_color)
-        for r in top_v_rows
-    ]
+        sev_q = _fresh(_apply_filters(sev_q, *fargs))
+        sev_rows = (await db.execute(sev_q)).all()
 
-    # --- Top 10 hosts by vuln count ---
-    top_h_q = (
-        select(
-            Host.ip,
-            Host.dns,
-            Host.os,
-            func.count(LatestVuln.id).label("host_count"),
+        total = sum(r.count for r in sev_rows)
+        critical = sum(r.count for r in sev_rows if r.severity >= 4)
+        sev_dist = [SeverityCount(severity=r.severity, count=r.count) for r in sev_rows]
+
+        # Host count (separate — can't derive from severity grouping)
+        host_q = select(func.count(func.distinct(LatestVuln.host_id)))
+        host_q = _fresh(_apply_filters(host_q, *fargs))
+        hosts = (await db.execute(host_q)).scalar() or 0
+
+        return total, hosts, critical, sev_dist
+
+    # --- Group 2: Top vulns ---
+    async def _top_vulns():
+        q = (
+            select(
+                LatestVuln.qid, LatestVuln.title, LatestVuln.severity,
+                func.count(LatestVuln.id).label("count"),
+                VulnLayer.name.label("layer_name"), VulnLayer.color.label("layer_color"),
+            )
+            .outerjoin(VulnLayer, LatestVuln.layer_id == VulnLayer.id)
+            .group_by(LatestVuln.qid, LatestVuln.title, LatestVuln.severity, VulnLayer.name, VulnLayer.color)
+            .order_by(func.count(LatestVuln.id).desc())
+            .limit(10)
         )
-        .join(LatestVuln, LatestVuln.host_id == Host.id)
-        .group_by(Host.id, Host.ip, Host.dns, Host.os)
-        .order_by(func.count(LatestVuln.id).desc())
-        .limit(10)
-    )
-    top_h_q = _apply_filters(top_h_q, *fargs, host_joined=True)
-    top_h_q = apply_freshness(top_h_q, LatestVuln.last_detected, freshness or "active", thresholds)
-    top_h_rows = (await db.execute(top_h_q)).all()
-    top_hosts = [
-        TopHost(ip=r.ip, dns=r.dns, os=r.os, host_count=r.host_count)
-        for r in top_h_rows
-    ]
+        q = _fresh(_apply_filters(q, *fargs))
+        rows = (await db.execute(q)).all()
+        return [TopVuln(qid=r.qid, title=r.title, severity=r.severity, count=r.count,
+                        layer_name=r.layer_name, layer_color=r.layer_color) for r in rows]
 
-    # --- Coherence checks ---
-    coh_q = select(ReportCoherenceCheck)
-    if report_id:
-        coh_q = coh_q.where(ReportCoherenceCheck.scan_report_id == report_id)
-    coh_rows = (await db.execute(coh_q)).scalars().all()
-    coherence_checks = [
-        CoherenceItem(
-            check_type=c.check_type,
-            entity=c.entity,
-            expected_value=c.expected_value,
-            actual_value=c.actual_value,
-            severity=c.severity,
+    # --- Group 3: Top hosts ---
+    async def _top_hosts():
+        q = (
+            select(Host.ip, Host.dns, Host.os, func.count(LatestVuln.id).label("host_count"))
+            .join(LatestVuln, LatestVuln.host_id == Host.id)
+            .group_by(Host.id, Host.ip, Host.dns, Host.os)
+            .order_by(func.count(LatestVuln.id).desc())
+            .limit(10)
         )
-        for c in coh_rows
-    ]
+        q = _fresh(_apply_filters(q, *fargs, host_joined=True))
+        rows = (await db.execute(q)).all()
+        return [TopHost(ip=r.ip, dns=r.dns, os=r.os, host_count=r.host_count) for r in rows]
 
-    # --- Layer distribution ---
-    layer_q = (
-        select(
-            VulnLayer.id.label("layer_id"),
-            VulnLayer.name,
-            VulnLayer.color,
-            func.count(LatestVuln.id).label("count"),
+    # --- Group 4: Layer + OS distributions ---
+    async def _distributions():
+        os_class_label = os_class_case(Host.os).label("os_class")
+
+        # Layer distribution
+        layer_q = (
+            select(VulnLayer.id.label("layer_id"), VulnLayer.name, VulnLayer.color,
+                   func.count(LatestVuln.id).label("count"))
+            .select_from(LatestVuln)
+            .outerjoin(VulnLayer, LatestVuln.layer_id == VulnLayer.id)
+            .group_by(VulnLayer.id, VulnLayer.name, VulnLayer.color)
         )
-        .select_from(LatestVuln)
-        .outerjoin(VulnLayer, LatestVuln.layer_id == VulnLayer.id)
-        .group_by(VulnLayer.id, VulnLayer.name, VulnLayer.color)
-    )
-    layer_q = _apply_filters(layer_q, *fargs)
-    layer_q = apply_freshness(layer_q, LatestVuln.last_detected, freshness or "active", thresholds)
-    layer_rows = (await db.execute(layer_q)).all()
-    layer_distribution = [
-        LayerCount(id=r.layer_id, name=r.name, color=r.color, count=r.count)
-        for r in layer_rows
-    ]
+        layer_q = _fresh(_apply_filters(layer_q, *fargs))
 
-    # --- OS class distribution (count distinct hosts, not vulns) ---
-    os_class_label = os_class_case(Host.os).label("os_class")
-    os_q = (
-        select(os_class_label, func.count(func.distinct(Host.id)).label("count"))
-        .select_from(LatestVuln)
-        .join(Host, LatestVuln.host_id == Host.id)
-        .group_by(os_class_label)
-    )
-    os_q = _apply_filters(os_q, *fargs, host_joined=True)
-    os_q = apply_freshness(os_q, LatestVuln.last_detected, freshness or "active", thresholds)
-    os_rows = (await db.execute(os_q)).all()
-    os_class_distribution = [
-        OsClassCount(name=r.os_class, count=r.count) for r in os_rows
-    ]
+        # OS class distribution
+        os_q = (
+            select(os_class_label, func.count(func.distinct(Host.id)).label("count"))
+            .select_from(LatestVuln)
+            .join(Host, LatestVuln.host_id == Host.id)
+            .group_by(os_class_label)
+        )
+        os_q = _fresh(_apply_filters(os_q, *fargs, host_joined=True))
 
-    # --- OS type distribution (count distinct hosts, not vulns) ---
-    os_type_label = os_type_case(Host.os).label("os_type")
-    os_type_q = (
-        select(os_class_label, os_type_label, func.count(func.distinct(Host.id)).label("count"))
-        .select_from(LatestVuln)
-        .join(Host, LatestVuln.host_id == Host.id)
-        .group_by(os_class_label, os_type_label)
-    )
-    os_type_q = _apply_filters(os_type_q, *fargs, host_joined=True)
-    os_type_q = apply_freshness(os_type_q, LatestVuln.last_detected, freshness or "active", thresholds)
-    os_type_rows = (await db.execute(os_type_q)).all()
-    os_type_distribution = [
-        OsTypeCount(os_class=r.os_class, os_type=r.os_type, count=r.count)
-        for r in os_type_rows
-    ]
+        # OS type distribution
+        os_type_label = os_type_case(Host.os).label("os_type")
+        os_type_q = (
+            select(os_class_label, os_type_label, func.count(func.distinct(Host.id)).label("count"))
+            .select_from(LatestVuln)
+            .join(Host, LatestVuln.host_id == Host.id)
+            .group_by(os_class_label, os_type_label)
+        )
+        os_type_q = _fresh(_apply_filters(os_type_q, *fargs, host_joined=True))
+
+        layer_rows, os_rows, os_type_rows = await asyncio.gather(
+            db.execute(layer_q), db.execute(os_q), db.execute(os_type_q),
+        )
+        layer_rows = layer_rows.all()
+        os_rows = os_rows.all()
+        os_type_rows = os_type_rows.all()
+
+        return (
+            [LayerCount(id=r.layer_id, name=r.name, color=r.color, count=r.count) for r in layer_rows],
+            [OsClassCount(name=r.os_class, count=r.count) for r in os_rows],
+            [OsTypeCount(os_class=r.os_class, os_type=r.os_type, count=r.count) for r in os_type_rows],
+        )
+
+    # --- Coherence checks (lightweight, no LatestVuln scan) ---
+    async def _coherence():
+        coh_q = select(ReportCoherenceCheck)
+        if report_id:
+            coh_q = coh_q.where(ReportCoherenceCheck.scan_report_id == report_id)
+        rows = (await db.execute(coh_q)).scalars().all()
+        return [CoherenceItem(check_type=c.check_type, entity=c.entity,
+                              expected_value=c.expected_value, actual_value=c.actual_value,
+                              severity=c.severity) for c in rows]
+
+    # Execute all groups in parallel
+    (total_vulns, host_count, critical_count, severity_distribution), \
+        top_vulns, top_hosts, (layer_distribution, os_class_distribution, os_type_distribution), \
+        coherence_checks = await asyncio.gather(
+            _kpis_and_severity(), _top_vulns(), _top_hosts(), _distributions(), _coherence(),
+        )
 
     return OverviewResponse(
         total_vulns=total_vulns,

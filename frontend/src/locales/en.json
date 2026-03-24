@@ -343,6 +343,10 @@
       "settingsSaved": "Settings saved",
       "scheduleCreated": "Update scheduled successfully",
       "scheduleCancelled": "Schedule cancelled",
+      "stateReset": "Upgrade state reset ({{count}} operation(s))",
+      "resetState": "Reset state",
+      "resetStateConfirmTitle": "Reset upgrade state?",
+      "resetStateConfirmContent": "This will cancel any running or stuck upgrade. Use this if the app is stuck in 'Update in progress' mode after a restore or failure.",
       "newUpload": "New package",
       "packageReady": "Package ready",
       "errors": {
@@ -377,6 +381,10 @@
       "addDir": "Add a directory",
       "importManagement": "Import management",
       "importCsv": "Import a CSV",
+      "rescanSources": "Rescan sources",
+      "rescanTitle": "Rescan sources?",
+      "rescanContent": "Watched directories will be re-scanned. Files already imported will be skipped. Missing files will be imported automatically.",
+      "rescanStarted": "Rescan started — missing imports will arrive shortly",
       "resetAll": "Reset entire database",
       "resetTitle": "Reset entire database",
       "resetWarning": "Warning: this action will delete ALL imported reports, vulnerabilities, and hosts. This action is irreversible.",
@@ -893,7 +901,8 @@
           "title": "Watched directories",
           "items": [
             "Add directories to watch with a file pattern (e.g.: *.csv), optional recursive mode, and an exclusion date.",
-            "The watcher scans directories periodically and imports newly detected files."
+            "The watcher scans directories periodically and imports newly detected files.",
+            "Rescan sources — Forces a full re-scan of all directories. Useful after a database restore to reimport missing files."
           ]
         }
       }
@@ -1251,7 +1260,8 @@
           "title": "History",
           "items": [
             "View the 50 most recent updates with their status, duration, and any errors",
-            "Possible statuses: Completed (green), Failed (red), Rolled back (orange), Cancelled (grey)"
+            "Possible statuses: Completed (green), Failed (red), Rolled back (orange), Cancelled (grey)",
+            "Reset state — If the app is stuck in 'Update in progress' mode (e.g. after a database restore), the red button forces a state reset."
           ]
         }
       }
